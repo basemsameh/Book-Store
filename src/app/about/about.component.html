@@ -1,0 +1,75 @@
+<app-breadcrumb-wrapper [title]="'About Us'"></app-breadcrumb-wrapper>
+<main class="container-fluid">
+  <section>
+    <div class="row align-items-center">
+      <!-- Image -->
+      <figure class="col-12 col-lg-6 mb-lg-0 mb-4 p-3 position-relative">
+        <img
+          src="../../assets/images/about-page/person.jpg"
+          alt="Person reading book"
+          class="w-100"
+        />
+        <!-- Play Button -->
+        <a
+          id="play-btn"
+          href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I"
+          class="bg-white rounded-circle position-absolute top-50 start-50 translate-middle"
+        >
+          <i class="fa-solid fa-play"></i>
+        </a>
+      </figure>
+      <!-- Content -->
+      <article class="content col-12 col-lg-6 p-3">
+        <h1 class="fw-bold mb-4">
+          About the Bookle <br />
+          Books Store
+        </h1>
+        <p class="mb-0">
+          Nullam convallis ullamcorper nulla. Nam accumsan ac leo quis posuere.
+          Nunc rutrum lorem justo, at blandit mauris ullamcorper tristique.
+          Suspendisse vel ante venenatis, porttitor ligula sed, iaculis metus.
+          Nullam non erat gravida, viverra leo ut, maximus tortor. Pellentesque
+          vitae nunc rhoncus, lacinia nulla sed, commodo lectus. Curabitur at
+          consectetur velit.
+        </p>
+        <br />
+        <p>
+          Morbi cursus enim in consequat suscipit. Quisque id dui ante. Praesent
+          auctor sed velit ac aliquet. Morbi consectetur sem nec ipsum
+          malesuada, ut gravida nisl molestie. Proin hendrerit ullamcorper dui,
+          quis convallis mauris cursus nec. Interdum et malesuada fames ac ante
+          ipsum primis in faucibus. Vivamus ac laoreet orci.
+        </p>
+        <a href="about" class="fw-bold" style="color: var(--orange)"
+          >Overview <i class="fa-solid fa-up-right-from-square ms-2"></i
+        ></a>
+      </article>
+    </div>
+  </section>
+  <!-- Get Discount Section -->
+  <section class="discount mb-0 pb-0">
+    <app-discount-section></app-discount-section>
+  </section>
+  <!-- What our client say section -->
+  <section class="feedback">
+    <!-- Head Section -->
+    <article class="text-center">
+      <h2 class="fs-1 fw-bold">Customer Feedback</h2>
+      <p
+        style="max-width: 500px; line-height: 28px; color: var(--blue)"
+        class="mx-auto"
+      >
+        Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec at
+        nulla nulla. Duis posuere ex lacus
+      </p>
+    </article>
+    <!-- Body Section -->
+    <div class="mt-5">
+      <app-client-say></app-client-say>
+    </div>
+  </section>
+  <!-- Featured Author Section -->
+  <section>
+    <app-featured-author></app-featured-author>
+  </section>
+</main>

@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import "swiper/swiper-bundle.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.2s linear 0s;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --main-color: #036280;
+  --light-main-color: #d0e1e7;
+  --blue: #012e4a;
+  --white: #fff;
+  --black: #000;
+  --orange: #ff6500;
+}
+
+.w-fit {
+  width: fit-content;
+}
+
+.btn-main {
+  background-color: var(--main-color) !important;
+  color: var(--white) !important;
+  font-weight: 700 !important;
+  padding: 10px 20px !important;
+  font-size: 18px !important;
+}
+
+.btn-main:hover {
+  background-color: var(--orange) !important;
+}
+
+/* Next and previous buttons of swiper */
+.custom-prev,
+.custom-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: var(--main-color);
+  color: var(--white);
+  z-index: 3;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border: 1px solid var(--white);
+  opacity: 0;
+}
+
+.custom-prev:hover,
+.custom-next:hover {
+  background-color: var(--orange) !important;
+}
+
+.custom-prev {
+  left: 5px;
+}
+
+.custom-next {
+  right: 5px;
+}
+
+/* Style the scrollbar track (background) */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #82B1C0;
+}
+
+/* Style the scrollbar handle (the thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  height: 50px;
+}

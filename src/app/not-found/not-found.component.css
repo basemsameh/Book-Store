@@ -1,0 +1,29 @@
+section {
+  padding: 65px 10px;
+}
+
+section figure img {
+  max-width: 700px !important;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+h1 span {
+  color: var(--orange);
+}
+
+p {
+  color: var(--blue);
+  font-size: 18px;
+}
+
+.btn {
+  width: 280px !important;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

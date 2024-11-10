@@ -1,0 +1,46 @@
+/* Get Discount Section */
+.get-discount {
+  background-image: url(../../../public/assets/images/discount-section/bg-discount-section.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--light-main-color);
+  padding: 95px 0;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (width >= 992px) {
+  .get-discount {
+    max-width: 100%;
+    margin: 0 10px;
+  }
+}
+
+.get-discount article {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.get-discount article h2 {
+  color: var(--blue);
+  line-height: 50px;
+}
+
+.get-discount [alt="Books"] {
+  left: -100px;
+}
+
+.get-discount [alt="Girl Image"] {
+  top: 0;
+  right: 15px;
+  animation: girl-movement 1.5s linear 0s infinite alternate;
+}
+
+@keyframes girl-movement {
+  to {
+    right: -5px;
+  }
+}

@@ -1,0 +1,65 @@
+<article class="featured-author">
+  <!-- Head Section -->
+  <article class="text-center">
+    <h2 class="fw-bold fs-1">Featured Author</h2>
+    <p
+      style="max-width: 500px; line-height: 28px; color: var(--blue)"
+      class="mx-auto"
+    >
+      Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec at
+      nulla nulla. Duis posuere ex lacus
+    </p>
+  </article>
+  <!-- Swiper Container -->
+  <div class="swiper-container position-relative">
+    <!-- Authors -->
+    <swiper-container
+      #swiperAuthors
+      [slidesPerView]="checkSizeOfWindow()"
+      [loop]="true"
+      [autoplay]="{ delay: 2500, disableOnInteraction: false }"
+      autoplay="true"
+      speed="1500"
+      class="mySwiper mt-5"
+    >
+      @for (author of featuredAuthor; track author.id) {
+      <!-- Author -->
+      <swiper-slide class="p-2 my-3">
+        <div class="p-4 shadow rounded-3">
+          <figure class="mb-0 text-center position-relative">
+            <!-- Author image -->
+            <img
+              src="../../assets/images/featured-author/0{{ author.id }}.jpg"
+              alt="Author"
+              class="rounded-circle"
+            />
+            <!-- Shape -->
+            <img
+              src="../../assets/images/featured-author/shape-img.png"
+              alt="shape"
+              class="position-absolute start-50 translate-middle-x"
+            />
+          </figure>
+          <div class="content rounded-3 py-3 pb-0 mt-5 text-center">
+            <h6 class="author-name">
+              <a
+                href="team/details"
+                class="fw-bold fs-5 text-decoration-none"
+                >{{ author.authorName }}</a
+              >
+            </h6>
+            <p>{{ author.booksNumber }}</p>
+          </div>
+        </div>
+      </swiper-slide>
+      }
+    </swiper-container>
+    <!-- Custom Navigation Buttons -->
+    <div class="custom-prev" (click)="swiperAuthors.swiper.slidePrev()">
+      <i class="fa-solid fa-arrow-left-long"></i>
+    </div>
+    <div class="custom-next" (click)="swiperAuthors.swiper.slideNext()">
+      <i class="fa-solid fa-arrow-right-long"></i>
+    </div>
+  </div>
+</article>

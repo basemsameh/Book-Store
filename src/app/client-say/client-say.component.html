@@ -1,0 +1,45 @@
+<swiper-container
+  [slidesPerView]="sizeOfSwiperClients()"
+  [loop]="true"
+  [autoplay]="{ delay: 2000, disableOnInteraction: false }"
+  autoplay="true"
+  speed="1000"
+  [centeredSlides]="true"
+  class="mySwiper"
+>
+  @for (client of clientsSays; track client.id) {
+  <!-- Client -->
+  <swiper-slide class="px-3 active">
+    <div class="content mb-2 shadow rounded-3 p-4 mt-3 position-relative">
+      <p>{{ client.say }}</p>
+      <div class="row align-items-center">
+        <!-- Client Info -->
+        <figure class="mb-md-0 col-12 col-md-8 d-flex align-items-center ps-3">
+          <img [src]="client.linkImage" alt="Client" class="rounded-circle" />
+          <div class="ms-3">
+            <strong class="fs-5">{{ client.clientName }}</strong> <br />
+            <span>{{ client.clientJob }}</span> <br />
+            <div style="color: var(--orange)">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star mx-1"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star mx-1"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+          </div>
+        </figure>
+        <!-- Client Logo -->
+        <figure class="col-12 col-md-4 text-center text-md-end mb-0">
+          <img [src]="client.logo" alt="Client Logo" />
+        </figure>
+      </div>
+      <!-- Black Shape Image -->
+      <img
+        src="../../assets/images/home-page/shape.svg"
+        alt="Black Shape"
+        class="position-absolute bottom-0 start-0"
+      />
+    </div>
+  </swiper-slide>
+  }
+</swiper-container>

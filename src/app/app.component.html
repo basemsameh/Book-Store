@@ -1,0 +1,36 @@
+<!-- <section class="container">
+  <div class="row">
+    @for (book of books; track book.id) {
+    <article class="col-6 col-md-3 col-lg-2 p-3">
+      <div class="shadow rounded-3 overflow-hidden">
+        <figure class="mb-0">
+          <img
+            [src]="book.volumeInfo.imageLinks.thumbnail"
+            [alt]="book.volumeInfo.title"
+            style="max-height: 350px !important"
+            class="w-100"
+          />
+        </figure>
+        <div class="content p-4">
+          <h3>
+            {{
+              book.volumeInfo.title
+                | slice : 0 : book.volumeInfo.title.indexOf(" ")
+            }}...
+          </h3>
+          <h5>
+            {{
+              book.volumeInfo.categories
+                ? book.volumeInfo.categories
+                : "No Category"
+            }}
+          </h5>
+        </div>
+      </div>
+    </article>
+    }
+  </div>
+</section> -->
+<app-header></app-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer>

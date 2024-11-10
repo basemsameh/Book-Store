@@ -1,0 +1,13 @@
+section {
+  padding: 170px 0;
+  background-color: #e6eff2;
+}
+
+section h1 {
+  color: var(--blue);
+}
+
+section p a:hover,
+section p span {
+  color: var(--main-color) !important;
+}

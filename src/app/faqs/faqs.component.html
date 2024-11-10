@@ -1,0 +1,68 @@
+<app-breadcrumb-wrapper [title]="'Faqs'"></app-breadcrumb-wrapper>
+<section class="row container-fluid">
+  <!-- Buttons -->
+  <ul class="nav nav-tabs col-12 col-md-4 col-lg-3" id="myTab" role="tablist">
+    @for (faq of faqsName; track $index) {
+    <li class="nav-item" role="presentation">
+      <button
+        [class.active]="$index === 0"
+        class="nav-link"
+        id="{{ faq }}-tab"
+        data-bs-toggle="tab"
+        [attr.data-bs-target]="'#' + faq + '-tab-pane'"
+        type="button"
+        role="tab"
+        (click)="getValue(faq)"
+        [attr.aria-controls]="faq + '-tab-pane'"
+        aria-selected="true"
+      >
+        {{ faq }}
+      </button>
+    </li>
+    }
+  </ul>
+  <!-- Tabs -->
+  <article class="tab-content col-12 col-md-8 col-lg-9" id="myTabContent">
+    @for (item of faqsName; track $index; let i = $index) {
+    <div
+      [ngClass]="i === 0 ? 'active show' : ''"
+      class="tab-pane fade"
+      id="{{ item }}-tab-pane"
+      role="tabpanel"
+      [attr.aria-labelledby]="item + '-tab'"
+      tabindex="0"
+    >
+      @for (faq of currentLoopingData; track $index; let k = $index) {
+      <div class="part mb-3 shadow p-3 rounded-3">
+        <button
+          class="btn fw-bold fs-5 d-flex justify-content-between w-100 border-0"
+          type="button"
+          [class.active]="k === 0"
+          (click)="
+            toggleActiveQuestino(faq.question);
+            toggleArrowIcon(faq.question + 'icon')
+          "
+          data-bs-toggle="collapse"
+          [attr.data-bs-target]="'#' + item + k"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+          [id]="faq.question"
+        >
+          {{ faq.question }} @if (k === 0) {<i
+            class="fa-solid fa-angles-down"
+          ></i
+          >}@else {<i
+            class="fa-solid fa-angles-right"
+            [id]="faq.question + 'icon'"
+          ></i
+          >}
+        </button>
+        <p class="collapse p-3 mb-0" [class.show]="k === 0" id="{{ item + k }}">
+          {{ faq.answer }}
+        </p>
+      </div>
+      }
+    </div>
+    }
+  </article>
+</section>

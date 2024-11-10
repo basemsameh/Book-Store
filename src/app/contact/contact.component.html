@@ -1,0 +1,217 @@
+<app-breadcrumb-wrapper [title]="'Contact Us'"></app-breadcrumb-wrapper>
+<section class="row container-fluid align-items-center">
+  <!-- Info -->
+  <article class="info col-12 col-lg-4 p-3 mb-4 mb-lg-3">
+    <div class="p-4 rounded-4 rounded-bottom-0">
+      <!-- Phone Number -->
+      <div class="d-flex align-items-center pt-3 pb-2">
+        <i class="fa-solid fa-phone rounded-circle border me-3"></i>
+        <div class="content">
+          <span>Call Us 7/24</span>
+          <h4 class="mt-2 fw-bold">
+            <a href="tel:+208-555-0112" class="text-white text-decoration-none"
+              >+208-555-0112</a
+            >
+          </h4>
+        </div>
+      </div>
+      <hr />
+      <!-- Email -->
+      <div class="d-flex align-items-center pt-3 pb-2">
+        <i class="fa-solid fa-envelope rounded-circle border me-3"></i>
+        <div class="content">
+          <span>Make a Quote</span>
+          <h4 class="mt-2 fw-bold">
+            <a
+              href="mailto:example@gmail.com"
+              class="text-white text-decoration-none"
+              >example&#64;gmail.com</a
+            >
+          </h4>
+        </div>
+      </div>
+      <hr />
+      <!-- Location -->
+      <div class="d-flex align-items-center pt-3 pb-4">
+        <i class="fa-solid fa-location-dot rounded-circle border me-3"></i>
+        <div class="content">
+          <span>Location</span>
+          <h4 class="mt-2 fw-bold">4517 Washington ave.</h4>
+        </div>
+      </div>
+    </div>
+    <!-- Image -->
+    <figure class="mb-0 position-relative rounded-bottom-4">
+      <a
+        id="play-btn"
+        href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I"
+        class="bg-white rounded-circle position-absolute top-50 start-50 translate-middle"
+      >
+        <i class="fa-solid fa-play"></i>
+      </a>
+      <img
+        src="../../assets/images/contact-page/contact.jpg"
+        alt="Image"
+        class="w-100 rounded-bottom-4"
+      />
+    </figure>
+  </article>
+  <!-- Form -->
+  <article class="col-12 col-lg-8 p-3">
+    <form action="#" class="row p-4 pt-0" [formGroup]="messageForm">
+      <h1 class="fw-bold">Ready to Get Started?</h1>
+      <p style="line-height: 28px; max-width: 800px" class="my-3">
+        Nunc tincidunt cursus lectus ac semper. Aenean ullamcorper quis arcu
+        molestie consequat. Interdum et malesuada fames ac ante ipsum primis in
+        faucibus. Ut nec lobortis elit, eu ultrices justo. Fusce auctor erat
+        est, non fringilla nibh tempus quis. Aenean dignissim
+      </p>
+      <!-- Your Name -->
+      <div class="name col-12 col-md-6 mb-4">
+        <label for="name" class="form-label fw-bold"
+          >Your Name <span class="text-danger">*</span></label
+        >
+        <input
+          formControlName="username"
+          type="text"
+          class="form-control p-3 shadow-none"
+          placeholder="Your Name"
+          id="name"
+          maxlength="50"
+          minlength="3"
+          [class.not-valid-input]="
+            messageForm.controls.username.invalid &&
+            messageForm.controls.username.touched
+          "
+          name="name"
+          required
+        />
+        <!-- Alert -->
+        @if (messageForm.controls.username.invalid &&
+        messageForm.controls.username.touched) {
+        <div class="alert alert-danger mt-2">
+          @if (!messageForm.controls.username.value) { You should fill this
+          field }@else { Name should range between 3 to 50 letters }
+        </div>
+        }
+      </div>
+      <!-- Your Email -->
+      <div class="email col-12 col-md-6 mb-4">
+        <label for="email" class="form-label fw-bold"
+          >Your Email <span class="text-danger">*</span></label
+        >
+        <input
+          formControlName="email"
+          type="email"
+          class="form-control p-3 shadow-none"
+          placeholder="Your Eamil"
+          id="email"
+          name="email"
+          minlength="5"
+          [class.not-valid-input]="
+            messageForm.controls.email.invalid &&
+            messageForm.controls.email.touched
+          "
+          maxlength="254"
+          required
+        />
+        <!-- Alert -->
+        @if (messageForm.controls.email.invalid &&
+        messageForm.controls.email.touched) {
+        <div class="alert alert-danger mt-2">
+          @if (!messageForm.controls.email.value) { You should fill this field }
+          @else {Invalid email format }
+        </div>
+        }
+      </div>
+      <!-- Write Message -->
+      <div class="message mb-4 col-12">
+        <label for="message" class="form-label fw-bold"
+          >Write Message <span class="text-danger">*</span></label
+        >
+        <textarea
+          formControlName="message"
+          required
+          name="message"
+          placeholder="Write Message"
+          id="message"
+          maxlength="2000"
+          minlength="10"
+          rows="10"
+          [class.not-valid-input]="
+            messageForm.controls.message.invalid &&
+            messageForm.controls.message.touched
+          "
+          class="form-control p-3 shadow-none"
+        ></textarea>
+        <!-- Alert -->
+        @if (messageForm.controls.message.invalid &&
+        messageForm.controls.message.touched) {
+        <div class="alert alert-danger mt-2">
+          @if (!messageForm.controls.message.value) { You should fill this field
+          } @else { Invalid message format. Message should range between 10 to
+          2000 letters }
+        </div>
+        }
+      </div>
+      <!-- Send Message -->
+      <button
+        class="btn btn-main rounded-5"
+        type="submit"
+        [disabled]="messageForm.invalid"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Send Message <i class="fa-solid fa-arrow-right-long ms-2"></i>
+      </button>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                (click)="reloadPage()"
+              ></button>
+            </div>
+            <div
+              class="modal-body text-success text-center"
+              style="font-size: 80px"
+            >
+              <i class="fa-regular fa-circle-check"></i>
+              <h3 class="text-black">Message sended correctly!</h3>
+            </div>
+            <div class="modal-footer mx-auto">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+                (click)="reloadPage()"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </article>
+</section>
+<!-- Iframe -->
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6678.7619084840835!2d144.9618311901502!3d-37.81450084255415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4758afc1d%3A0x3119cc820fdfc62e!2sEnvato!5e0!3m2!1sen!2sbd!4v1641984054261!5m2!1sen!2sbd"
+  style="border: 0"
+  allowfullscreen=""
+  loading="lazy"
+  height="500"
+  class="w-100"
+></iframe>

@@ -1,0 +1,104 @@
+footer {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 80px 20px;
+}
+
+footer .contact {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+footer .contact h5 {
+  font-size: 23px !important;
+}
+
+footer .contact i {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+@media (width >= 1300px) {
+  .contact article {
+    width: calc(100% / 4);
+  }
+}
+
+.widgets .media i {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.widgets .media i:hover {
+  background-color: var(--orange) !important;
+}
+
+.widgets h4::before,
+.widgets h4::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  background-color: var(--orange);
+  height: 2px;
+  width: 25px;
+}
+
+.widgets h4::after {
+  background-color: var(--white);
+  width: 50px;
+  left: 40px;
+}
+
+.widgets ul li a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.widgets ul li a:hover {
+  padding-left: 5px;
+  color: var(--orange) !important;
+}
+
+.widgets .input-group {
+  padding: 2px;
+}
+
+.widgets .input-group input {
+  background-color: var(--blue);
+  border: 1px solid #999;
+}
+
+.widgets .input-group input::placeholder {
+  color: #ddd;
+}
+
+.widgets .input-group button {
+  background-color: var(--main-color);
+  color: var(--white);
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.widgets .input-group button:hover {
+  background-color: var(--white);
+  color: var(--main-color);
+}
+
+.end-footer {
+  background-color: var(--main-color);
+}
+
+.end-footer .payments a img {
+  height: 40px;
+  width: 65px;
+}

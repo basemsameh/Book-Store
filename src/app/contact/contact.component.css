@@ -1,0 +1,78 @@
+section {
+  padding: 80px 10px;
+}
+
+section .info div {
+  color: var(--white);
+  background-color: var(--main-color);
+}
+
+section .info div i {
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+section .info figure #play-btn {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--main-color);
+  z-index: 2;
+}
+
+section .info figure #play-btn:hover {
+  background-color: var(--main-color) !important;
+  color: var(--white) !important;
+}
+
+section .info figure::before,
+section .info figure::after {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+section .info figure::before {
+  animation: small-circle 1.5s linear 1.3s infinite alternate;
+}
+
+section .info figure::after {
+  animation: big-circle 1.5s linear 1s infinite alternate;
+}
+
+@keyframes small-circle {
+  to {
+    height: 110px;
+    width: 110px;
+  }
+}
+
+@keyframes big-circle {
+  to {
+    height: 125px;
+    width: 125px;
+  }
+}
+
+.btn-main {
+  height: 60px;
+  width: 250px;
+}
+
+.not-valid-input {
+  border: 1px solid red !important;
+}

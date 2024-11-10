@@ -1,0 +1,25 @@
+/* Featured Authors */
+.featured-author:hover .swiper-container .custom-next,
+.featured-author:hover .swiper-container .custom-prev {
+  opacity: 1;
+}
+
+.featured-author .swiper-container .custom-next {
+  right: 20px;
+}
+
+.featured-author .swiper-container .custom-prev {
+  left: 20px;
+}
+
+.featured-author .content .author-name a {
+  color: var(--blue);
+}
+
+.featured-author figure [alt="shape"] {
+  top: -5px;
+}
+
+.featured-author .content {
+  border: 2px dashed var(--blue);
+}

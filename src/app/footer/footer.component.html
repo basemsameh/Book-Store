@@ -1,0 +1,180 @@
+<footer>
+  <!-- Contact Section -->
+  <section class="contact row">
+    <!-- Phone Number -->
+    <article class="col-12 col-md-6 mb-4">
+      <div class="d-flex align-items-center">
+        <i class="fa-solid fa-phone rounded-circle border me-3"></i>
+        <div class="content">
+          <span>Call Us 7/24</span>
+          <h5 class="mt-2 fw-bold">
+            <a href="tel:+208-555-0112" class="text-white text-decoration-none"
+              >+208-555-0112</a
+            >
+          </h5>
+        </div>
+      </div>
+    </article>
+    <!-- Email -->
+    <article class="col-12 col-md-6 mb-4">
+      <div class="d-flex align-items-center">
+        <i class="fa-solid fa-envelope rounded-circle border me-3"></i>
+        <div class="content">
+          <span>Make a Quote</span>
+          <h5 class="mt-2 fw-bold">
+            <a
+              href="mailto:example@gmail.com"
+              class="text-white text-decoration-none"
+              >example&#64;gmail.com</a
+            >
+          </h5>
+        </div>
+      </div>
+    </article>
+    <!-- Time -->
+    <article class="col-12 col-md-6 mb-4">
+      <div class="d-flex align-items-center">
+        <i class="fa-solid fa-stopwatch rounded-circle border me-3"></i>
+        <div class="content">
+          <span>Opening Hour</span>
+          <h5 class="mt-2 fw-bold">Sunday - Fri: 9 aM - 6 pM</h5>
+        </div>
+      </div>
+    </article>
+    <!-- Location -->
+    <article class="col-12 col-md-6 mb-4">
+      <div class="d-flex align-items-center">
+        <i class="fa-solid fa-location-dot rounded-circle border me-3"></i>
+        <div class="content">
+          <span>Location</span>
+          <h5 class="mt-2 fw-bold">4517 Washington ave.</h5>
+        </div>
+      </div>
+    </article>
+  </section>
+  <!-- widgets Section -->
+  <section class="widgets row mt-5 pt-5">
+    <!-- Widget -->
+    <article class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0">
+      <figure>
+        <img src="../../assets/images/white-logo.svg" alt="Logo" />
+      </figure>
+      <p style="color: #ddd; line-height: 28px" class="my-4">
+        Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a
+        lacinia curabitur lacinia mollis
+      </p>
+      <!-- Media -->
+      <div class="media d-flex">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter mx-2"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-linkedin-in ms-2"></i>
+      </div>
+    </article>
+    <!-- Costumers Support -->
+    <article class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0">
+      <h4 class="fw-bold position-relative pb-5">Costumers Support</h4>
+      <ul class="list-unstyled">
+        <li class="mb-3">
+          <a href="shop/default">
+            <i class="fa-solid fa-angles-right me-1"></i> Store List</a
+          >
+        </li>
+        <li class="mb-3">
+          <a href="contact">
+            <i class="fa-solid fa-angles-right me-1"></i> Opening Hours</a
+          >
+        </li>
+        <li class="mb-3">
+          <a href="contact">
+            <i class="fa-solid fa-angles-right me-1"></i> Contact Us</a
+          >
+        </li>
+        <li class="mb-3">
+          <a href="contact">
+            <i class="fa-solid fa-angles-right me-1"></i> Return Policy</a
+          >
+        </li>
+      </ul>
+    </article>
+    <!-- Categories -->
+    <article class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0">
+      <h4 class="fw-bold position-relative pb-5">Categories</h4>
+      <ul class="list-unstyled">
+        @for (book of books.slice(9, 13); track book.id) {
+        <li class="mb-3">
+          <a href="shop/default" class="text-white">
+            <i class="fa-solid fa-angles-right me-1"></i>
+            {{ book.volumeInfo.categories }}</a
+          >
+        </li>
+        }
+      </ul>
+    </article>
+    <!-- Newsletter -->
+    <article class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0">
+      <h4 class="fw-bold position-relative pb-5">Newsletter</h4>
+      <p style="color: #ddd; line-height: 28px">
+        Sign up to searing weekly newsletter to get the latest updates.
+      </p>
+      <form action="#" class="input-group mb-3">
+        <input
+          type="email"
+          class="form-control text-white shadow-none"
+          placeholder="Enter Email Address"
+          required
+        />
+        <button class="btn" type="submit">
+          <i class="fa-regular fa-paper-plane"></i>
+        </button>
+      </form>
+    </article>
+  </section>
+</footer>
+<!-- End Footer -->
+<section class="end-footer p-3 py-4 text-white">
+  <div class="row align-items-center">
+    <p class="col-12 col-md-6 mb-lg-0 text-center text-md-start">
+      © All Copyright {{ currentDate | date : "yyyy" }} by
+      <strong>Bookle</strong>
+    </p>
+    <div class="payments col-12 col-md-6 text-center text-md-end">
+      <!-- Visa -->
+      <a href="contact" class="text-decoration-none">
+        <img
+          src="../../assets/images/footer-page/01.png"
+          alt="Payment"
+          style="padding: 10px"
+          class="border rounded-1"
+        />
+      </a>
+      <!-- Mastercard -->
+      <a href="contact" class="text-decoration-none mx-3">
+        <img
+          src="../../assets/images/footer-page/02.png"
+          alt="Payment"
+          style="padding: 10px"
+          class="border rounded-1"
+        />
+      </a>
+      <!-- Payoneer -->
+      <a href="contact" class="text-decoration-none">
+        <img
+          src="../../assets/images/footer-page/03.png"
+          alt="Payment"
+          style="padding: 10px"
+          class="border rounded-1"
+        />
+      </a>
+      <!-- Affirm -->
+      <a href="contact" class="text-decoration-none ms-3">
+        <img
+          src="../../assets/images/footer-page/04.png"
+          alt="Payment"
+          style="padding: 10px"
+          class="border rounded-1"
+        />
+      </a>
+    </div>
+  </div>
+</section>

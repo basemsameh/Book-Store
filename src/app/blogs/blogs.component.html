@@ -1,0 +1,312 @@
+<app-breadcrumb-wrapper [title]="'Blogs'"></app-breadcrumb-wrapper>
+<main class="container-fluid">
+  <section class="row">
+    <!-- Part of Blogs -->
+    <article class="blogs-part mt-4 col-12">
+      <div class="tab-content" id="myTabContent">
+        <!-- First Page -->
+        <div
+          class="tab-pane fade show active"
+          id="fpage-tab-pane"
+          role="tabpanel"
+          aria-labelledby="fpage-tab"
+          tabindex="0"
+        >
+          <div class="row">
+            @for (blog of blogs | slice:0:9; track blog.id) {
+            <!-- News -->
+            <div class="col-12 col-md-6 col-lg-4 p-3 mb-3">
+              <div class="news bg-white shadow rounded-3 p-3">
+                <!-- Image -->
+                <figure class="position-relative overflow-hidden rounded-3">
+                  <img
+                    src="../../assets/images/blogs-page/{{
+                      checkIdNumber(blog.id)
+                    }}.jfif"
+                    alt="Blog"
+                    class="w-100 rounded-3"
+                    loading="lazy"
+                  />
+                  <!-- Activities word -->
+                  <span class="activities position-absolute">{{
+                    blog.category
+                  }}</span>
+                </figure>
+                <!-- Content -->
+                <div class="content mt-4 px-1">
+                  <!-- Date and Admin -->
+                  <div class="row">
+                    <!-- Date -->
+                    <div class="col-6">
+                      <i
+                        class="fa-solid fa-calendar-days me-1"
+                        style="color: var(--main-color)"
+                      ></i>
+                      {{ blog.publishedDate | date }}
+                    </div>
+                    <!-- Admin -->
+                    <div class="col-6 text-end">
+                      <i
+                        class="fa-regular fa-user me-1"
+                        style="color: var(--main-color)"
+                      ></i>
+                      {{ blog.author }}
+                    </div>
+                  </div>
+                  <!-- Title -->
+                  <h6 class="news-title my-3">
+                    <a
+                      (click)="navigateToBlog(blog.id)"
+                      class="fw-bold text-black fs-5 text-decoration-none"
+                    >
+                      {{ blog.title }}
+                    </a>
+                  </h6>
+                  <!-- Read more -->
+                  <a
+                    (click)="navigateToBlog(blog.id)"
+                    class="text-black text-decoration-none"
+                    >Read More
+                    <i class="fa-solid fa-arrow-right-long ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+        <!-- Second Page -->
+        <div
+          class="tab-pane fade"
+          id="lpage-tab-pane"
+          role="tabpanel"
+          aria-labelledby="lpage-tab"
+          tabindex="0"
+        >
+          <div class="row">
+            @for (blog of blogs | slice:9:12; track blog.id) {
+            <!-- News -->
+            <div class="col-12 col-md-6 col-lg-4 p-3 mb-3">
+              <div class="news bg-white shadow rounded-3 p-3">
+                <!-- Image -->
+                <figure class="position-relative overflow-hidden rounded-3">
+                  <img
+                    src="../../assets/images/blogs-page/{{
+                      checkIdNumber(blog.id)
+                    }}.jfif"
+                    alt="Blog"
+                    class="w-100 rounded-3"
+                    loading="lazy"
+                  />
+                  <!-- Activities word -->
+                  <span class="activities position-absolute">{{
+                    blog.category
+                  }}</span>
+                </figure>
+                <!-- Content -->
+                <div class="content mt-4 px-1">
+                  <!-- Date and Admin -->
+                  <div class="row">
+                    <!-- Date -->
+                    <div class="col-6">
+                      <i
+                        class="fa-solid fa-calendar-days me-1"
+                        style="color: var(--main-color)"
+                      ></i>
+                      {{ blog.publishedDate | date }}
+                    </div>
+                    <!-- Admin -->
+                    <div class="col-6 text-end">
+                      <i
+                        class="fa-regular fa-user me-1"
+                        style="color: var(--main-color)"
+                      ></i>
+                      {{ blog.author }}
+                    </div>
+                  </div>
+                  <!-- Title -->
+                  <h6 class="news-title my-3">
+                    <a
+                      (click)="navigateToBlog(blog.id)"
+                      class="fw-bold text-black fs-5 text-decoration-none"
+                    >
+                      {{ blog.title }}
+                    </a>
+                  </h6>
+                  <!-- Read more -->
+                  <a
+                    (click)="navigateToBlog(blog.id)"
+                    class="text-black text-decoration-none"
+                    >Read More
+                    <i class="fa-solid fa-arrow-right-long ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+      <!-- Nav tas -->
+      <ul
+        class="nav nav-tabs w-fit mx-auto mt-5 mb-4"
+        id="myTab"
+        role="tablist"
+      >
+        <!-- Left arrow (first page) -->
+        <li
+          class="nav-item"
+          [class.opacity-0]="hideLeftButton"
+          role="presentation"
+        >
+          <button
+            [disabled]="hideLeftButton"
+            class="nav-link"
+            id="fpage-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#fpage-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="fpage-tab-pane"
+            aria-selected="false"
+            (click)="
+              hideRightButton = false; hideLeftButton = true; scrollToTop()
+            "
+          >
+            <i class="fa-solid fa-angles-left"></i>
+          </button>
+        </li>
+        <!-- First Page -->
+        <li class="nav-item mx-3" role="presentation">
+          <button
+            class="nav-link active"
+            [class.active]="hideLeftButton"
+            id="fpage-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#fpage-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="fpage-tab-pane"
+            aria-selected="true"
+            (click)="
+              hideRightButton = false; hideLeftButton = true; scrollToTop()
+            "
+          >
+            1
+          </button>
+        </li>
+        <!-- Last Page -->
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="lpage-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#lpage-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="lpage-tab-pane"
+            aria-selected="false"
+            [class.active]="hideRightButton"
+            (click)="
+              hideLeftButton = false; hideRightButton = true; scrollToTop()
+            "
+          >
+            2
+          </button>
+        </li>
+        <!-- Right arrow (last page) -->
+        <li
+          class="nav-item ms-3"
+          [class.opacity-0]="hideRightButton"
+          role="presentation"
+        >
+          <button
+            [disabled]="hideRightButton"
+            class="nav-link"
+            id="lpage-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#lpage-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="lpage-tab-pane"
+            aria-selected="false"
+            (click)="
+              hideLeftButton = false; hideRightButton = true; scrollToTop()
+            "
+          >
+            <i class="fa-solid fa-angles-right"></i>
+          </button>
+        </li>
+      </ul>
+    </article>
+    <!-- Part of aside  -->
+    <aside class="mt-4 col-12 pt-3">
+      <!-- Search -->
+      <div class="border rounded-3 p-3">
+        <div class="input-group">
+          <input
+            type="search"
+            name="search"
+            placeholder="Search.."
+            class="form-control rounded-end-0 shadow-none"
+          />
+          <button class="btn btn-main">Search</button>
+        </div>
+      </div>
+      <div class="row justify-content-between px-3">
+        <!-- Categories -->
+        <div
+          class="categories border rounded-3 p-3 position-relative mt-5 col-12 col-md-5"
+        >
+          <h5
+            class="position-absolute shadow fw-bold btn-main text-center rounded-3 w-75 top-0 start-50 translate-middle"
+          >
+            Categories
+          </h5>
+          <ul class="pt-4 list-unstyled mb-0">
+            @for (category of categories; track $index) {
+            <li class="pb-3 d-flex align-items-center">
+              <i class="fa-solid fa-circle me-3" style="font-size: 8px"></i>
+              {{ category.category }}
+              <span class="ms-auto">({{ category.number }})</span>
+            </li>
+            }
+          </ul>
+        </div>
+        <!-- Lates Posts -->
+        <div
+          class="latest-posts border rounded-3 p-3 pb-0 position-relative mt-5 col-12 col-md-6"
+        >
+          <h5
+            class="position-absolute shadow fw-bold btn-main text-center rounded-3 w-75 top-0 start-50 translate-middle"
+          >
+            Latest Posts
+          </h5>
+          <div class="pt-4">
+            @for (blog of blogs; track blog.id) { @if
+            (latesPosts.includes(blog.publishedDate)) {
+            <div class="row align-items-center border-bottom mb-3 pb-3">
+              <figure class="col-12 col-md-5 mb-md-0 rounded-3">
+                <img
+                  src="../../assets/images/blogs-page/{{
+                    checkIdNumber(blog.id)
+                  }}.jfif"
+                  alt="Blog"
+                  class="w-100 rounded-3"
+                />
+              </figure>
+              <div class="content col-12 col-md-7 p-3">
+                <h5 class="fw-bold">{{ blog.title }}</h5>
+                <p class="mb-0 text-black-50">
+                  <i class="fa-regular fa-clock me-1"></i>
+                  {{ blog.publishedDate | date }}
+                </p>
+              </div>
+            </div>
+            } }
+          </div>
+        </div>
+      </div>
+    </aside>
+  </section>
+</main>
