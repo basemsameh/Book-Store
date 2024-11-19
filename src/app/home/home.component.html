@@ -5,7 +5,10 @@
     <article class="content col-12 col-lg-6 p-4 text-center z-2 text-lg-start">
       <span class="fs-1 moon-font">Up to 30% Off</span>
       <h1>Get Your New Book <br />With The Best Price</h1>
-      <a href="shop" class="btn btn-main rounded-5 px-5 py-3 mt-4"
+      <a
+        href="#"
+        routerLink="shop"
+        class="btn btn-main rounded-5 px-5 py-3 mt-4"
         >Shop Now <i class="fa-solid fa-arrow-right-long ms-2"></i
       ></a>
     </article>
@@ -119,7 +122,7 @@
   <!-- Head Section -->
   <div class="d-flex justify-content-between">
     <h2 class="fs-1 fw-bold">Featured Books</h2>
-    <a href="shop/defualt" class="explore-btn btn rounded-5 me-2"
+    <a href="shop" class="explore-btn btn rounded-5 me-2"
       >Explore More <i class="fa-solid fa-arrow-right-long ms-2"></i
     ></a>
   </div>
@@ -162,23 +165,25 @@
           {{ book.volumeInfo.categories }}
         </p>
         <!-- Title -->
-        <a
-          class="book-title fw-bold fs-5 text-decoration-none"
-          href="shop/details"
+        <h5
+          class="book-title fw-bold"
           style="color: var(--blue)"
+          (click)="navigateToBook(book.id)"
         >
           {{ book.volumeInfo.title | slice : 0 : 24 }}
-        </a>
+        </h5>
         <!-- Price -->
         <p style="color: var(--orange); font-size: 14px" class="fw-bold">
-          {{ book.saleInfo.listPrice.amount | currency }}
+          {{
+            book.saleInfo.listPrice.amount | currency : "EGP" : "symbol-narrow"
+          }}
         </p>
         <div class="d-flex justify-content-between">
           <!-- Author -->
           <figure class="author w-fit">
             <img
               src="../../assets/images/publisher-placeholder.jpg"
-              alt=""
+              alt="Author"
               class="publisher-img rounded-circle me-2"
             />
             @if ( book.volumeInfo.authors) {
@@ -195,7 +200,10 @@
             <i class="fa-regular fa-star"></i>
           </div>
         </div>
-        <button class="btn add-cart-btn w-100">
+        <button
+          class="btn add-cart-btn w-100"
+          (click)="navigateToBook(book.id)"
+        >
           <i class="fa-solid fa-basket-shopping"></i> Add To Cart
         </button>
       </div>
@@ -253,7 +261,7 @@
   <!-- Head Section -->
   <div class="d-flex justify-content-between">
     <h2 class="fs-1 fw-bold">Bookle Top Books</h2>
-    <a href="shop/defualt" class="explore-btn btn rounded-5 me-2"
+    <a href="#" routerLink="shop" class="explore-btn btn rounded-5 me-2"
       >Explore More <i class="fa-solid fa-arrow-right-long ms-2"></i
     ></a>
   </div>
@@ -276,9 +284,7 @@
           <a href="cart" class="text-black text-decoration-none">
             <i class="fa-solid fa-shuffle"></i>
           </a>
-          <a href="shop/details" class="text-black text-decoration-none">
-            <i class="fa-regular fa-eye"></i>
-          </a>
+          <i class="fa-regular fa-eye" (click)="navigateToBook(book.id)"></i>
         </div>
       </figure>
       <!-- Content -->
@@ -286,23 +292,25 @@
         <p class="text-black-50 fw-medium mb-2">
           {{ book.volumeInfo.categories }}
         </p>
-        <a
-          class="book-title fw-bold fs-5 text-decoration-none"
-          href="shop/details"
+        <h5
+          class="book-title fw-bold"
+          (click)="navigateToBook(book.id)"
           style="color: var(--blue)"
         >
           {{ book.volumeInfo.title | slice : 0 : 24 }}
-        </a>
+        </h5>
         <!-- Price -->
         <p style="color: var(--orange); font-size: 14px" class="fw-bold">
-          {{ book.saleInfo.listPrice.amount | currency }}
+          {{
+            book.saleInfo.listPrice.amount | currency : "EGP" : "symbol-narrow"
+          }}
         </p>
         <div class="d-flex justify-content-between">
           <!-- Author -->
           <figure class="author w-fit">
             <img
               src="../../assets/images/publisher-placeholder.jpg"
-              alt=""
+              alt="Author"
               class="publisher-img rounded-circle me-2"
             />
             @if ( book.volumeInfo.authors) {
@@ -334,7 +342,8 @@
         <h3 class="fw-bold fs-2">Find Your Nest Books!</h3>
         <p class="my-4 fw-medium">And get your 25% discount now!</p>
         <a
-          href="shop/defualt"
+          href="#"
+          routerlink="shop"
           class="btn shopNow-btn rounded-5 fw-bold text-decoration-none bg-white"
           >Shop Now <i class="fa-solid fa-arrow-right-long ms-2"></i
         ></a>
@@ -353,7 +362,7 @@
     <!-- Title Section -->
     <div class="d-flex justify-content-between align-items-center">
       <h3 class="fw-bold">Top Rating Books</h3>
-      <a href="shop/defualt" class="explore-btn btn rounded-5 me-2"
+      <a href="#" routerLink="shop" class="explore-btn btn rounded-5 me-2"
         >View More <i class="fa-solid fa-arrow-right-long ms-2"></i
       ></a>
     </div>
@@ -381,13 +390,13 @@
                   {{ book.volumeInfo.categories }}
                 </p>
                 <!-- Title -->
-                <a
-                  class="book-title fw-bold fs-5 text-decoration-none"
-                  href="shop/details"
+                <h5
+                  class="book-title fw-bold"
+                  (click)="navigateToBook(book.id)"
                   style="color: var(--blue)"
                 >
                   {{ book.volumeInfo.title | slice : 0 : 24 }}
-                </a>
+                </h5>
               </div>
               <!-- Icons -->
               <div class="icons-shop col-12 col-md-4 mt-3 mt-md-0">
@@ -395,14 +404,18 @@
                 <a href="cart" class="text-black text-decoration-none">
                   <i class="fa-solid fa-shuffle"></i>
                 </a>
-                <a href="shop/details" class="text-black text-decoration-none">
-                  <i class="fa-regular fa-eye"></i>
-                </a>
+                <i
+                  class="fa-regular fa-eye"
+                  (click)="navigateToBook(book.id)"
+                ></i>
               </div>
             </div>
             <!-- Price -->
             <p style="color: var(--main-color)" class="fw-bold mt-1">
-              {{ book.saleInfo.listPrice.amount | currency }}
+              {{
+                book.saleInfo.listPrice.amount
+                  | currency : "EGP" : "symbol-narrow"
+              }}
             </p>
             <!-- Author -->
             <figure class="author w-fit bg-white mb-2">
@@ -432,7 +445,10 @@
                 <i class="fa-solid fa-star mx-1"></i>
                 <i class="fa-regular fa-star"></i>
               </div>
-              <button class="btn add-cart-btn col-12 col-md-5">
+              <button
+                class="btn add-cart-btn col-12 col-md-5"
+                (click)="navigateToBook(book.id)"
+              >
                 <i class="fa-solid fa-basket-shopping"></i> Add To Cart
               </button>
             </div>
@@ -499,7 +515,7 @@
                 class="fa-solid fa-calendar-days me-1"
                 style="color: var(--main-color)"
               ></i>
-              {{ blog.publishedDate | date}}
+              {{ blog.publishedDate | date }}
             </div>
             <!-- Admin -->
             <div class="col-6 text-end">
@@ -510,15 +526,12 @@
               {{ blog.author }}
             </div>
           </div>
-          <h6 class="news-title my-3">
-            <a
-              href="news/details"
-              class="fw-bold text-black fs-5 text-decoration-none"
-            >
-              {{ blog.title }}
-            </a>
-          </h6>
-          <a href="news/details" class="text-black text-decoration-none"
+          <h5 class="news-title my-3 fw-bold" (click)="navigateToBlog(blog.id)">
+            {{ blog.title }}
+          </h5>
+          <a
+            (click)="navigateToBlog(blog.id)"
+            class="text-black text-decoration-none"
             >Read More
             <i class="fa-solid fa-arrow-right-long ms-1"></i>
           </a>

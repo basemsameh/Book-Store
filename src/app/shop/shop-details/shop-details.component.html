@@ -1,0 +1,572 @@
+<app-breadcrumb-wrapper [title]="'Shop Details'"></app-breadcrumb-wrapper>
+<main class="container-fluid my-4">
+  <section class="book row py-5 px-2">
+    <!-- Image -->
+    <div class="image col-12 col-lg-5">
+      <!-- Current Book -->
+      <figure class="rounded-4 border bg-body-tertiary p-4 p-lg-5">
+        <img
+          [src]="currentBook.volumeInfo.imageLinks.smallThumbnail"
+          [alt]="currentBook.volumeInfo.title"
+        />
+      </figure>
+      <!-- Other Books -->
+      <div class="other-books mt-4 row p-2">
+        @for (book of books | slice:8:16; track book.id) {
+        <div class="col-6 col-md-4 col-lg-3">
+          <figure
+            class="border rounded-3 p-2"
+            (click)="navigateToBook(book.id)"
+          >
+            <img
+              style="height: 150px"
+              [src]="book.volumeInfo.imageLinks.smallThumbnail"
+              [alt]="book.volumeInfo.title"
+            />
+          </figure>
+        </div>
+        }
+      </div>
+    </div>
+    <!-- Content -->
+    <article class="content col-12 col-lg-7 pt-md-0 p-4 p-lg-5 pt-lg-0">
+      <!-- Title -->
+      <h2 class="fw-bold">{{ currentBook.volumeInfo.title }}</h2>
+      <!-- Review -->
+      <div class="review mt-3">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star mx-1"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star mx-1"></i>
+        <i class="fa-regular fa-star me-2"></i>
+        <span class="fw-medium">(100 Customer Reviews)</span>
+      </div>
+      <!-- Description -->
+      <p class="mt-3 description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar,
+        tortor quis varius pretium est felis scelerisque nulla, vitae placerat
+        justo nunc a massa. Aenean nec montes vestibulum urna vel imperdiet
+        ipsum. Orci varius natoque penatibus et magnis dis ridicul parturient
+        montes.
+      </p>
+      <!-- Price -->
+      <strong class="fs-2 price">{{
+        currentBook.saleInfo.listPrice.amount
+          | currency : "EGP" : "symbol-narrow"
+      }}</strong>
+      <!-- Qunatity & Read A Little & Add to cart & whishlist -->
+      <div class="row mt-4 align-items-center btns pb-3">
+        <!-- Qunatity -->
+        <div class="qunatity col-12 col-md-6 mb-4">
+          <div class="input-group border rounded-5 py-2">
+            <button
+              class="btn ps-4 fs-5"
+              (click)="subtractQuentity(quantityInput)"
+            >
+              -
+            </button>
+            <input
+              #quantityInput
+              type="number"
+              name="qunatity"
+              value="1"
+              min="1"
+              class="form-control border-0 text-center fs-5 shadow-none"
+            />
+            <button class="btn pe-4 fs-5" (click)="addQuentity(quantityInput)">
+              +
+            </button>
+          </div>
+        </div>
+        <!-- Read A Little Button -->
+        <div class="btn-read col-12 col-md-6 mb-4">
+          <button
+            class="btn btn-main rounded-5 w-100 py-3"
+            data-bs-toggle="modal"
+            data-bs-target="#readALittle"
+          >
+            Read A Little
+          </button>
+        </div>
+        <!-- Add To Cart & Add to Whislist buttons -->
+        <div
+          class="add-btns col-12 mb-4 mb-md-0 d-flex align-items-center justify-content-between"
+        >
+          <!-- Add To Cart Button -->
+          <button class="btn btn-main rounded-5 w-75 py-3">
+            <i class="fa-solid fa-basket-shopping me-1"></i> Add To Cart
+          </button>
+          <!-- Add to Whislist -->
+          <button
+            class="btn btn-main rounded-circle mx-auto mx-md-0"
+            title="Add to Whislist"
+          >
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+        <!-- <div class="btn-whish col-12 col-md-6 col-lg-2">
+        </div> -->
+      </div>
+      <hr />
+      <!-- Book Category -->
+      <div class="p-2 rounded-4 border book-category mt-4">
+        <ul class="bg-body-tertiary rounded-4 list-unstyled p-2 py-3 row m-0">
+          <li class="col-12 col-md-6 col-lg-4 mb-3">
+            <strong>SKU:</strong> FTC1020B65D
+          </li>
+          <li class="col-12 col-md-6 col-lg-4 mb-3">
+            <strong>Tags:</strong> Design Low Book
+          </li>
+          <li class="col-12 col-md-6 col-lg-4 mb-3">
+            <strong>Total page:</strong> {{ currentBook.volumeInfo.pageCount }}
+          </li>
+          <li class="col-12 col-md-6 col-lg-4 mb-3">
+            <strong>Publish Years:</strong>
+            {{ currentBook.volumeInfo.publishedDate | date : "yyyy" }}
+          </li>
+          <li class="col-12 col-md-6 col-lg-4 mb-3">
+            <strong>Category:</strong> {{ currentBook.volumeInfo.categories }}
+          </li>
+          <li class="col-12 col-md-6 col-lg-4 mb-3">
+            <strong>Format:</strong> Hardcover
+          </li>
+          <li class="col-12 col-md-6 col-lg-4 mb-3 mb-md-0">
+            <strong>Language:</strong> English
+          </li>
+          <li class="col-12 col-md-6 col-lg-4">
+            <strong>Century:</strong> Egypt
+          </li>
+        </ul>
+      </div>
+      <!-- Book Category -->
+      <div class="p-2 rounded-4 border book-category mt-4">
+        <ul class="bg-body-tertiary rounded-4 list-unstyled p-2 py-4 row m-0">
+          <li class="col-12 col-lg-5 mb-3">
+            <i class="fa-solid fa-check me-1 text-success"></i> Free shipping
+            orders from $150
+          </li>
+          <li class="col-12 col-lg-7 mb-3">
+            <i class="fa-solid fa-check me-1 text-success"></i> Mamaya Flash
+            Discount: Starting at 30% Off
+          </li>
+          <li class="col-12 col-lg-5 mb-3 mb-lg-0">
+            <i class="fa-solid fa-check me-1 text-success"></i> 30 days exchange
+            & return
+          </li>
+          <li class="col-12 col-lg-7">
+            <i class="fa-solid fa-check me-1 text-success"></i> Safe & Secure
+            online shopping
+          </li>
+        </ul>
+      </div>
+      <!-- Also Available On -->
+      <div class="row mt-4 align-items-center">
+        <p class="col-6 col-md-3 mb-md-0 fw-bold" style="color: var(--blue)">
+          Also Available On:
+        </p>
+        <!-- Customer -->
+        <figure class="col-6 col-md-3 mb-md-0">
+          <a href="https://customer.io/">
+            <img
+              src="../../../assets/images/shop-page/cutomerio.png"
+              alt="cutomerio"
+              class="w-100"
+            />
+          </a>
+        </figure>
+        <!-- Amazon -->
+        <figure class="col-6 col-md-3 mb-md-0">
+          <a href="https://amazon.com" class="">
+            <img
+              src="../../../assets/images/shop-page/amazon.png"
+              alt="amazon"
+              class="w-100"
+            />
+          </a>
+        </figure>
+        <!-- Dropbox -->
+        <figure class="col-6 col-md-3 mb-md-0">
+          <a href="https://www.dropbox.com/">
+            <img
+              src="../../../assets/images/shop-page/dropbox.png"
+              alt="dropbox"
+              class="w-100"
+            />
+          </a>
+        </figure>
+      </div>
+    </article>
+    <!-- Read A Little Modal -->
+    <div
+      class="modal fade"
+      id="readALittle"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered p-3 bg-white rounded-3">
+        <div class="modal-content">
+          <div class="modal-header p-3 border-0">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4 p-lg-5 border-0">
+            <h4 class="text-center fw-bold mb-4">The Role Of Book</h4>
+            <p>
+              Educating the Public <br />
+              Political books play a crucial role in educating the public about
+              political theories, historical events, policies, and the workings
+              of governments. They provide readers with insights into complex
+              political concepts and the historical context behind current
+              events, helping to foster a more informed citizenry.
+            </p>
+            <p>
+              Shaping Public Opinion <br />
+              Authors of political books often aim to influence public opinion
+              by presenting arguments and perspectives on various issues. These
+              books can sway readers' views, either reinforcing their existing
+              beliefs or challenging them to consider alternative viewpoints.
+              This influence can extend to political debates and discussions in
+              the public sphere.
+            </p>
+            <p>
+              Documenting History <br />
+              Political books serve as valuable records of historical events and
+              political movements. They document the thoughts, actions, and
+              decisions of political leaders and activists, providing future
+              generations with a detailed account of significant periods and
+              events. This historical documentation is essential for
+              understanding the evolution of political systems and ideologies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- More Info About Book -->
+  <section class="more-info pb-4">
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link active border-0"
+          id="desc-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#desc-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="desc-tab-pane"
+          aria-selected="true"
+        >
+          Description
+        </button>
+      </li>
+      <li class="nav-item mx-2" role="presentation">
+        <button
+          class="nav-link border-0"
+          id="addInfo-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#addInfo-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="addInfo-tab-pane"
+          aria-selected="false"
+        >
+          Additional Information
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link border-0"
+          id="reviews-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#reviews-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="reviews-tab-pane"
+          aria-selected="false"
+        >
+          Reviews (3)
+        </button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <!-- Book Description -->
+      <div
+        class="tab-pane fade show active"
+        id="desc-tab-pane"
+        role="tabpanel"
+        aria-labelledby="desc-tab"
+        tabindex="0"
+      >
+        <p class="pt-4 description">{{ currentBook.volumeInfo.description }}</p>
+      </div>
+      <!-- Additional Information Part -->
+      <div
+        class="tab-pane fade"
+        id="addInfo-tab-pane"
+        role="tabpanel"
+        aria-labelledby="addInfo-tab"
+        tabindex="0"
+      >
+        <table class="table mt-4">
+          <tbody>
+            <tr>
+              <th>Availability</th>
+              <td>Available</td>
+            </tr>
+            <tr>
+              <th>Categories</th>
+              <td>{{ currentBook.volumeInfo.categories }}</td>
+            </tr>
+            <tr>
+              <th>Publish Date</th>
+              <td>{{ currentBook.volumeInfo.publishedDate }}</td>
+            </tr>
+            <tr>
+              <th>Total Page</th>
+              <td>{{ currentBook.volumeInfo.pageCount }}</td>
+            </tr>
+            <tr>
+              <th>Format</th>
+              <td>Hardcover</td>
+            </tr>
+            <tr>
+              <th>Country</th>
+              <td>Egypt</td>
+            </tr>
+            <tr>
+              <th>Language</th>
+              <td>English</td>
+            </tr>
+            <tr>
+              <th>Dimensions</th>
+              <td>30 × 32 × 46 Inches</td>
+            </tr>
+            <tr>
+              <th>Weight</th>
+              <td>2.5 Pounds</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Reviews -->
+      <div
+        class="tab-pane fade"
+        id="reviews-tab-pane"
+        role="tabpanel"
+        aria-labelledby="reviews-tab"
+        tabindex="0"
+      >
+        <div class="row mt-4">
+          @for (comment of comments; track comment.id) {
+          <!-- Image -->
+          <div class="reviews row" style="max-width: 1200px">
+            <figure class="mb-md-0 rounded-circle text-center col-12 col-md-2">
+              <img
+                src="../../assets/images/blogs-page/comment-{{
+                  comment.id
+                }}.png"
+                alt="Review"
+                class="rounded-circle"
+              />
+            </figure>
+            <!-- Info -->
+            <div class="info col-12 col-md-10 mt-3 mt-md-0">
+              <h4 class="fw-bold mb-1">{{ comment.fullName }}</h4>
+              <span class="col-6 d-inline-block text-black-50"
+                >November 20, 2024 at 2:37 pm</span
+              >
+              <span
+                class="d-inline-block col-6 text-end"
+                style="color: var(--orange)"
+              >
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+              <p class="my-2">
+                Neque porro est qui dolorem ipsum quia quaed inventor veritatis
+                et quasi architecto var sed efficitur turpis gilla sed sit amet
+                finibus eros. Lorem Ipsum is simply dummy
+              </p>
+            </div>
+          </div>
+          <hr class="my-4" />
+          }
+        </div>
+        <!-- Your Rating -->
+        <div class="your-rating mt-4">
+          <h3 class="fw-bold">Your Rating*</h3>
+          <p class="mt-3">
+            Your Rating* <i class="fa-regular fa-star ms-2"></i>
+            <i class="fa-regular fa-star mx-1"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star mx-1"></i>
+            <i class="fa-regular fa-star"></i>
+          </p>
+          <!-- Form -->
+          <form action="#" class="row">
+            <!-- Name -->
+            <div class="name col-12 col-md-6 p-3">
+              <label for="name" class="form-label"
+                >Your Name
+                <span style="color: var(--main-color)">*</span></label
+              >
+              <input
+                type="text"
+                name="name"
+                class="form-control shadow-none p-3"
+                id="name"
+                placeholder="Your Name"
+              />
+            </div>
+            <!-- Email -->
+            <div class="name col-12 col-md-6 p-3">
+              <label for="email" class="form-label"
+                >Your Email
+                <span style="color: var(--main-color)">*</span></label
+              >
+              <input
+                type="email"
+                name="email"
+                class="form-control shadow-none p-3"
+                id="email"
+                placeholder="Your Email"
+              />
+            </div>
+            <!-- Message -->
+            <div class="message col-12 p-3">
+              <label for="message" class="form-label"
+                >Message <span style="color: var(--main-color)">*</span></label
+              >
+              <textarea
+                name="message"
+                id="message"
+                class="form-control shadow-none p-3"
+                placeholder="Write Message"
+                rows="8"
+              ></textarea>
+            </div>
+            <!--  -->
+            <div class="terms my-3">
+              <input
+                type="checkbox"
+                id="accept-terms"
+                class="form-check-input shadow-none d-inline-block me-2"
+              />
+              <label for="accept-terms" class="text-capitalize"
+                >I accept your terms & conditions</label
+              >
+            </div>
+            <!-- Submit -->
+            <button type="submit" class="ms-3 rounded-5 w-fit btn btn-main">
+              Submit Now
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Related Products Section -->
+  <section class="shop-sec p-3 mt-5">
+    <!-- Head Section -->
+    <div class="head-sec">
+      <h2 class="fs-1 fw-bold text-center">Related Products</h2>
+      <p class="text-center mx-auto" style="max-width: 500px;">
+        Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec at
+        nulla nulla. Duis posuere ex lacus
+      </p>
+    </div>
+    <!-- Body Section -->
+    <swiper-container
+      [slidesPerView]="checkSizeOfWindow()"
+      [loop]="true"
+      [autoplay]="{ delay: 2000, disableOnInteraction: false }"
+      autoplay="true"
+      speed="1000"
+      class="mySwiper mt-5"
+    >
+      @for (book of books; track book.id) {
+      <swiper-slide class="w-fit">
+        <!-- Image -->
+        <figure
+          class="text-center rounded-3 mb-0 bg-body-secondary position-relative p-4 mx-auto"
+          style="width: 90%"
+        >
+          <img
+            style="height: 200px"
+            [src]="book.volumeInfo.imageLinks.smallThumbnail"
+            [alt]="book.volumeInfo.title"
+          />
+          <!-- Icons -->
+          <div class="icons-shop position-absolute">
+            <i class="fa-regular fa-heart" title="Add To Wishlist"></i>
+            <a href="cart" class="text-black text-decoration-none">
+              <i class="fa-solid fa-shuffle"></i>
+            </a>
+            <i class="fa-regular fa-eye" (click)="navigateToBook(book.id)"></i>
+          </div>
+        </figure>
+        <!-- Content -->
+        <div class="content p-3">
+          <!-- Category -->
+          <p class="text-black-50 fw-medium mb-2">
+            {{ book.volumeInfo.categories }}
+          </p>
+          <!-- Title -->
+          <h5
+            class="book-title fw-bold"
+            (click)="navigateToBook(book.id)"
+            style="color: var(--blue)"
+          >
+            {{ book.volumeInfo.title | slice : 0 : 24 }}
+          </h5>
+          <!-- Price -->
+          <p style="color: var(--orange); font-size: 14px" class="fw-bold">
+            {{
+              book.saleInfo.listPrice.amount
+                | currency : "EGP" : "symbol-narrow"
+            }}
+          </p>
+          <div class="d-flex justify-content-between">
+            <!-- Author -->
+            <figure class="author w-fit">
+              <img
+                src="../../assets/images/publisher-placeholder.jpg"
+                alt=""
+                class="publisher-img rounded-circle me-2"
+              />
+              @if ( book.volumeInfo.authors) {
+              <span>{{ checkTextLength(book.volumeInfo.authors[0]) }}</span>
+              } @else {
+              <span>Basem Sameh</span>
+              }
+            </figure>
+            <div class="ms-auto w-fit" style="color: var(--orange)">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+          </div>
+          <button
+            class="btn add-cart-btn w-100"
+            (click)="navigateToBook(book.id)"
+          >
+            <i class="fa-solid fa-basket-shopping"></i> Add To Cart
+          </button>
+        </div>
+      </swiper-slide>
+      }
+    </swiper-container>
+  </section>
+</main>

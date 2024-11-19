@@ -7,10 +7,14 @@ import { AuthorComponent } from './author/author.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { SingleBlogComponent } from './single-blog/single-blog.component';
+import { ShopComponent } from './shop/shop.component';
+import { ShopDetailsComponent } from './shop/shop-details/shop-details.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'shop', component: ShopComponent },
+  { path: 'shop/:id', component: ShopDetailsComponent },
   { path: 'pages/about', component: AboutComponent },
   { path: 'pages/author', component: AuthorComponent },
   { path: 'pages/faqs', component: FaqsComponent },

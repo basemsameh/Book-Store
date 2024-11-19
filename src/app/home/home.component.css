@@ -135,23 +135,10 @@ section {
   border: 1px solid var(--orange);
 }
 
-.add-cart-btn {
-  background-color: var(--light-main-color);
-  color: var(--main-color);
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-weight: 600;
-}
-
-/* Public health service publication */
-.add-cart-btn:hover {
-  background-color: var(--orange);
-  color: var(--white);
-}
-
 /* Book Title */
 .book-title:hover {
   color: var(--orange) !important;
+  cursor: pointer;
 }
 
 swiper-slide:hover figure .icons-shop {
@@ -330,8 +317,10 @@ figure .icons-shop {
   transform: scale(1.1) rotate(4deg);
 }
 
+.latest-news .row .content h5:hover,
 .latest-news .row .content a:hover {
   color: var(--orange) !important;
+  cursor: pointer;
 }
 
 @media (width >= 768px) {

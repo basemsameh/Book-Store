@@ -1,0 +1,525 @@
+<!-- Books And Aside -->
+<section class="row m-0 booksAndAside">
+  <!-- Aside -->
+  <aside class="col-12 pt-3">
+    <!-- Search -->
+    <div class="search border rounded-3 p-3">
+      <div class="input-group">
+        <input
+          type="search"
+          name="search"
+          placeholder="Search.."
+          class="form-control rounded-end-0 shadow-none"
+        />
+        <button class="btn btn-main">Search</button>
+      </div>
+    </div>
+    <!-- Categories & Product Status & Price Filter & Review -->
+    <article class="row">
+      <!-- Categories -->
+      <div
+        class="categories border rounded-3 p-3 position-relative mt-5 col-12 col-md-5 col-12 col-md-6"
+      >
+        <h5
+          class="position-absolute shadow fw-bold btn-main text-center rounded-3 w-75 top-0 start-50 translate-middle"
+        >
+          Categories
+        </h5>
+        <div class="content pt-4">
+          @for (category of booksCategories; track $index) {
+          <p
+            class="border category rounded-2 p-3"
+            (click)="toggleActiveCategory($index)"
+          >
+            {{ category.volumeInfo.categories[0] }}
+          </p>
+          }
+        </div>
+      </div>
+      <!-- Product Status & Price Filter & Review -->
+      <div class="col-12 col-md-6 divsCollection">
+        <!-- Product Status -->
+        <div
+          class="product-status border rounded-3 p-3 position-relative mt-5 col-12 col-md-5 w-100"
+        >
+          <h5
+            class="position-absolute shadow fw-bold btn-main text-center rounded-3 w-75 top-0 start-50 translate-middle"
+          >
+            Product Status
+          </h5>
+          <div class="content pt-4">
+            <!-- Stock -->
+            <select
+              name="stock"
+              id="stock"
+              class="form-select p-3 mb-3 shadow-none"
+            >
+              <option value="in-stock">In Stock</option>
+              <option value="castle-in-the-sky">Castle In The Sky</option>
+              <option value="the-hidden-mystery-behind">
+                The Hidden Mystery Behind
+              </option>
+              <option value="flovely-and-unicom-erna">
+                Flovely And Unicom Erna
+              </option>
+            </select>
+            <!-- Sale -->
+            <select name="sale" id="sale" class="form-select p-3 shadow-none">
+              <option value="on-sale">On Sale</option>
+              <option value="flovely-and-unicom-erna">
+                Flovely And Unicom Erna
+              </option>
+              <option value="castle-in-the-sky">Castle In The Sky</option>
+              <option value="how-deal-with-very-bad-book">
+                How Deal With Very Bad BOOK
+              </option>
+            </select>
+          </div>
+        </div>
+        <!-- Filter By Price -->
+        <div
+          class="categories border rounded-3 p-3 position-relative mt-5 col-12 col-md-5 w-100"
+        >
+          <h5
+            class="position-absolute shadow fw-bold btn-main text-center rounded-3 w-75 top-0 start-50 translate-middle"
+          >
+            Filter By Price
+          </h5>
+          <div class="content pt-4">
+            <div class="input-group mb-3 rounded-3" id="minMaxPrice">
+              <!-- Min Price -->
+              <input
+                class="rounded-3 styled-range"
+                type="range"
+                step="1"
+                min="0"
+                max="4999"
+                name="price"
+                [(ngModel)]="minPrice"
+                id="rangeInpt1"
+                (input)="updateSliderValue('rangeInpt1')"
+              />
+              <!-- Max Price -->
+              <input
+                id="rangeInpt2"
+                type="range"
+                step="1"
+                min="5000"
+                max="10000"
+                name="price"
+                [(ngModel)]="maxPrice"
+                class="rounded-3 styled-range"
+                (input)="updateSliderValue('rangeInpt2')"
+              />
+            </div>
+            <button class="btn-main btn fw-medium me-3 filter-btn">
+              Filter
+            </button>
+            <label for="minMaxPrice">${{ minPrice }} - ${{ maxPrice }}</label>
+          </div>
+        </div>
+        <!-- By Review -->
+        <div
+          class="review border rounded-3 p-3 position-relative mt-5 col-12 col-md-5 w-100"
+        >
+          <h5
+            class="position-absolute shadow fw-bold btn-main text-center rounded-3 w-75 top-0 start-50 translate-middle"
+          >
+            By Review
+          </h5>
+          <div class="content pt-4">
+            @for (review of reviews; track review.startsNum) {
+            <div class="review mb-2">
+              <input
+                type="checkbox"
+                name="review"
+                id="review-{{ review.reviewNum }}"
+                class="form-check-input shadow-none me-3"
+              />
+              <label
+                for="review-{{ review.reviewNum }}"
+                [innerHTML]="getNumberStars($index)"
+              ></label>
+              <strong class="ms-2">{{ review.reviewNum }}</strong>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+    </article>
+  </aside>
+  <!-- Books -->
+  <article class="books">
+    <div class="tab-content" id="myTabContent">
+      <!-- First Page -->
+      <div
+        class="tab-pane fade show active"
+        id="fpage-tab-pane"
+        role="tabpanel"
+        aria-labelledby="fpage-tab"
+        tabindex="0"
+      >
+        <div class="row">
+          @for (book of books | slice:4:20; track book.id) { @if
+          (currentCategory.length) { @if
+          (currentCategory.includes(book.volumeInfo.categories[0])) {
+          <div class="col-12 col-md-6 col-lg-3 p-3">
+            <div class="book">
+              <!-- Image -->
+              <figure
+                class="text-center rounded-3 mb-0 bg-body-secondary position-relative p-4"
+              >
+                <img
+                  style="height: 200px"
+                  [src]="book.volumeInfo.imageLinks.smallThumbnail"
+                  [alt]="book.volumeInfo.title"
+                />
+                <!-- Icons -->
+                <div class="icons-shop position-absolute">
+                  <i class="fa-regular fa-heart" title="Add To Wishlist"></i>
+                  <a href="cart" class="text-black text-decoration-none">
+                    <i class="fa-solid fa-shuffle"></i>
+                  </a>
+                  <i
+                    class="fa-regular fa-eye"
+                    (click)="navigateToBook(book.id)"
+                    title="Show Book"
+                  ></i>
+                </div>
+              </figure>
+              <!-- Content -->
+              <div class="content mt-3">
+                <!-- Title -->
+                <h5
+                  class="book-title fw-bold"
+                  (click)="navigateToBook(book.id)"
+                  style="color: var(--blue)"
+                >
+                  {{ book.volumeInfo.title }}
+                </h5>
+                <!-- Price and Review -->
+                <div class="d-flex justify-content-between mt-2">
+                  <!-- Price -->
+                  <p
+                    style="color: var(--orange); font-size: 14px"
+                    class="fw-bold w-fit fs-6"
+                  >
+                    {{
+                      book.saleInfo.listPrice.amount
+                        | currency : "EGP" : "symbol-narrow"
+                    }}
+                  </p>
+                  <!-- Review -->
+                  <div class="ms-auto w-fit fw-medium">
+                    <i
+                      class="fa-solid fa-star"
+                      style="color: var(--star-color)"
+                    ></i>
+                    3.4 (25)
+                  </div>
+                </div>
+                <button
+                  class="btn add-cart-btn w-100"
+                  (click)="navigateToBook(book.id)"
+                >
+                  <i class="fa-solid fa-basket-shopping"></i> Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          } } @else {
+          <div class="col-12 col-md-6 col-lg-3 p-3">
+            <div class="book">
+              <!-- Image -->
+              <figure
+                class="text-center rounded-3 mb-0 bg-body-secondary position-relative p-4"
+              >
+                <img
+                  style="height: 200px"
+                  [src]="book.volumeInfo.imageLinks.smallThumbnail"
+                  [alt]="book.volumeInfo.title"
+                />
+                <!-- Icons -->
+                <div class="icons-shop position-absolute">
+                  <i class="fa-regular fa-heart" title="Add To Wishlist"></i>
+                  <a href="cart" class="text-black text-decoration-none">
+                    <i class="fa-solid fa-shuffle"></i>
+                  </a>
+                  <i
+                    class="fa-regular fa-eye"
+                    (click)="navigateToBook(book.id)"
+                    title="Show Book"
+                  ></i>
+                </div>
+              </figure>
+              <!-- Content -->
+              <div class="content mt-3">
+                <!-- Title -->
+                <h5
+                  class="book-title fw-bold"
+                  (click)="navigateToBook(book.id)"
+                  style="color: var(--blue)"
+                >
+                  {{ book.volumeInfo.title }}
+                </h5>
+                <!-- Price and Review -->
+                <div class="d-flex justify-content-between mt-2">
+                  <!-- Price -->
+                  <p
+                    style="color: var(--orange); font-size: 14px"
+                    class="fw-bold w-fit fs-6"
+                  >
+                    {{ book.saleInfo.listPrice.amount | currency }}
+                  </p>
+                  <!-- Review -->
+                  <div class="ms-auto w-fit fw-medium">
+                    <i
+                      class="fa-solid fa-star"
+                      style="color: var(--star-color)"
+                    ></i>
+                    3.4 (25)
+                  </div>
+                </div>
+                <button
+                  class="btn add-cart-btn w-100"
+                  (click)="navigateToBook(book.id)"
+                >
+                  <i class="fa-solid fa-basket-shopping"></i> Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          } }
+        </div>
+      </div>
+      <!-- Second Page -->
+      <div
+        class="tab-pane fade"
+        id="lpage-tab-pane"
+        role="tabpanel"
+        aria-labelledby="lpage-tab"
+        tabindex="0"
+      >
+        <div class="row">
+          @for (book of books | slice:0:16; track book.id) { @if
+          (currentCategory.length) { @if
+          (currentCategory.includes(book.volumeInfo.categories[0])) {
+          <div class="col-12 col-md-6 col-lg-3 p-3">
+            <div class="book">
+              <!-- Image -->
+              <figure
+                class="text-center rounded-3 mb-0 bg-body-secondary position-relative p-4"
+              >
+                <img
+                  style="height: 200px"
+                  [src]="book.volumeInfo.imageLinks.smallThumbnail"
+                  [alt]="book.volumeInfo.title"
+                />
+                <!-- Icons -->
+                <div class="icons-shop position-absolute">
+                  <i class="fa-regular fa-heart" title="Add To Wishlist"></i>
+                  <a href="cart" class="text-black text-decoration-none">
+                    <i class="fa-solid fa-shuffle"></i>
+                  </a>
+                  <i
+                    class="fa-regular fa-eye"
+                    (click)="navigateToBook(book.id)"
+                    title="Show Book"
+                  ></i>
+                </div>
+              </figure>
+              <!-- Content -->
+              <div class="content mt-3">
+                <!-- Title -->
+                <h5
+                  class="book-title fw-bold"
+                  (click)="navigateToBook(book.id)"
+                  style="color: var(--blue)"
+                >
+                  {{ book.volumeInfo.title }}
+                </h5>
+                <!-- Price and Review -->
+                <div class="d-flex justify-content-between mt-2">
+                  <!-- Price -->
+                  <p
+                    style="color: var(--orange); font-size: 14px"
+                    class="fw-bold w-fit fs-6"
+                  >
+                    {{
+                      book.saleInfo.listPrice.amount
+                        | currency : "EGP" : "symbol-narrow"
+                    }}
+                  </p>
+                  <!-- Review -->
+                  <div class="ms-auto w-fit fw-medium">
+                    <i
+                      class="fa-solid fa-star"
+                      style="color: var(--star-color)"
+                    ></i>
+                    3.4 (25)
+                  </div>
+                </div>
+                <button
+                  class="btn add-cart-btn w-100"
+                  (click)="navigateToBook(book.id)"
+                >
+                  <i class="fa-solid fa-basket-shopping"></i> Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          } } @else {
+          <div class="col-12 col-md-6 col-lg-3 p-3">
+            <div class="book">
+              <!-- Image -->
+              <figure
+                class="text-center rounded-3 mb-0 bg-body-secondary position-relative p-4"
+              >
+                <img
+                  style="height: 200px"
+                  [src]="book.volumeInfo.imageLinks.smallThumbnail"
+                  [alt]="book.volumeInfo.title"
+                />
+                <!-- Icons -->
+                <div class="icons-shop position-absolute">
+                  <i class="fa-regular fa-heart" title="Add To Wishlist"></i>
+                  <a href="cart" class="text-black text-decoration-none">
+                    <i class="fa-solid fa-shuffle"></i>
+                  </a>
+                  <i
+                    class="fa-regular fa-eye"
+                    (click)="navigateToBook(book.id)"
+                    title="Show Book"
+                  ></i>
+                </div>
+              </figure>
+              <!-- Content -->
+              <div class="content mt-3">
+                <!-- Title -->
+                <h5
+                  class="book-title fw-bold"
+                  (click)="navigateToBook(book.id)"
+                  style="color: var(--blue)"
+                >
+                  {{ book.volumeInfo.title }}
+                </h5>
+                <!-- Price and Review -->
+                <div class="d-flex justify-content-between mt-2">
+                  <!-- Price -->
+                  <p
+                    style="color: var(--orange); font-size: 14px"
+                    class="fw-bold w-fit fs-6"
+                  >
+                    {{ book.saleInfo.listPrice.amount | currency }}
+                  </p>
+                  <!-- Review -->
+                  <div class="ms-auto w-fit fw-medium">
+                    <i
+                      class="fa-solid fa-star"
+                      style="color: var(--star-color)"
+                    ></i>
+                    3.4 (25)
+                  </div>
+                </div>
+                <button
+                  class="btn add-cart-btn w-100"
+                  (click)="navigateToBook(book.id)"
+                >
+                  <i class="fa-solid fa-basket-shopping"></i> Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          } }
+        </div>
+      </div>
+    </div>
+    <!-- Nav tas -->
+    <ul class="nav nav-tabs w-fit mx-auto mt-5 mb-4" id="myTab" role="tablist">
+      <!-- Left arrow (first page) -->
+      <li
+        class="nav-item"
+        [class.opacity-0]="hideLeftButton"
+        role="presentation"
+      >
+        <button
+          [disabled]="hideLeftButton"
+          class="nav-link"
+          id="fpage-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#fpage-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="fpage-tab-pane"
+          aria-selected="false"
+          (click)="
+            hideRightButton = false; hideLeftButton = true; scrollToTop()
+          "
+        >
+          <i class="fa-solid fa-angles-left"></i>
+        </button>
+      </li>
+      <!-- First Page -->
+      <li class="nav-item mx-3" role="presentation">
+        <button
+          class="nav-link active"
+          [class.active]="hideLeftButton"
+          id="fpage-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#fpage-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="fpage-tab-pane"
+          aria-selected="true"
+          (click)="
+            hideRightButton = false; hideLeftButton = true; scrollToTop()
+          "
+        >
+          1
+        </button>
+      </li>
+      <!-- Last Page -->
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="lpage-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#lpage-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="lpage-tab-pane"
+          aria-selected="false"
+          [class.active]="hideRightButton"
+          (click)="
+            hideLeftButton = false; hideRightButton = true; scrollToTop()
+          "
+        >
+          2
+        </button>
+      </li>
+      <!-- Right arrow (last page) -->
+      <li
+        class="nav-item ms-3"
+        [class.opacity-0]="hideRightButton"
+        role="presentation"
+      >
+        <button
+          [disabled]="hideRightButton"
+          class="nav-link"
+          id="lpage-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#lpage-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="lpage-tab-pane"
+          aria-selected="false"
+          (click)="
+            hideLeftButton = false; hideRightButton = true; scrollToTop()
+          "
+        >
+          <i class="fa-solid fa-angles-right"></i>
+        </button>
+      </li>
+    </ul>
+  </article>
+</section>

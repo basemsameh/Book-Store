@@ -1,0 +1,1702 @@
+[
+    {
+        "kind": "books#volume",
+        "id": "ups8CwAAQBAJ",
+        "etag": "A7ji8vo/J+g",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/ups8CwAAQBAJ",
+        "volumeInfo": {
+            "title": "Microsoft Word 2016 Step By Step",
+            "authors": [
+                "InfoWorld Media Group, Inc."
+            ],
+            "publisher": "InfoWorld Media Group, Inc.",
+            "publishedDate": "2015-12-18",
+            "description": "The quick way to learn Microsoft Word 2016! This is learning made easy. Get more done quickly with Word 2016. Jump in wherever you need answers--brisk lessons and colorful screenshots show you exactly what to do, step by step. Get easy-to-follow guidance from a certified Microsoft Office Specialist Master Learn and practice new skills while working with sample content, or look up specific procedures Create visually appealing documents for school, business, community, or personal purposes Use built-in tools to capture and edit graphics Present data in tables, diagrams, and charts Track and compile reference materials Manage document collaboration and review Fix privacy, accessibility, and compatibility issues Supercharge your efficiency by creating custom styles, themes, and templates",
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9780735699458"
+                },
+                {
+                    "type": "ISBN_10",
+                    "identifier": "0735699453"
+                }
+            ],
+            "readingModes": {
+                "text": true,
+                "image": true
+            },
+            "pageCount": 815,
+            "printType": "BOOK",
+            "categories": [
+                "Business & Economics"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": true,
+            "contentVersion": "1.9.8.0.preview.3",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=ups8CwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=ups8CwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com.eg/books?id=ups8CwAAQBAJ&pg=PT122&dq=search+term&hl=&cd=1&source=gbs_api",
+            "infoLink": "https://play.google.com/store/books/details?id=ups8CwAAQBAJ&source=gbs_api",
+            "canonicalVolumeLink": "https://play.google.com/store/books/details?id=ups8CwAAQBAJ"
+        },
+        "saleInfo": {
+            "country": "EG",
+            "saleability": "FOR_SALE",
+            "isEbook": true,
+            "listPrice": {
+                "amount": 898.11,
+                "currencyCode": "EGP"
+            },
+            "retailPrice": {
+                "amount": 898.11,
+                "currencyCode": "EGP"
+            },
+            "buyLink": "https://play.google.com/store/books/details?id=ups8CwAAQBAJ&rdid=book-ups8CwAAQBAJ&rdot=1&source=gbs_api",
+            "offers": [
+                {
+                    "finskyOfferType": 1,
+                    "listPrice": {
+                        "amountInMicros": 898110000,
+                        "currencyCode": "EGP"
+                    },
+                    "retailPrice": {
+                        "amountInMicros": 898110000,
+                        "currencyCode": "EGP"
+                    }
+                }
+            ]
+        },
+        "accessInfo": {
+            "country": "EG",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Microsoft_Word_2016_Step_By_Step-sample-epub.acsm?id=ups8CwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Microsoft_Word_2016_Step_By_Step-sample-pdf.acsm?id=ups8CwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=ups8CwAAQBAJ&hl=&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "... search box. To find a search result in the document 1. On the Results page of the Navigation pane, point to a search ... term by selecting the Match case check box. • Exclude occurrences of the <b>search term</b> that appear within other&nbsp;..."
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "uT0EAAAAMBAJ",
+        "etag": "XAO5CrM1fyE",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/uT0EAAAAMBAJ",
+        "volumeInfo": {
+            "title": "InfoWorld",
+            "publishedDate": "1991-09-23",
+            "description": "InfoWorld is targeted to Senior IT professionals. Content is segmented into Channels and Topic Centers. InfoWorld also celebrates people, companies, and projects.",
+            "readingModes": {
+                "text": false,
+                "image": true
+            },
+            "pageCount": 104,
+            "printType": "MAGAZINE",
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "preview-1.0.0",
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=uT0EAAAAMBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=uT0EAAAAMBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com.eg/books?id=uT0EAAAAMBAJ&pg=PA78&dq=search+term&hl=&cd=2&source=gbs_api",
+            "infoLink": "http://books.google.com.eg/books?id=uT0EAAAAMBAJ&dq=search+term&hl=&source=gbs_api",
+            "canonicalVolumeLink": "https://books.google.com/books/about/InfoWorld.html?hl=&id=uT0EAAAAMBAJ"
+        },
+        "saleInfo": {
+            "country": "EG",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false,
+            "listPrice": {
+                "amount": 3092.04
+            }
+        },
+        "accessInfo": {
+            "country": "EG",
+            "viewability": "ALL_PAGES",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": false
+            },
+            "pdf": {
+                "isAvailable": false
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=uT0EAAAAMBAJ&hl=&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "... <b>phrase</b>, choose Hypertext from the menu, and Isys will throw out any noise <b>words</b> in the <b>phrase</b> and build a fresh <b>search</b> based on the remaining <b>words</b>. The program lets you filter <b>searches</b>, limiting them to specified directories, file name&nbsp;..."
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "LD9tCQAAQBAJ",
+        "etag": "J/0c5semLcI",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/LD9tCQAAQBAJ",
+        "volumeInfo": {
+            "title": "Advances in Information Retrieval",
+            "subtitle": "24th BCS-IRSG European Colloquium on IR Research Glasgow, UK, March 25-27, 2002 Proceedings",
+            "authors": [
+                "Fabio Crestani",
+                "Mark Girolami",
+                "C.J.van Rijsbergen"
+            ],
+            "publisher": "Springer",
+            "publishedDate": "2003-07-31",
+            "description": "The annual colloquium on information retrieval research provides an opportunity for both new and established researchers to present papers describing work in progress or ?nal results. This colloquium was established by the BCS IRSG(B- tish Computer Society Information Retrieval Specialist Group), and named the Annual Colloquium on Information Retrieval Research. Recently, the location of the colloquium has alternated between the United Kingdom and continental Europe. To re?ect the growing European orientation of the event, the colloquium was renamed “European Annual Colloquium on Information Retrieval Research” from 2001. Since the inception of the colloquium in 1979 the event has been hosted in the city of Glasgow on four separate occasions. However, this was the ?rst time that the organization of the colloquium had been jointly undertaken by three separate computer and information science departments; an indication of the collaborative nature and diversity of IR research within the universities of the West of Scotland. The organizers of ECIR 2002 saw a sharp increase in the number of go- quality submissions in answer to the call for papers over previous years and as such 52 submitted papers were each allocated 3 members of the program committee for double blind review of the manuscripts. A total of 23 papers were eventually selected for oral presentation at the colloquium in Glasgow which gave an acceptance rate of less than 45% and ensured a very high standard of the papers presented.",
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9783540458869"
+                },
+                {
+                    "type": "ISBN_10",
+                    "identifier": "3540458867"
+                }
+            ],
+            "readingModes": {
+                "text": false,
+                "image": true
+            },
+            "pageCount": 376,
+            "printType": "BOOK",
+            "categories": [
+                "Computers"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "0.1.1.0.preview.1",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=LD9tCQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=LD9tCQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com.eg/books?id=LD9tCQAAQBAJ&pg=PA110&dq=search+term&hl=&cd=3&source=gbs_api",
+            "infoLink": "https://play.google.com/store/books/details?id=LD9tCQAAQBAJ&source=gbs_api",
+            "canonicalVolumeLink": "https://play.google.com/store/books/details?id=LD9tCQAAQBAJ"
+        },
+        "saleInfo": {
+            "country": "EG",
+            "saleability": "FOR_SALE",
+            "isEbook": true,
+            "listPrice": {
+                "amount": 2994.92,
+                "currencyCode": "EGP"
+            },
+            "retailPrice": {
+                "amount": 2994.92,
+                "currencyCode": "EGP"
+            },
+            "buyLink": "https://play.google.com/store/books/details?id=LD9tCQAAQBAJ&rdid=book-LD9tCQAAQBAJ&rdot=1&source=gbs_api",
+            "offers": [
+                {
+                    "finskyOfferType": 1,
+                    "listPrice": {
+                        "amountInMicros": 2994920000,
+                        "currencyCode": "EGP"
+                    },
+                    "retailPrice": {
+                        "amountInMicros": 2994920000,
+                        "currencyCode": "EGP"
+                    }
+                }
+            ]
+        },
+        "accessInfo": {
+            "country": "EG",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": false
+            },
+            "pdf": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Advances_in_Information_Retrieval-sample-pdf.acsm?id=LD9tCQAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=LD9tCQAAQBAJ&hl=&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "... <b>search</b> knowledge in <b>query</b> expansion (QE) is an unmapped terrain in <b>research</b> on information retrieval. It is likely that both have an impact on the ... <b>Terms</b>, and <b>Term</b> Selection in <b>Query</b> Expansion: An Analytical Study Pertti Vakkari."
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "pV_hAQAAQBAJ",
+        "etag": "hJ1B2X+c75o",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/pV_hAQAAQBAJ",
+        "volumeInfo": {
+            "title": "Qualitative Research: Analysis Types & Tools",
+            "authors": [
+                "Renata Tesch"
+            ],
+            "publisher": "Routledge",
+            "publishedDate": "2013-10-31",
+            "description": "First published in 1990. There was a time when most researchers believed that the only phenomena that counted in the social sciences were those that could be measured. To make that perfectly clear, they called any phenomenon they intended to study a 'variable', indicating that the phenomenon could vary in size, length, amount, or any other quantity. Unfortunately, not many phenomena in the human world comes naturally in quantities. If we cannot even give a useful answer to what qualitative analysis is and how it works, then it seems rather incongruent to try and involve a computer, the very essence of precision and orderliness. Isn't qualitative analysis a much too individualistic and flexible an activity to be supported by a computer? Won't a computer do exactly what qualitative researchers want to avoid, namely standardize the process? Won't it mechanize and rigidify qualitative analysis? The answer to these questions is NO, and this book explains why.",
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9781135388027"
+                },
+                {
+                    "type": "ISBN_10",
+                    "identifier": "1135388024"
+                }
+            ],
+            "readingModes": {
+                "text": true,
+                "image": true
+            },
+            "pageCount": 338,
+            "printType": "BOOK",
+            "categories": [
+                "Education"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "1.7.7.0.preview.3",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=pV_hAQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=pV_hAQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com.eg/books?id=pV_hAQAAQBAJ&pg=RA5-PT127&dq=search+term&hl=&cd=4&source=gbs_api",
+            "infoLink": "http://books.google.com.eg/books?id=pV_hAQAAQBAJ&dq=search+term&hl=&source=gbs_api",
+            "canonicalVolumeLink": "https://books.google.com/books/about/Qualitative_Research_Analysis_Types_Tool.html?hl=&id=pV_hAQAAQBAJ"
+        },
+        "saleInfo": {
+            "country": "EG",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false,
+            "listPrice": {
+                "amount": 4411.32
+            }
+        },
+        "accessInfo": {
+            "country": "EG",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Qualitative_Research_Analysis_Types_Tool-sample-epub.acsm?id=pV_hAQAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Qualitative_Research_Analysis_Types_Tool-sample-pdf.acsm?id=pV_hAQAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=pV_hAQAAQBAJ&hl=&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "... word must be to the <b>search term</b>. The technical term for such queries is proximity searches. Almost all search programs make Boolean operators available (exception: Golden Retriever). A relatively new kind of query is the phonetic search&nbsp;..."
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "HmFEAgAAQBAJ",
+        "etag": "vLU37mmdKRU",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/HmFEAgAAQBAJ",
+        "volumeInfo": {
+            "title": "Supporting Research Writing",
+            "subtitle": "Roles and Challenges in Multilingual Settings",
+            "authors": [
+                "Valerie Matarese"
+            ],
+            "publisher": "Elsevier",
+            "publishedDate": "2012-11-06",
+            "description": "Supporting Research Writing explores the range of services designed to facilitate academic writing and publication in English by non-native English-speaking (NNES) authors. It analyses the realities of offering services such as education, translation, editing and writing, and then considers the challenges and benefits that result when these boundaries are consciously blurred. It thus provides an opportunity for readers to reflect on their professional roles and the services that will best serve their clients' needs. A recurring theme is, therefore, the interaction between language professional and client-author. The book offers insights into the opportunities and challenges presented by considering ourselves first and foremost as writing support professionals, differing in our primary approach (through teaching, translating, editing, writing, or a combination of those) but with a common goal. This view has major consequences for the training of professionals who support English-language publication by NNES academics and scientists. Supporting Research Writing will therefore be a stimulus to professional development for those who support English-language publication in real-life contexts and an important resource for those entering the profession. - Takes a holistic approach to writing support and reveals how it is best conceived as a spectrum of overlapping and interrelated professional activities - Stresses the importance of understanding the real-world needs of authors in their quest to publish - Provides insights into the approaches used by experienced practitioners across Europe",
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9781780633503"
+                },
+                {
+                    "type": "ISBN_10",
+                    "identifier": "1780633505"
+                }
+            ],
+            "readingModes": {
+                "text": true,
+                "image": true
+            },
+            "pageCount": 331,
+            "printType": "BOOK",
+            "categories": [
+                "Language Arts & Disciplines"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "2.5.7.0.preview.3",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=HmFEAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=HmFEAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com.eg/books?id=HmFEAgAAQBAJ&pg=PA67&dq=search+term&hl=&cd=5&source=gbs_api",
+            "infoLink": "https://play.google.com/store/books/details?id=HmFEAgAAQBAJ&source=gbs_api",
+            "canonicalVolumeLink": "https://play.google.com/store/books/details?id=HmFEAgAAQBAJ"
+        },
+        "saleInfo": {
+            "country": "EG",
+            "saleability": "FOR_SALE",
+            "isEbook": true,
+            "listPrice": {
+                "amount": 4716.7,
+                "currencyCode": "EGP"
+            },
+            "retailPrice": {
+                "amount": 4716.7,
+                "currencyCode": "EGP"
+            },
+            "buyLink": "https://play.google.com/store/books/details?id=HmFEAgAAQBAJ&rdid=book-HmFEAgAAQBAJ&rdot=1&source=gbs_api",
+            "offers": [
+                {
+                    "finskyOfferType": 1,
+                    "listPrice": {
+                        "amountInMicros": 4716700000,
+                        "currencyCode": "EGP"
+                    },
+                    "retailPrice": {
+                        "amountInMicros": 4716700000,
+                        "currencyCode": "EGP"
+                    }
+                }
+            ]
+        },
+        "accessInfo": {
+            "country": "EG",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Supporting_Research_Writing-sample-epub.acsm?id=HmFEAgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Supporting_Research_Writing-sample-pdf.acsm?id=HmFEAgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=HmFEAgAAQBAJ&hl=&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "... search a corpus of biotechnology articles using role as the <b>search term</b> and setting the parameters to organize the output by the word following the <b>search term</b> in alphabetical order. Figure 4.2 shows the output of such a search&nbsp;..."
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "WyfXDwAAQBAJ",
+        "etag": "HoeZkaNJPQA",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/WyfXDwAAQBAJ",
+        "volumeInfo": {
+            "title": "Modeling Information Diffusion in Online Social Networks with Partial Differential Equations",
+            "authors": [
+                "Haiyan Wang",
+                "Feng Wang",
+                "Kuai Xu"
+            ],
+            "publisher": "Springer Nature",
+            "publishedDate": "2020-03-16",
+            "description": "The book lies at the interface of mathematics, social media analysis, and data science. Its authors aim to introduce a new dynamic modeling approach to the use of partial differential equations for describing information diffusion over online social networks. The eigenvalues and eigenvectors of the Laplacian matrix for the underlying social network are used to find communities (clusters) of online users. Once these clusters are embedded in a Euclidean space, the mathematical models, which are reaction-diffusion equations, are developed based on intuitive social distances between clusters within the Euclidean space. The models are validated with data from major social media such as Twitter. In addition, mathematical analysis of these models is applied, revealing insights into information flow on social media. Two applications with geocoded Twitter data are included in the book: one describing the social movement in Twitter during the Egyptian revolution in 2011 and another predicting influenza prevalence. The new approach advocates a paradigm shift for modeling information diffusion in online social networks and lays the theoretical groundwork for many spatio-temporal modeling problems in the big-data era.",
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9783030388522"
+                },
+                {
+                    "type": "ISBN_10",
+                    "identifier": "3030388522"
+                }
+            ],
+            "readingModes": {
+                "text": true,
+                "image": true
+            },
+            "pageCount": 153,
+            "printType": "BOOK",
+            "categories": [
+                "Mathematics"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "1.2.2.0.preview.3",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=WyfXDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=WyfXDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com.eg/books?id=WyfXDwAAQBAJ&pg=PA64&dq=search+term&hl=&cd=6&source=gbs_api",
+            "infoLink": "https://play.google.com/store/books/details?id=WyfXDwAAQBAJ&source=gbs_api",
+            "canonicalVolumeLink": "https://play.google.com/store/books/details?id=WyfXDwAAQBAJ"
+        },
+        "saleInfo": {
+            "country": "EG",
+            "saleability": "FOR_SALE",
+            "isEbook": true,
+            "listPrice": {
+                "amount": 3526.74,
+                "currencyCode": "EGP"
+            },
+            "retailPrice": {
+                "amount": 3526.74,
+                "currencyCode": "EGP"
+            },
+            "buyLink": "https://play.google.com/store/books/details?id=WyfXDwAAQBAJ&rdid=book-WyfXDwAAQBAJ&rdot=1&source=gbs_api",
+            "offers": [
+                {
+                    "finskyOfferType": 1,
+                    "listPrice": {
+                        "amountInMicros": 3526740000,
+                        "currencyCode": "EGP"
+                    },
+                    "retailPrice": {
+                        "amountInMicros": 3526740000,
+                        "currencyCode": "EGP"
+                    }
+                }
+            ]
+        },
+        "accessInfo": {
+            "country": "EG",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Modeling_Information_Diffusion_in_Online-sample-epub.acsm?id=WyfXDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Modeling_Information_Diffusion_in_Online-sample-pdf.acsm?id=WyfXDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=WyfXDwAAQBAJ&hl=&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "... <b>search</b> - <b>term</b> is entered relative to the total search - volume across various regions of the world , and in various languages . Google Trends also allows the user to compare the volume of searches between two or more terms . An&nbsp;..."
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "8_JHAwAAQBAJ",
+        "etag": "G944LOKDyD0",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/8_JHAwAAQBAJ",
+        "volumeInfo": {
+            "title": "Principles of Research Design and Drug Literature Evaluation",
+            "authors": [
+                "Rajender R. Aparasu",
+                "John P. Bentley"
+            ],
+            "publisher": "Jones & Bartlett Publishers",
+            "publishedDate": "2014-03-07",
+            "description": "Principles of Research Design and Drug Literature Evaluation is a unique resource that provides a balanced approach covering critical elements of clinical research, biostatistical principles, and scientific literature evaluation techniques for evidence-based medicine. This accessible text provides comprehensive course content that meets and exceeds the curriculum standards set by the Accreditation Council for Pharmacy Education (ACPE). Written by expert authors specializing in pharmacy practice and research, this valuable text will provide pharmacy students and practitioners with a thorough understanding of the principles and practices of drug literature evaluation with a strong grounding in research and biostatistical principles. Principles of Research Design and Drug Literature Evaluation is an ideal foundation for professional pharmacy students and a key resource for pharmacy residents, research fellows, practitioners, and clinical researchers. FEATURES * Chapter Pedagogy: Learning Objectives, Review Questions, References, and Online Resources * Instructor Resources: PowerPoint Presentations, Test Bank, and an Answer Key * Student Resources: a Navigate Companion Website, including Crossword Puzzles, Interactive Flash Cards, Interactive Glossary, Matching Questions, and Web Links From the Foreword: \"This book was designed to provide and encourage practitioner’s development and use of critical drug information evaluation skills through a deeper understanding of the foundational principles of study design and statistical methods. Because guidance on how a study’s limited findings should not be used is rare, practitioners must understand and evaluate for themselves the veracity and implications of the inherently limited primary literature findings they use as sources of drug information to make evidence-based decisions together with their patients. The editors organized the book into three supporting sections to meet their pedagogical goals and address practitioners’ needs in translating research into practice. Thanks to the editors, authors, and content of this book, you can now be more prepared than ever before for translating research into practice.\" L. Douglas Ried, PhD, FAPhA Editor-in-Chief Emeritus, Journal of the American Pharmacists Association Professor and Associate Dean for Academic Affairs, College of Pharmacy, University of Texas at Tyler, Tyler, Texas",
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9781449691318"
+                },
+                {
+                    "type": "ISBN_10",
+                    "identifier": "1449691315"
+                }
+            ],
+            "readingModes": {
+                "text": false,
+                "image": true
+            },
+            "pageCount": 400,
+            "printType": "BOOK",
+            "categories": [
+                "Medical"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "0.1.1.0.preview.1",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=8_JHAwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=8_JHAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com.eg/books?id=8_JHAwAAQBAJ&pg=PA266&dq=search+term&hl=&cd=7&source=gbs_api",
+            "infoLink": "http://books.google.com.eg/books?id=8_JHAwAAQBAJ&dq=search+term&hl=&source=gbs_api",
+            "canonicalVolumeLink": "https://books.google.com/books/about/Principles_of_Research_Design_and_Drug_L.html?hl=&id=8_JHAwAAQBAJ"
+        },
+        "saleInfo": {
+            "country": "EG",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false,
+            "listPrice": {
+                "amount": 1079.44
+            }
+        },
+        "accessInfo": {
+            "country": "EG",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": false
+            },
+            "pdf": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Principles_of_Research_Design_and_Drug_L-sample-pdf.acsm?id=8_JHAwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=8_JHAwAAQBAJ&hl=&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "... terms. Searching through controlled vocabularies is often preferred; however, there are situations when searching by keywords is appropriate. A keyword search will find any literature that uses that <b>search term</b> in the appropriate field&nbsp;..."
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "DllaAAAAIAAJ",
+        "etag": "wwiXWtJNfUU",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/DllaAAAAIAAJ",
+        "volumeInfo": {
+            "title": "Municipal Research, to Promote the Application of Scientific Principles to Government",
+            "publishedDate": "1915",
+            "industryIdentifiers": [
+                {
+                    "type": "OTHER",
+                    "identifier": "UCAL:B3457856"
+                }
+            ],
+            "readingModes": {
+                "text": false,
+                "image": true
+            },
+            "pageCount": 784,
+            "printType": "BOOK",
+            "categories": [
+                "Budget"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "0.5.4.0.full.1",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=DllaAAAAIAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=DllaAAAAIAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com.eg/books?id=DllaAAAAIAAJ&pg=RA2-PA100&dq=search+term&hl=&cd=8&source=gbs_api",
+            "infoLink": "https://play.google.com/store/books/details?id=DllaAAAAIAAJ&source=gbs_api",
+            "canonicalVolumeLink": "https://play.google.com/store/books/details?id=DllaAAAAIAAJ"
+        },
+        "saleInfo": {
+            "country": "EG",
+            "saleability": "FREE",
+            "isEbook": true,
+            "buyLink": "https://play.google.com/store/books/details?id=DllaAAAAIAAJ&rdid=book-DllaAAAAIAAJ&rdot=1&source=gbs_api",
+            "listPrice": {
+                "amount": 3684.78
+            }
+        },
+        "accessInfo": {
+            "country": "EG",
+            "viewability": "ALL_PAGES",
+            "embeddable": true,
+            "publicDomain": true,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": false,
+                "downloadLink": "http://books.google.com.eg/books/download/Municipal_Research_to_Promote_the_Applic.epub?id=DllaAAAAIAAJ&hl=&output=epub&source=gbs_api"
+            },
+            "pdf": {
+                "isAvailable": true,
+                "downloadLink": "http://books.google.com.eg/books/download/Municipal_Research_to_Promote_the_Applic.pdf?id=DllaAAAAIAAJ&hl=&output=pdf&sig=ACfU3U1m8FfvF4xOmatScy-1I8UXA_NVrg&source=gbs_api"
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=DllaAAAAIAAJ&hl=&source=gbs_api",
+            "accessViewStatus": "FULL_PUBLIC_DOMAIN",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "about half of them provide for the two year <b>term</b> and about half or a slight majority for the four year <b>term</b> . A <b>search</b> for the factors which led to the choice of two or four years in the several states reveals no consistent explanation&nbsp;..."
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "KJiKCgAAQBAJ",
+        "etag": "rh/krWt/xgg",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/KJiKCgAAQBAJ",
+        "volumeInfo": {
+            "title": "Behavioral Interactions, Markets, and Economic Dynamics",
+            "subtitle": "Topics in Behavioral Economics",
+            "authors": [
+                "Shinsuke Ikeda",
+                "Hideaki Kiyoshi Kato",
+                "Fumio Ohtake",
+                "Yoshiro Tsutsui"
+            ],
+            "publisher": "Springer",
+            "publishedDate": "2015-09-12",
+            "description": "This book collects important contributions in behavioral economics and related topics, mainly by Japanese researchers, to provide new perspectives for the future development of economics and behavioral economics. The volume focuses especially on economic studies that examine interactions of multiple agents and/or market phenomena by using behavioral economics models. Reflecting the diverse fields of the editors, the book captures broad influences of behavioral economics on various topics in economics. Those subjects include parental altruism, economic growth and development, the relative and permanent income hypotheses, wealth distribution, asset price bubbles, auctions, search, contracts, personnel management and market efficiency and anomalies in financial markets. The chapter authors have added newly written addenda to the original articles in which they address their own subsequent works, supplementary analyses, detailed information on the underlying data and/or recent literature surveys. This will help readers to further understand recent developments in behavioral economics and related research.",
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9784431555018"
+                },
+                {
+                    "type": "ISBN_10",
+                    "identifier": "4431555013"
+                }
+            ],
+            "readingModes": {
+                "text": true,
+                "image": true
+            },
+            "pageCount": 668,
+            "printType": "BOOK",
+            "categories": [
+                "Business & Economics"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "1.5.5.0.preview.3",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=KJiKCgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=KJiKCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com.eg/books?id=KJiKCgAAQBAJ&pg=PA432&dq=search+term&hl=&cd=9&source=gbs_api",
+            "infoLink": "https://play.google.com/store/books/details?id=KJiKCgAAQBAJ&source=gbs_api",
+            "canonicalVolumeLink": "https://play.google.com/store/books/details?id=KJiKCgAAQBAJ"
+        },
+        "saleInfo": {
+            "country": "EG",
+            "saleability": "FOR_SALE",
+            "isEbook": true,
+            "listPrice": {
+                "amount": 5391.28,
+                "currencyCode": "EGP"
+            },
+            "retailPrice": {
+                "amount": 5391.28,
+                "currencyCode": "EGP"
+            },
+            "buyLink": "https://play.google.com/store/books/details?id=KJiKCgAAQBAJ&rdid=book-KJiKCgAAQBAJ&rdot=1&source=gbs_api",
+            "offers": [
+                {
+                    "finskyOfferType": 1,
+                    "listPrice": {
+                        "amountInMicros": 5391280000,
+                        "currencyCode": "EGP"
+                    },
+                    "retailPrice": {
+                        "amountInMicros": 5391280000,
+                        "currencyCode": "EGP"
+                    }
+                }
+            ]
+        },
+        "accessInfo": {
+            "country": "EG",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Behavioral_Interactions_Markets_and_Econ-sample-epub.acsm?id=KJiKCgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Behavioral_Interactions_Markets_and_Econ-sample-pdf.acsm?id=KJiKCgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=KJiKCgAAQBAJ&hl=&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "... <b>search</b> model in which committee <b>search</b> is stopped only if at least two out of three members vote to stop <b>searching</b> ... <b>term</b> on the right - hand side in Eq . ( 15.4 ) shows the value of continuing the committee <b>search</b> activity after&nbsp;..."
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "yXCtAAAAQBAJ",
+        "etag": "i9PxnO3lXic",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/yXCtAAAAQBAJ",
+        "volumeInfo": {
+            "title": "Investigating Internet Crimes",
+            "subtitle": "An Introduction to Solving Crimes in Cyberspace",
+            "authors": [
+                "Todd G. Shipley",
+                "Art Bowker"
+            ],
+            "publisher": "Newnes",
+            "publishedDate": "2013-11-12",
+            "description": "Written by experts on the frontlines, Investigating Internet Crimes provides seasoned and new investigators with the background and tools they need to investigate crime occurring in the online world. This invaluable guide provides step-by-step instructions for investigating Internet crimes, including locating, interpreting, understanding, collecting, and documenting online electronic evidence to benefit investigations. Cybercrime is the fastest growing area of crime as more criminals seek to exploit the speed, convenience and anonymity that the Internet provides to commit a diverse range of criminal activities. Today's online crime includes attacks against computer data and systems, identity theft, distribution of child pornography, penetration of online financial services, using social networks to commit crimes, and the deployment of viruses, botnets, and email scams such as phishing. Symantec's 2012 Norton Cybercrime Report stated that the world spent an estimated $110 billion to combat cybercrime, an average of nearly $200 per victim. Law enforcement agencies and corporate security officers around the world with the responsibility for enforcing, investigating and prosecuting cybercrime are overwhelmed, not only by the sheer number of crimes being committed but by a lack of adequate training material. This book provides that fundamental knowledge, including how to properly collect and document online evidence, trace IP addresses, and work undercover. - Provides step-by-step instructions on how to investigate crimes online - Covers how new software tools can assist in online investigations - Discusses how to track down, interpret, and understand online electronic evidence to benefit investigations - Details guidelines for collecting and documenting online evidence that can be presented in court",
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9780124079298"
+                },
+                {
+                    "type": "ISBN_10",
+                    "identifier": "0124079296"
+                }
+            ],
+            "readingModes": {
+                "text": true,
+                "image": true
+            },
+            "pageCount": 497,
+            "printType": "BOOK",
+            "categories": [
+                "Computers"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": true,
+            "contentVersion": "2.5.6.0.preview.3",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=yXCtAAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=yXCtAAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com.eg/books?id=yXCtAAAAQBAJ&pg=PA277&dq=search+term&hl=&cd=10&source=gbs_api",
+            "infoLink": "https://play.google.com/store/books/details?id=yXCtAAAAQBAJ&source=gbs_api",
+            "canonicalVolumeLink": "https://play.google.com/store/books/details?id=yXCtAAAAQBAJ"
+        },
+        "saleInfo": {
+            "country": "EG",
+            "saleability": "FOR_SALE",
+            "isEbook": true,
+            "listPrice": {
+                "amount": 2771.61,
+                "currencyCode": "EGP"
+            },
+            "retailPrice": {
+                "amount": 2771.61,
+                "currencyCode": "EGP"
+            },
+            "buyLink": "https://play.google.com/store/books/details?id=yXCtAAAAQBAJ&rdid=book-yXCtAAAAQBAJ&rdot=1&source=gbs_api",
+            "offers": [
+                {
+                    "finskyOfferType": 1,
+                    "listPrice": {
+                        "amountInMicros": 2771610000,
+                        "currencyCode": "EGP"
+                    },
+                    "retailPrice": {
+                        "amountInMicros": 2771610000,
+                        "currencyCode": "EGP"
+                    }
+                }
+            ]
+        },
+        "accessInfo": {
+            "country": "EG",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Investigating_Internet_Crimes-sample-epub.acsm?id=yXCtAAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Investigating_Internet_Crimes-sample-pdf.acsm?id=yXCtAAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=yXCtAAAAQBAJ&hl=&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "... <b>search</b> results in three columns , ( 1 ) <b>search</b> results , ( 2 ) a “ snapshot &quot; of related <b>searches</b> with associated ... <b>term</b> VERE SOFTWARE Company and Product Info from Officer.com www.officer.com/company/10039749 - Incorporated in&nbsp;..."
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "u6V8DwAAQBAJ",
+        "etag": "+oTQVw8TgcU",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/u6V8DwAAQBAJ",
+        "volumeInfo": {
+            "title": "Love... Quilting",
+            "subtitle": "18 Simple Step-by-Step Projects to Sew",
+            "authors": [
+                "Marion Patterson",
+                "Sally Ablett",
+                "Sue Warren"
+            ],
+            "publisher": "Fox Chapel Publishing",
+            "publishedDate": "2016-12-01",
+            "description": "Quilting is a $3.58 billion industry in the United States, with 21.3 million quilters nationwide. Fourteen percent of U.S. households are home to at least one active quilter. Love... Quilting is an excellent introduction to quilting for beginners. The projects are designed for quilters of all skill levels and all techniques are clearly explained. A wide range of attractive projects feature easy-to-follow instructions and diagrams.",
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9781607652748"
+                },
+                {
+                    "type": "ISBN_10",
+                    "identifier": "1607652749"
+                }
+            ],
+            "readingModes": {
+                "text": true,
+                "image": true
+            },
+            "pageCount": 304,
+            "printType": "BOOK",
+            "categories": [
+                "Crafts & Hobbies"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "0.1.1.0.preview.3",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=u6V8DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=u6V8DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com.eg/books?id=u6V8DwAAQBAJ&printsec=frontcover&dq=quilting&hl=&cd=1&source=gbs_api",
+            "infoLink": "http://books.google.com.eg/books?id=u6V8DwAAQBAJ&dq=quilting&hl=&source=gbs_api",
+            "canonicalVolumeLink": "https://books.google.com/books/about/Love_Quilting.html?hl=&id=u6V8DwAAQBAJ"
+        },
+        "saleInfo": {
+            "country": "EG",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false,
+            "listPrice": {
+                "amount": 2499.38
+            }
+        },
+        "accessInfo": {
+            "country": "EG",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Love_Quilting-sample-epub.acsm?id=u6V8DwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Love_Quilting-sample-pdf.acsm?id=u6V8DwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=u6V8DwAAQBAJ&hl=&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "Quilting is a $3.58 billion industry in the United States, with 21.3 million quilters nationwide."
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "Y-B3EAAAQBAJ",
+        "etag": "hzzkld5UpRk",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/Y-B3EAAAQBAJ",
+        "volumeInfo": {
+            "title": "Quilting",
+            "authors": [
+                "Jennifer Fulton"
+            ],
+            "publisher": "Dorling Kindersley Ltd",
+            "publishedDate": "2014-10-07",
+            "description": "Quilting is a traditional skill that is enjoying a resurge in popularity as a means of creative expression and a wonderful way to make beautiful, thoughtful gifts for important occasions. Quilting takes a great deal of skill and patience, and there are lots of ways it can go wrong, wasting time and expensive fabric in the process. In this book readers learn how to master the process of both machine and hand quilting with the following: Beautiful full-color, step-by step photos teach each skill needed, from the basics to more advanced techniques. More than 20 sample projects with materials lists, photos, and step-by-step instructions. A guide to all the tools and supplies needed to get started, including a primer on sewing machines and stitching. Tips for buying and cutting fabric, and piecing it into blocks by hand or machine.Techniques for making applique quilts, by machine or by hand. Instructions for assembling quilt blocks into a finished quilt top.The best stitching methods for turning a quilt top into a finished, quilted quilt.",
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9780241887387"
+                },
+                {
+                    "type": "ISBN_10",
+                    "identifier": "0241887380"
+                }
+            ],
+            "readingModes": {
+                "text": true,
+                "image": true
+            },
+            "pageCount": 290,
+            "printType": "BOOK",
+            "categories": [
+                "Crafts & Hobbies"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "2.2.2.0.preview.3",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=Y-B3EAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=Y-B3EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com.eg/books?id=Y-B3EAAAQBAJ&pg=PA166&dq=quilting&hl=&cd=2&source=gbs_api",
+            "infoLink": "http://books.google.com.eg/books?id=Y-B3EAAAQBAJ&dq=quilting&hl=&source=gbs_api",
+            "canonicalVolumeLink": "https://books.google.com/books/about/Quilting.html?hl=&id=Y-B3EAAAQBAJ"
+        },
+        "saleInfo": {
+            "country": "EG",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false,
+            "listPrice": {
+                "amount": 2190.5
+            }
+        },
+        "accessInfo": {
+            "country": "EG",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Quilting-sample-epub.acsm?id=Y-B3EAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Quilting-sample-pdf.acsm?id=Y-B3EAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=Y-B3EAAAQBAJ&hl=&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "... <b>quilting</b> than others . The batting you choose dictates how close together your <b>quilting</b> stitches must be ; some require close <b>quilting</b> while others ... <b>QUILT</b> FOR <b>QUILTING</b> 000 100 Mark the <b>Quilting</b> Pattern <b>Quilting</b> stitches together the."
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "_0JqDwAAQBAJ",
+        "etag": "J6zjutlSLRo",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/_0JqDwAAQBAJ",
+        "volumeInfo": {
+            "title": "Wonderful One-Block Quilting",
+            "subtitle": "Quick & Easy Techniques for Small Projects to Full-Size Quilts",
+            "authors": [
+                "Choly Knight"
+            ],
+            "publisher": "Fox Chapel Publishing",
+            "publishedDate": "2016-12-01",
+            "description": "Quilting is not just your grandmother's hobby any more, with surging interest among 20-something young adults. This book is the perfect entry point for a new quilter. It will appeal to both beginners and time-challenged quilters. Wonderful One-Block Quilting features a progressive learning format—learn a technique, practice a project. It teaches basic quilting techniques via small, manageable, one-session projects.",
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9781607653905"
+                },
+                {
+                    "type": "ISBN_10",
+                    "identifier": "1607653907"
+                }
+            ],
+            "readingModes": {
+                "text": true,
+                "image": true
+            },
+            "pageCount": 335,
+            "printType": "BOOK",
+            "categories": [
+                "Crafts & Hobbies"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "1.4.6.0.preview.3",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=_0JqDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=_0JqDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com.eg/books?id=_0JqDwAAQBAJ&printsec=frontcover&dq=quilting&hl=&cd=3&source=gbs_api",
+            "infoLink": "http://books.google.com.eg/books?id=_0JqDwAAQBAJ&dq=quilting&hl=&source=gbs_api",
+            "canonicalVolumeLink": "https://books.google.com/books/about/Wonderful_One_Block_Quilting.html?hl=&id=_0JqDwAAQBAJ"
+        },
+        "saleInfo": {
+            "country": "EG",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false,
+            "listPrice": {
+                "amount": 4626.41
+            }
+        },
+        "accessInfo": {
+            "country": "EG",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Wonderful_One_Block_Quilting-sample-epub.acsm?id=_0JqDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Wonderful_One_Block_Quilting-sample-pdf.acsm?id=_0JqDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=_0JqDwAAQBAJ&hl=&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "This book is the perfect entry point for a new quilter. It will appeal to both beginners and time-challenged quilters. Wonderful One-Block Quilting features a progressive learning format—learn a technique, practice a project."
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "xt_-qyFy2PIC",
+        "etag": "HqKVY5ijJgE",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/xt_-qyFy2PIC",
+        "volumeInfo": {
+            "title": "Quilting Designs From The Past",
+            "subtitle": "300+ Designs from 1810–1940",
+            "authors": [
+                "Jenny Carr kinney"
+            ],
+            "publisher": "C&T Publishing Inc",
+            "publishedDate": "2010-11-05",
+            "description": "Make Your Quilts Look Like Antiques with Authentic Period Quilting Designs. Over 300 historically accurate quilting designs, organized into four time periods to make it easy to find the right designs for your quilt. Essential reference guide for anyone interested in vintage and antique quilts. Designs for all skill levels, from beginner to advanced. Use for hand or machine quilting. You've created a beautiful quilt top in the style of your favorite era. But how do you quilt it? This huge collection of historic quilting designs has the answer. With hundreds of designs gathered from old quilts, patterns, books, magazines, and other original sources, you'll find the perfect quilting design to make your quilt look like it was created generations ago.",
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9781607053835"
+                },
+                {
+                    "type": "ISBN_10",
+                    "identifier": "1607053837"
+                }
+            ],
+            "readingModes": {
+                "text": false,
+                "image": true
+            },
+            "pageCount": 132,
+            "printType": "BOOK",
+            "categories": [
+                "Crafts & Hobbies"
+            ],
+            "averageRating": 4,
+            "ratingsCount": 2,
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": true,
+            "contentVersion": "0.3.1.0.preview.1",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=xt_-qyFy2PIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=xt_-qyFy2PIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com.eg/books?id=xt_-qyFy2PIC&pg=PA124&dq=quilting&hl=&cd=4&source=gbs_api",
+            "infoLink": "http://books.google.com.eg/books?id=xt_-qyFy2PIC&dq=quilting&hl=&source=gbs_api",
+            "canonicalVolumeLink": "https://books.google.com/books/about/Quilting_Designs_From_The_Past.html?hl=&id=xt_-qyFy2PIC"
+        },
+        "saleInfo": {
+            "country": "EG",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false,
+            "listPrice": {
+                "amount": 829.98
+            }
+        },
+        "accessInfo": {
+            "country": "EG",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": false
+            },
+            "pdf": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Quilting_Designs_From_The_Past-sample-pdf.acsm?id=xt_-qyFy2PIC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=xt_-qyFy2PIC&hl=&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "... <b>Quilting</b> by Harriet Hargrave and Mastering <b>Quilt</b> Marking by Pepper Cory are excel- lent books presenting valuable ... <b>quilting</b> patterns . Before you transfer the designs from the page to the cloth , check their size against the&nbsp;..."
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "t2rEEAAAQBAJ",
+        "etag": "jCJiXiZkuZY",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/t2rEEAAAQBAJ",
+        "volumeInfo": {
+            "title": "Quilting Through Life",
+            "subtitle": "Patterns and Prose for Every Stage of Life (Spiral Bound to Lay Flat)",
+            "authors": [
+                "Jenny Doan"
+            ],
+            "publisher": "Harper Horizon",
+            "publishedDate": "2024-05-07",
+            "description": "Step-by-step quilting instructions and personal stories to inspire both seasoned pros and new quilters alike. America's quilter, Jenny Doan, has always believed that quilts are more than fabric and stitches. They become keepers of memories, milestones, and stories; creating profound connections across generations. By alternating personal stories with detailed step-by-step guidance on how you can make quilts for all of life's milestones—from new births, to marriages, to loss and grief—Jenny comes alongside you to share the joy and transformative power of quilting in her passionate and innovative way. With beautiful, full-color images and easy-to-follow diagrams to help you with your own projects, Quilting Through Life is a creative and authentic guidebook to the art of quilting. It's an art designed to be shared with family and friends, crafted from the scraps of memories, laughter, and tears. It's an art that allows us to express how we feel, create something beautiful, and extend the warmth in our hearts to wrap around those we love. From choosing your fabrics and selecting a pattern to creating mitered corners, Quilting Through Life will walk you through how to stitch a legacy of love for every stage of life.",
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9781400248537"
+                },
+                {
+                    "type": "ISBN_10",
+                    "identifier": "1400248531"
+                }
+            ],
+            "readingModes": {
+                "text": true,
+                "image": false
+            },
+            "pageCount": 209,
+            "printType": "BOOK",
+            "categories": [
+                "Crafts & Hobbies"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "1.3.3.0.preview.2",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=t2rEEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=t2rEEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com.eg/books?id=t2rEEAAAQBAJ&printsec=frontcover&dq=quilting&hl=&cd=5&source=gbs_api",
+            "infoLink": "https://play.google.com/store/books/details?id=t2rEEAAAQBAJ&source=gbs_api",
+            "canonicalVolumeLink": "https://play.google.com/store/books/details?id=t2rEEAAAQBAJ"
+        },
+        "saleInfo": {
+            "country": "EG",
+            "saleability": "FOR_SALE",
+            "isEbook": true,
+            "listPrice": {
+                "amount": 871.79,
+                "currencyCode": "EGP"
+            },
+            "retailPrice": {
+                "amount": 871.79,
+                "currencyCode": "EGP"
+            },
+            "buyLink": "https://play.google.com/store/books/details?id=t2rEEAAAQBAJ&rdid=book-t2rEEAAAQBAJ&rdot=1&source=gbs_api",
+            "offers": [
+                {
+                    "finskyOfferType": 1,
+                    "listPrice": {
+                        "amountInMicros": 871790000,
+                        "currencyCode": "EGP"
+                    },
+                    "retailPrice": {
+                        "amountInMicros": 871790000,
+                        "currencyCode": "EGP"
+                    }
+                }
+            ]
+        },
+        "accessInfo": {
+            "country": "EG",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Quilting_Through_Life-sample-epub.acsm?id=t2rEEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+                "isAvailable": false
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=t2rEEAAAQBAJ&hl=&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "Step-by-step quilting instructions and personal stories to inspire both seasoned pros and new quilters alike. America&#39;s quilter, Jenny Doan, has always believed that quilts are more than fabric and stitches."
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "iJrS9blx6fIC",
+        "etag": "JVJ8+aqzIpw",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/iJrS9blx6fIC",
+        "volumeInfo": {
+            "title": "Quilting 101",
+            "subtitle": "Master Basic Skills and Techniques Easily Through Step-by-Step Instruction",
+            "authors": [
+                "Creative Publishing International"
+            ],
+            "publisher": "Creative Publishing International",
+            "publishedDate": "2011-03",
+            "description": "\"Beginner's guide to quilting, teaches all the basic techniques through easy projects. Includes DVD-ROM\"--Provided by publisher.",
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9781589235731"
+                },
+                {
+                    "type": "ISBN_10",
+                    "identifier": "1589235738"
+                }
+            ],
+            "readingModes": {
+                "text": true,
+                "image": true
+            },
+            "pageCount": 178,
+            "printType": "BOOK",
+            "categories": [
+                "Crafts & Hobbies"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": true,
+            "contentVersion": "0.4.5.0.preview.3",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=iJrS9blx6fIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=iJrS9blx6fIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com.eg/books?id=iJrS9blx6fIC&printsec=frontcover&dq=quilting&hl=&cd=6&source=gbs_api",
+            "infoLink": "http://books.google.com.eg/books?id=iJrS9blx6fIC&dq=quilting&hl=&source=gbs_api",
+            "canonicalVolumeLink": "https://books.google.com/books/about/Quilting_101.html?hl=&id=iJrS9blx6fIC"
+        },
+        "saleInfo": {
+            "country": "EG",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false,
+            "listPrice": {
+                "amount": 4618.05
+            }
+        },
+        "accessInfo": {
+            "country": "EG",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Quilting_101-sample-epub.acsm?id=iJrS9blx6fIC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Quilting_101-sample-pdf.acsm?id=iJrS9blx6fIC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=iJrS9blx6fIC&hl=&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "&quot;Beginner&#39;s guide to quilting, teaches all the basic techniques through easy projects. Includes DVD-ROM&quot;--Provided by publisher."
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "1WqjSf8FwooC",
+        "etag": "Gcjai9zHAas",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/1WqjSf8FwooC",
+        "volumeInfo": {
+            "title": "First Steps to Free-motion Quilting",
+            "subtitle": "24 Projects for Fearless Stitching",
+            "authors": [
+                "Christina Cameli"
+            ],
+            "publisher": "C&T Publishing Inc",
+            "publishedDate": "2013",
+            "description": "A refreshingly new approach to free-motion stitching, First Steps to Free-Motion Quilting by Christina Cameli allows you to make something beautiful while improving your free-motion quilting skills. It features 24 simple projects and quilts that are light on assembly so you can spend most of your time stitching. You'll learn the basics, pick a project, and start stitching. A handy troubleshooting guide ensures success every step of the way.",
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9781607056720"
+                },
+                {
+                    "type": "ISBN_10",
+                    "identifier": "1607056720"
+                }
+            ],
+            "readingModes": {
+                "text": false,
+                "image": true
+            },
+            "pageCount": 148,
+            "printType": "BOOK",
+            "categories": [
+                "Crafts & Hobbies"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": true,
+            "contentVersion": "0.1.1.0.preview.1",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=1WqjSf8FwooC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=1WqjSf8FwooC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com.eg/books?id=1WqjSf8FwooC&printsec=frontcover&dq=quilting&hl=&cd=7&source=gbs_api",
+            "infoLink": "http://books.google.com.eg/books?id=1WqjSf8FwooC&dq=quilting&hl=&source=gbs_api",
+            "canonicalVolumeLink": "https://books.google.com/books/about/First_Steps_to_Free_motion_Quilting.html?hl=&id=1WqjSf8FwooC"
+        },
+        "saleInfo": {
+            "country": "EG",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false,
+            "listPrice": {
+                "amount": 2519.03
+            }
+        },
+        "accessInfo": {
+            "country": "EG",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": false
+            },
+            "pdf": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/First_Steps_to_Free_motion_Quilting-sample-pdf.acsm?id=1WqjSf8FwooC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=1WqjSf8FwooC&hl=&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "A refreshingly new approach to free-motion stitching, First Steps to Free-Motion Quilting by Christina Cameli allows you to make something beautiful while improving your free-motion quilting skills."
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "AvDaWLrwLCoC",
+        "etag": "cYgymfyEy/k",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/AvDaWLrwLCoC",
+        "volumeInfo": {
+            "title": "Quilting Happiness",
+            "subtitle": "Projects, Inspiration, and Ideas to Make Quilting More Joyful",
+            "authors": [
+                "Diane Gilleland",
+                "Christina Lane"
+            ],
+            "publisher": "Potter Craft",
+            "publishedDate": "2013-08-27",
+            "description": "Why do you love to quilt? Is it the finished quilt itself, or the experiences you had while making it? Do you find more joy in designing a beautiful pattern or in improvising as you go? Are you happiest when making quilts for yourself or for others? Whether it is delighting in the colors and textures of your materials to the sweet satisfaction of curling up under a handmade quilt, quilting holds infinite possibilities for exploring the many joys of creativity. In Quilting Happiness, you will find 20 timeless, adaptable quilting projects that will invite you to try a variety of design styles, as well as a wealth of tips and techniques, inspiring stories, and creative exercises to help you discover even more reasons to love quilting. Learn to make an inspiration board, create more meaningful quilts, or find lifelong quilting friends. Use this book again and again as a guide throughout your quilting life to spark your imagination on each rereading. Embrace new ideas on your quilting adventures and enjoy wherever they take you.",
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9780770434106"
+                },
+                {
+                    "type": "ISBN_10",
+                    "identifier": "077043410X"
+                }
+            ],
+            "readingModes": {
+                "text": true,
+                "image": false
+            },
+            "pageCount": 178,
+            "printType": "BOOK",
+            "categories": [
+                "Crafts & Hobbies"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": true,
+            "contentVersion": "1.10.8.0.preview.2",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=AvDaWLrwLCoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=AvDaWLrwLCoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com.eg/books?id=AvDaWLrwLCoC&pg=PA162&dq=quilting&hl=&cd=8&source=gbs_api",
+            "infoLink": "https://play.google.com/store/books/details?id=AvDaWLrwLCoC&source=gbs_api",
+            "canonicalVolumeLink": "https://play.google.com/store/books/details?id=AvDaWLrwLCoC"
+        },
+        "saleInfo": {
+            "country": "EG",
+            "saleability": "FOR_SALE",
+            "isEbook": true,
+            "listPrice": {
+                "amount": 1088.15,
+                "currencyCode": "EGP"
+            },
+            "retailPrice": {
+                "amount": 1088.15,
+                "currencyCode": "EGP"
+            },
+            "buyLink": "https://play.google.com/store/books/details?id=AvDaWLrwLCoC&rdid=book-AvDaWLrwLCoC&rdot=1&source=gbs_api",
+            "offers": [
+                {
+                    "finskyOfferType": 1,
+                    "listPrice": {
+                        "amountInMicros": 1088150000,
+                        "currencyCode": "EGP"
+                    },
+                    "retailPrice": {
+                        "amountInMicros": 1088150000,
+                        "currencyCode": "EGP"
+                    }
+                }
+            ]
+        },
+        "accessInfo": {
+            "country": "EG",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/Quilting_Happiness-sample-epub.acsm?id=AvDaWLrwLCoC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+                "isAvailable": false
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=AvDaWLrwLCoC&hl=&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "... <b>Quilting</b> needles have a very small eye , which helps them glide more easily in and out of your <b>quilt</b> . It also makes them trickier to thread , so a needle threader is a big help . Needle Grabber ( c ) : This flat rubber disk helps you&nbsp;..."
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "6ItfnEs0O9sC",
+        "etag": "6r5ouNcRx2M",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/6ItfnEs0O9sC",
+        "volumeInfo": {
+            "title": "The Art of the Handmade Quilt",
+            "authors": [
+                "Nancy Brenan Daniel"
+            ],
+            "publisher": "Sterling Publishing Company, Inc.",
+            "publishedDate": "2008",
+            "description": "Sewing machines are speedier--but, increasingly, quilters are discovering that working by hand provides even more pleasure and superior results. And world-renowned quilt maker, teacher, author, and show judge Nancy Brenan Daniel has created an inspiring guide just for them, with ideas for 18 varied and beautiful hand-sewn quilts. Her detailed instructions cover it all, from making the blocks and stitching them together to adding borders and binding. Many of the designs come straight from Nancy’s own antique collection, and they’re pieced, appliqu�d, and even stenciled. Several traditional and much loved patterns--including the Courthouse Log Cabin, Shoo-fly, Prickly Pear, and Windblown Daisy--are accompanied by a contemporary appliqu� quilt and a small hand-embroidered wall hanging.",
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9781402733512"
+                },
+                {
+                    "type": "ISBN_10",
+                    "identifier": "1402733518"
+                }
+            ],
+            "readingModes": {
+                "text": false,
+                "image": true
+            },
+            "pageCount": 180,
+            "printType": "BOOK",
+            "categories": [
+                "Crafts & Hobbies"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "2.3.2.0.preview.1",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=6ItfnEs0O9sC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=6ItfnEs0O9sC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com.eg/books?id=6ItfnEs0O9sC&pg=PA166&dq=quilting&hl=&cd=9&source=gbs_api",
+            "infoLink": "http://books.google.com.eg/books?id=6ItfnEs0O9sC&dq=quilting&hl=&source=gbs_api",
+            "canonicalVolumeLink": "https://books.google.com/books/about/The_Art_of_the_Handmade_Quilt.html?hl=&id=6ItfnEs0O9sC"
+        },
+        "saleInfo": {
+            "country": "EG",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false,
+            "listPrice": {
+                "amount": 4540.41
+            }
+        },
+        "accessInfo": {
+            "country": "EG",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": false
+            },
+            "pdf": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/The_Art_of_the_Handmade_Quilt-sample-pdf.acsm?id=6ItfnEs0O9sC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=6ItfnEs0O9sC&hl=&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "... <b>quilting</b> stitch , one might begin working with a size 9 nee- dle . With practice one can expect to progress to a size 10 or 12 . General Supplies for Hand <b>Quilting</b> Supplies for hand <b>quilting</b> are few and basic . These can be found in any&nbsp;..."
+        }
+    },
+    {
+        "kind": "books#volume",
+        "id": "HTvnXwUO1MAC",
+        "etag": "v8I4+8xKOhw",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/HTvnXwUO1MAC",
+        "volumeInfo": {
+            "title": "1, 2, 3 Quilt",
+            "subtitle": "Shape Up Your Skills with 24 Stylish Projects",
+            "authors": [
+                "Ellen Luckett Baker"
+            ],
+            "publisher": "Chronicle Books",
+            "publishedDate": "2013-09-10",
+            "description": "The author of 1, 2, 3 Sew brings her creative skill-building approach to beginning and intermediate quilters—with two dozen projects included. In this book, expert seamstress and craft blogger Ellen Luckett Baker shares her fun building-block approach to quilting. Organized by quilting shapes—squares, triangles, hexagons, circles, flowers, stars, and diamonds—this easy-to-follow guide provides a simple way to master the elements of quilt design. Twenty-four projects progress in difficulty, allowing you to develop your technical skills as you work through the book. From the minimal Argyle Apron to the stylish Hexagon Handbag and more intricate Star Quilt, these modern, bright designs will appeal to beginning and intermediate quilters alike.",
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9781452129440"
+                },
+                {
+                    "type": "ISBN_10",
+                    "identifier": "1452129444"
+                }
+            ],
+            "readingModes": {
+                "text": true,
+                "image": true
+            },
+            "pageCount": 171,
+            "printType": "BOOK",
+            "categories": [
+                "Crafts & Hobbies"
+            ],
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": true,
+            "contentVersion": "2.12.12.0.preview.3",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=HTvnXwUO1MAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=HTvnXwUO1MAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com.eg/books?id=HTvnXwUO1MAC&pg=PA4&dq=quilting&hl=&cd=10&source=gbs_api",
+            "infoLink": "http://books.google.com.eg/books?id=HTvnXwUO1MAC&dq=quilting&hl=&source=gbs_api",
+            "canonicalVolumeLink": "https://books.google.com/books/about/1_2_3_Quilt.html?hl=&id=HTvnXwUO1MAC"
+        },
+        "saleInfo": {
+            "country": "EG",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false,
+            "listPrice": {
+                "amount": 559.35
+            }
+        },
+        "accessInfo": {
+            "country": "EG",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/1_2_3_Quilt-sample-epub.acsm?id=HTvnXwUO1MAC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com.eg/books/download/1_2_3_Quilt-sample-pdf.acsm?id=HTvnXwUO1MAC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=HTvnXwUO1MAC&hl=&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "... <b>quilts</b> . This book also teaches you a set of basic tech- niques that you&#39;ll need to begin <b>quilting</b> ( or to build on your current skills ) . There are how - to sections sprinkled throughout to help you shape up your skills as you work&nbsp;..."
+        }
+    }
+]

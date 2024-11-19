@@ -1,0 +1,17 @@
+section .nav {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+section .nav .nav-item button {
+  width: fit-content;
+  border: none;
+  background-color: transparent;
+  color: var(--black);
+}
+
+section .nav .nav-item button:hover,
+section .nav .nav-item button.active {
+  color: var(--orange);
+}

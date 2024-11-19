@@ -39,9 +39,9 @@
       <a class="navbar-brand" href="home">
         <img src="../../assets/images/white-logo.svg" alt="Logo" />
       </a>
-
       <!-- Left Items - Shop, Pages, Blog, Contact Icon -->
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-none d-lg-flex">
+        <!-- Home -->
         <li class="nav-item">
           <a
             class="nav-link"
@@ -49,28 +49,20 @@
             href="#"
             routerLinkActive="nav-orange"
             routerLink="home"
+            (click)="scrollToTop()"
             >Home</a
           >
         </li>
         <!-- Shop -->
-        <li class="nav-item dropdown">
+        <li class="nav-item">
           <a
-            class="nav-link dropdown-toggle mx-0 mx-lg-3"
+            class="nav-link mx-0 mx-lg-3"
             href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
+            routerLinkActive="nav-orange"
+            routerLink="shop"
+            (click)="scrollToTop()"
+            >Shop</a
           >
-            Shop
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Shop Default</a></li>
-            <li><a class="dropdown-item" href="#">Shop List</a></li>
-            <li><a class="dropdown-item" href="#">Shop Details</a></li>
-            <li><a class="dropdown-item" href="#">Shop Cart</a></li>
-            <li><a class="dropdown-item" href="#">Wishlist</a></li>
-            <li><a class="dropdown-item" href="#">Checkout</a></li>
-          </ul>
         </li>
         <!-- Pages -->
         <li class="nav-item dropdown">
@@ -92,6 +84,7 @@
                 routerLinkActive="nested-navItem"
                 routerLink="pages/about"
                 href="pages/about"
+                (click)="scrollToTop()"
                 >About Us</a
               >
             </li>
@@ -102,6 +95,7 @@
                 routerLinkActive="nested-navItem"
                 routerLink="pages/author"
                 href="pages/author"
+                (click)="scrollToTop()"
                 >Author</a
               >
             </li>
@@ -112,6 +106,7 @@
                 routerLinkActive="nested-navItem"
                 routerLink="pages/faqs"
                 href="pages/faqs"
+                (click)="scrollToTop()"
                 >Faq's</a
               >
             </li>
@@ -124,6 +119,7 @@
             routerLinkActive="nav-orange"
             routerLink="blogs"
             href="#"
+            (click)="scrollToTop()"
             >Blogs</a
           >
         </li>
@@ -134,6 +130,7 @@
             routerLinkActive="nav-orange"
             routerLink="contact"
             href="#"
+            (click)="scrollToTop()"
             >Contact</a
           >
         </li>
@@ -151,8 +148,10 @@
         <!-- Cart -->
         <li class="nav-item d-none d-lg-block">
           <a
+            routerLink="cart"
             class="nav-link right-items border rounded-circle mx-0 mx-lg-4"
             href="#"
+            (click)="scrollToTop()"
           >
             <i class="fa-solid fa-cart-shopping"></i>
             <span>0</span>
@@ -206,28 +205,20 @@
             routerLink="home"
             aria-current="page"
             href="home"
+            (click)="scrollToTop()"
             >Home</a
           >
         </li>
         <!-- Shop -->
-        <li class="nav-item dropdown">
+        <li class="nav-item">
           <a
-            class="nav-link dropdown-toggle mx-0 mx-lg-3"
+            class="nav-link"
             href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
+            routerLinkActive="nav-orange"
+            routerLink="shop"
+            (click)="scrollToTop()"
+            >Shop</a
           >
-            Shop
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Shop Default</a></li>
-            <li><a class="dropdown-item" href="#">Shop List</a></li>
-            <li><a class="dropdown-item" href="#">Shop Details</a></li>
-            <li><a class="dropdown-item" href="#">Shop Cart</a></li>
-            <li><a class="dropdown-item" href="#">Wishlist</a></li>
-            <li><a class="dropdown-item" href="#">Checkout</a></li>
-          </ul>
         </li>
         <!-- Pages -->
         <li class="nav-item dropdown">
@@ -249,6 +240,7 @@
                 routerLinkActive="nested-navItem"
                 routerLink="pages/about"
                 href="#"
+                (click)="scrollToTop()"
                 >About Us</a
               >
             </li>
@@ -259,6 +251,7 @@
                 routerLinkActive="nested-navItem"
                 routerLink="pages/author"
                 href="#"
+                (click)="scrollToTop()"
                 >Author</a
               >
             </li>
@@ -269,6 +262,7 @@
                 routerLinkActive="nested-navItem"
                 routerLink="pages/faqs"
                 href="#"
+                (click)="scrollToTop()"
                 >Faq's</a
               >
             </li>
@@ -281,6 +275,7 @@
             routerLinkActive="nav-orange"
             routerLink="blogs"
             href="#"
+            (click)="scrollToTop()"
             >Blogs</a
           >
         </li>
@@ -291,6 +286,7 @@
             href="#"
             routerLinkActive="nav-orange"
             routerLink="contact"
+            (click)="scrollToTop()"
             >Contact</a
           >
         </li>
@@ -332,7 +328,12 @@
             </a>
           </li>
         </ul>
-        <a href="contact" class="btn-main rounded-5 mt-2 btn w-100">
+        <a
+          href="#"
+          routerLink="contact"
+          class="btn-main rounded-5 mt-2 btn w-100"
+          (click)="scrollToTop()"
+        >
           Get A Quote <i class="fa-solid fa-right-long ms-2"></i>
         </a>
         <div class="icons mt-4 px-2 row">

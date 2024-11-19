@@ -1,0 +1,178 @@
+main .book figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .book figure img {
+  width: 250px;
+}
+
+main .book .content .review i {
+  color: var(--orange);
+}
+
+main .book .content .description {
+  line-height: 28px;
+  color: var(--blue);
+}
+
+main .book .content .price {
+  color: var(--orange);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+main .book .content button,
+main .book .content button:focus {
+  outline: none;
+  border: 0;
+}
+
+main .book .content .btn-read button {
+  background-color: var(--white) !important;
+  color: var(--main-color) !important;
+  border: 1px solid var(--main-color) !important;
+}
+
+main .book .content .btn-read button:hover {
+  background-color: var(--orange) !important;
+  color: var(--white) !important;
+}
+
+main .book .content .add-btns button:nth-of-type(2) {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .book .image .other-books figure:hover {
+  cursor: pointer;
+}
+
+main .book .image .other-books figure img {
+  max-width: 120px;
+}
+
+main .book .modal .modal-content {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(245, 243, 254, 0.5),
+      rgba(245, 243, 254, 0.5)
+    ),
+    url(../../../../public/assets/images/shop-page/read-little-bg.png);
+  background-position: center;
+}
+
+main .book .modal .modal-content .modal-header .btn-close {
+  background-color: #e3dffc;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .more-info .nav-tabs .nav-link {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+main .more-info .nav-tabs .nav-link:hover,
+main .more-info .nav-tabs .nav-link.active {
+  color: var(--orange);
+  border-bottom: 2px solid var(--orange) !important;
+  padding-bottom: 15px;
+}
+main .more-info .tab-content .description {
+  line-height: 28px;
+}
+
+main .more-info .tab-content table th,
+main .more-info .tab-content table td {
+  border: 1px solid lightgrey;
+  padding: 10px;
+}
+
+main .more-info .tab-content table td {
+  width: 85%;
+}
+
+main .more-info .tab-content .your-rating i {
+  color: var(--star-color);
+}
+
+main .more-info .tab-content form button {
+  width: 200px;
+  height: 60px;
+}
+
+/* Book Title */
+.book-title:hover {
+  color: var(--orange) !important;
+  cursor: pointer;
+}
+
+swiper-slide:hover figure .icons-shop {
+  transform: rotateY(0deg);
+}
+
+figure .icons-shop {
+  top: 25px;
+  right: 15px;
+  transform: rotateY(90deg);
+}
+
+.icons-shop i {
+  border: 1px solid #999;
+  border-radius: 50%;
+  height: 33px;
+  width: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.icons-shop i:hover {
+  background-color: var(--orange);
+  color: var(--white);
+  border: 1px solid var(--orange);
+}
+
+.author .publisher-img {
+  height: 30px !important;
+  width: 30px !important;
+}
+
+.author span {
+  font-size: 14px;
+}
+
+@media (width >= 1200px) {
+  main .book .content .btns .qunatity,
+  main .book .content .btns .btn-read {
+    margin-bottom: 0 !important;
+  }
+
+  main .book .content .btns .qunatity {
+    width: 25% !important;
+  }
+
+  main .book .content .btns .btn-read {
+    width: 30% !important;
+  }
+
+  main .book .content .btns .add-btns {
+    width: 45% !important;
+  }
+}

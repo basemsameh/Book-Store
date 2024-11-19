@@ -1,0 +1,54 @@
+section.row .author i {
+  color: var(--main-color);
+}
+
+section.row .content p {
+  line-height: 28px;
+  opacity: 0.8;
+}
+
+section.row .content .purple {
+  background-color: #f5f3fe;
+  opacity: 1;
+}
+
+section.row .content .purple svg {
+  right: 20px;
+  bottom: 20px;
+}
+
+section.row .tagsAndShare .tags span:hover {
+  cursor: pointer;
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+section.row .tagsAndShare .share a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+section .tagsAndShare .share a:hover {
+  color: var(--main-color);
+}
+
+section .replyBtn {
+  padding: 5px 15px !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+}
+
+section .postBtn {
+  width: 250px;
+  height: 60px;
+}
+
+@media (width >= 1200px) {
+  .blog-part {
+    width: 75% !important;
+  }
+
+  app-aside-blog {
+    width: 25% !important;
+  }
+}

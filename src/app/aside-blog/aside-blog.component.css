@@ -1,0 +1,20 @@
+.blog-title {
+  color: var(--black);
+}
+
+.blog-title:hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+@media (width >= 1200px) {
+  aside .tags,
+  aside .row .latest-posts,
+  aside .row .categories {
+    width: 100% !important;
+  }
+}
+
+.categories .activeLi {
+  color: var(--orange) !important;
+}

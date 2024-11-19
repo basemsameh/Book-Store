@@ -1,1 +1,221 @@
-<p>single-blog works!</p>
+<app-breadcrumb-wrapper [title]="'Blog Details'"></app-breadcrumb-wrapper>
+<main class="container-fluid my-5">
+  <section class="row">
+    <!-- Part of Blog -->
+    <article class="blog-part col-12 p-3">
+      <!-- Blog is Image -->
+      <figure class="rounded-2">
+        <img
+          src="../../assets/images/blogs-page/{{
+            checkIdNumber(currentBlog.id)
+          }}.jfif"
+          [alt]="currentBlog.title"
+          class="w-100 rounded-2"
+        />
+      </figure>
+      <!-- Author -->
+      <div class="author">
+        <span
+          ><i class="fa-regular fa-user me-1"></i>
+          {{ currentBlog.author }}</span
+        >
+        <span class="mx-4"
+          ><i class="fa-regular fa-comments me-1"></i> 2 Comments</span
+        >
+        <span
+          ><i class="fa-solid fa-tag me-1"></i> {{ currentBlog.category }}</span
+        >
+      </div>
+      <hr />
+      <!-- Content of Blog -->
+      <div class="content">
+        <h2 class="fw-bold my-4">{{ currentBlog.title }}</h2>
+        <p>{{ currentBlog.description }}</p>
+        <p>
+          Nunc tincidunt cursus lectus ac semper. Aenean ullamcorper quis arcu
+          molestie consequat. Interdum et malesuada fames ac ante ipsum primis
+          in faucibus. Ut nec lobortis elit, eu ultrices justo. Fusce auctor
+          erat est, non fringilla nibh tempus quis. Aenean dignissim turpis ut
+          interdum interdum. Nam molestie sed ex non tempus. Donec sodales
+          aliquam orci non imperdiet. Quisque tempus dolor id nisi blandit
+          tempor ut id lacus. Aliquam mattis tempor posuere. Sed ut sollicitudin
+          velit,
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+          efficitur et ipsum ut volutpat. Morbi a mollis felis. Nam consectetur
+          lectus vel lorem facilisis, quis viverra purus pharetra. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit. Fusce dui lacus, tempor a
+          metus vel, varius rhoncus nunc. Suspendisse luctus feugiat dictum.
+          Curabitur ipsum velit, viverra in pretium eget, molestie maximus
+          magna. Aliquam elementum vel turpis non bibendum. Cras in consequat
+          neque.
+        </p>
+        <p>
+          Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore of magna aliqua. Ut enim ad minim veniam, made of owl
+          the quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          dolor commodo consequat. Duis aute irure and dolor in
+          reprehenderit.Consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore of magna aliqua. Ut enim ad minim
+          veniam, made of owl the quis nostrud exercitation ullamco laboris nisi
+          ut aliquip ex ea dolor commodo consequat. Duis aute irure and dolor in
+          reprehenderit.
+        </p>
+        <p class="purple p-4 p-lg-5 rounded-3 position-relative">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+          efficitur et ipsum ut volutpat. Morbi a mollis felis. Nam consectetur
+          lectus vel lorem facilisis, quis viverra purus pharetra. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit. Fusce dui lacus, tempor a
+          metus vel, varius rhoncus nunc. Suspendisse luctus feugiat dictum.
+          Curabitur ipsum velit, viverra in pretium eget, molestie maximus
+          magna. Aliquam elementum vel turpis non bibendum.
+          <svg
+            class="position-absolute"
+            width="36"
+            height="36"
+            viewBox="0 0 36 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.71428 20.0711H0.5V5.64258H14.9286V20.4531L9.97665 30.3568H3.38041L8.16149 20.7947L8.5233 20.0711H7.71428Z"
+              stroke="#543EE8"
+            ></path>
+            <path
+              d="M28.2846 20.0711H21.0703V5.64258H35.4989V20.4531L30.547 30.3568H23.9507L28.7318 20.7947L29.0936 20.0711H28.2846Z"
+              stroke="#543EE8"
+            ></path>
+          </svg>
+        </p>
+        <p>
+          Nunc tincidunt cursus lectus ac semper. Aenean ullamcorper quis arcu
+          molestie consequat. Interdum et malesuada fames ac ante ipsum primis
+          in faucibus. Ut nec lobortis elit, eu ultrices justo. Fusce auctor
+          erat est, non fringilla nibh tempus quis. Aenean dignissim turpis ut
+          interdum interdum. Nam molestie sed ex non tempus. Donec sodales
+          aliquam orci non imperdiet. Quisque tempus dolor id nisi blandit
+          tempor ut id lacus. Aliquam mattis tempor posuere.
+        </p>
+      </div>
+      <hr />
+      <!-- Tags and Share -->
+      <div class="tagsAndShare row">
+        <!-- Tags -->
+        <div class="tags col-12 col-md-6 p-2 text-center text-md-start">
+          <strong class="fs-5 me-3">Tags:</strong>
+          @for (tag of currentBlog.tags; track $index) {
+          <span class="border p-2 rounded-2">{{ tag }}</span>
+          }
+        </div>
+        <!-- Share -->
+        <div
+          class="share col-12 col-md-6 text-center text-md-end p-2 mt-4 mt-md-0"
+        >
+          <strong class="fs-5 me-3">Share:</strong>
+          <a href="https://facebook.com">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com" class="mx-3">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="https://linkedin.com">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+      <hr />
+      <!-- Comments -->
+      <div class="comments">
+        <h2 class="fw-bold my-5">02 Comments</h2>
+        <div class="row">
+          @for (comment of comments; track comment.id) {
+          <!-- Image -->
+          <figure class="mb-md-0 rounded-circle text-center col-12 col-md-2">
+            <img
+              src="../../assets/images/blogs-page/comment-{{ comment.id }}.png"
+              alt="Comment"
+              class="rounded-circle"
+            />
+          </figure>
+          <!-- Info -->
+          <div class="info col-12 col-md-10 mt-3 mt-md-0">
+            <h4 class="fw-bold mb-1">{{ comment.fullName }}</h4>
+            <span class="col-6 d-inline-block"
+              >November 20, 2024 at 2:37 pm</span
+            >
+            <span
+              class="d-inline-block col-6 text-end"
+              style="color: var(--orange)"
+            >
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </span>
+            <p class="my-2 mb-3">
+              Neque porro est qui dolorem ipsum quia quaed inventor veritatis et
+              quasi architecto var sed efficitur turpis gilla sed sit amet
+              finibus eros. Lorem Ipsum is simply dummy
+            </p>
+            <button class="btn-main btn replyBtn">Reply</button>
+          </div>
+          <hr class="my-5" />
+          }
+        </div>
+      </div>
+      <!-- Leave A Comments -->
+      <div class="leave-comment">
+        <h2 class="fw-bold mb-4">Leave A Comments</h2>
+        <form action="#" class="row">
+          <!-- Name -->
+          <div class="name col-12 col-md-6 p-3">
+            <label for="name" class="form-label"
+              >Your Name <span style="color: var(--main-color)">*</span></label
+            >
+            <input
+              type="text"
+              name="name"
+              class="form-control shadow-none p-3"
+              id="name"
+              placeholder="Your Name"
+            />
+          </div>
+          <!-- Email -->
+          <div class="name col-12 col-md-6 p-3">
+            <label for="email" class="form-label"
+              >Your Email <span style="color: var(--main-color)">*</span></label
+            >
+            <input
+              type="email"
+              name="email"
+              class="form-control shadow-none p-3"
+              id="email"
+              placeholder="Your Email"
+            />
+          </div>
+          <!-- Message -->
+          <div class="message col-12 p-3">
+            <label for="message" class="form-label"
+              >Message <span style="color: var(--main-color)">*</span></label
+            >
+            <textarea
+              name="message"
+              id="message"
+              class="form-control shadow-none p-3"
+              placeholder="Write Message"
+              rows="8"
+            ></textarea>
+          </div>
+          <!-- Submit -->
+          <button type="submit" class="postBtn ms-3 rounded-5 btn btn-main">
+            Post Comment <i class="fa-solid fa-arrow-right-long ms-2"></i>
+          </button>
+        </form>
+      </div>
+    </article>
+    <!-- Part of aside  -->
+    <app-aside-blog class="col-12 pt-3"></app-aside-blog>
+  </section>
+</main>

@@ -36,6 +36,7 @@ swiper-container swiper-slide:hover figure img {
 /* Book Title */
 .book-title:hover {
   color: var(--orange) !important;
+  cursor: pointer;
 }
 
 swiper-slide:hover figure .icons-shop {

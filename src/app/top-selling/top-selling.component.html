@@ -32,9 +32,7 @@
         <a href="cart" class="text-black text-decoration-none">
           <i class="fa-solid fa-shuffle"></i>
         </a>
-        <a href="shop/details" class="text-black text-decoration-none">
-          <i class="fa-regular fa-eye"></i>
-        </a>
+        <i class="fa-regular fa-eye" (click)="navigateToBook(book.id)"></i>
       </div>
     </figure>
     <!-- Content -->
@@ -44,16 +42,18 @@
         {{ book.volumeInfo.categories }}
       </p>
       <!-- Title -->
-      <a
-        class="book-title fw-bold fs-5 text-decoration-none"
-        href="shop/details"
+      <h5
+        class="book-title fw-bold"
+        (click)="navigateToBook(book.id)"
         style="color: var(--blue)"
       >
         {{ book.volumeInfo.title | slice : 0 : 24 }}
-      </a>
+      </h5>
       <!-- Price -->
       <p style="color: var(--orange); font-size: 14px" class="fw-bold">
-        {{ book.saleInfo.listPrice.amount | currency }}
+        {{
+          book.saleInfo.listPrice.amount | currency : "EGP" : "symbol-narrow"
+        }}
       </p>
       <div class="d-flex justify-content-between">
         <!-- Author -->
@@ -77,7 +77,7 @@
           <i class="fa-regular fa-star"></i>
         </div>
       </div>
-      <button class="btn add-cart-btn w-100">
+      <button class="btn add-cart-btn w-100" (click)="navigateToBook(book.id)">
         <i class="fa-solid fa-basket-shopping"></i> Add To Cart
       </button>
     </div>

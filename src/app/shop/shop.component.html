@@ -1,0 +1,66 @@
+<app-breadcrumb-wrapper [title]="'Shop'"></app-breadcrumb-wrapper>
+<main class="container-fluid">
+  <section class="my-5">
+    <!-- Shop Header -->
+    <div class="border rounded-3 p-2 row align-items-center mb-5 mx-2">
+      <p class="col-12 col-md-6 mb-md-0">Showing 1-16 Of 32 Results</p>
+      <ul
+        class="nav nav-tabs col-12 col-md-6 text-md-end mb-0 border-0 p-0"
+        id="myTab"
+        role="tablist"
+      >
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="default-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#default-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="default-tab-pane"
+            aria-selected="true"
+          >
+            <i class="fa-solid fa-cubes"></i>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="list-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#list-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="list-tab-pane"
+            aria-selected="false"
+          >
+            <i class="fa-solid fa-list-ul"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <!-- Shop Views -->
+    <div class="tab-content p-0" id="myTabContent">
+      <!-- Shop Default -->
+      <div
+        class="tab-pane fade show active"
+        id="default-tab-pane"
+        role="tabpanel"
+        aria-labelledby="default-tab"
+        tabindex="0"
+      >
+        <app-shop-default></app-shop-default>
+      </div>
+      <!-- Shop List -->
+      <div
+        class="tab-pane fade"
+        id="list-tab-pane"
+        role="tabpanel"
+        aria-labelledby="list-tab"
+        tabindex="0"
+      >
+        <app-shop-list></app-shop-list>
+      </div>
+    </div>
+  </section>
+</main>

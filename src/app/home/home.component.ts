@@ -11,6 +11,7 @@ import { FeaturedAuthorComponent } from '../featured-author/featured-author.comp
 import { DiscountSectionComponent } from '../discount-section/discount-section.component';
 import 'swiper/swiper-bundle.css'; // Import Swiper CSS
 import { TopSellingComponent } from '../top-selling/top-selling.component';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -22,6 +23,7 @@ import { TopSellingComponent } from '../top-selling/top-selling.component';
     FeaturedAuthorComponent,
     DiscountSectionComponent,
     TopSellingComponent,
+    RouterModule,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
@@ -32,7 +34,7 @@ export class HomeComponent implements OnInit {
   prices: number[] = [];
   blogs: any[] = [];
   currentDate = new Date();
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService, private router: Router) {
     this.books = dataService.books;
     this.books[5].volumeInfo.authors = ['Management Association'];
     this.blogs = dataService.blogs;
@@ -77,5 +79,16 @@ export class HomeComponent implements OnInit {
 
   checkTextLength(text: string): string {
     return text.length > 10 ? text.slice(0, 10) : text;
+  }
+
+  navigateToBlog(id: number): void {
+    window.scrollTo(0, 0);
+    this.router.navigate(['blogs', id]);
+  }
+
+  // Navigate to shop details
+  navigateToBook(id: any): void {
+    window.scrollTo(0, 0);
+    this.router.navigate(['shop', id]);
   }
 }

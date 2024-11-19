@@ -1,0 +1,239 @@
+<section class="container-fluid">
+  <div class="tab-content" id="myTabContent">
+    <!-- First Page -->
+    <div
+      class="tab-pane fade show active"
+      id="fpage-tab-pane"
+      role="tabpanel"
+      aria-labelledby="fpage-tab"
+      tabindex="0"
+    >
+      @for (book of books | slice:0:16; track book.id) {
+      <!-- Book -->
+      <article class="border rounded-4 p-2 row mb-4">
+        <figure
+          class="col-12 col-md-4 col-lg-3 mx-auto mx-lg-0 rounded-4 mb-0 bg-body-secondary p-4"
+        >
+          <img
+            style="height: 200px"
+            [src]="book.volumeInfo.imageLinks.smallThumbnail"
+            [alt]="book.volumeInfo.title"
+          />
+        </figure>
+        <!-- Content -->
+        <div class="content col-12 col-md-9 text-center text-lg-start p-4">
+          <!-- Title -->
+          <h3
+            class="book-title fw-bold fs-3"
+            (click)="navigateToBook(book.id)"
+            style="color: var(--blue)"
+            title="Show Book"
+          >
+            {{ book.volumeInfo.title }}
+          </h3>
+          <!-- Price -->
+          <h5 class="fw-bold price mt-2">
+            {{
+              book.saleInfo.listPrice.amount
+                | currency : "EGP" : "symbol-narrow"
+            }}
+          </h5>
+          <!-- Stars -->
+          <div class="stars mb-3">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star mx-1"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star mx-1"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <!-- Description -->
+          <p>{{ book.volumeInfo.description | slice : 0 : 275 }}</p>
+          <!-- Icons And Add to Cart button -->
+          <div class="d-flex align-items-center">
+            <button
+              class="btn add-cart-btn mb-3 mx-auto mx-md-0 mb-md-0"
+              (click)="navigateToBook(book.id)"
+              title="Show Book"
+            >
+              <i class="fa-solid fa-basket-shopping"></i> Add To Cart
+            </button>
+            <!-- Icons -->
+            <span class="icons-shop w-fit mx-auto mx-md-0 ms-md-3">
+              <i class="fa-regular fa-heart" title="Add To Wishlist"></i>
+              <a href="cart" class="text-black text-decoration-none">
+                <i class="fa-solid fa-shuffle"></i>
+              </a>
+              <i
+                class="fa-regular fa-eye"
+                title="Show Book"
+                (click)="navigateToBook(book.id)"
+              ></i>
+            </span>
+          </div>
+        </div>
+      </article>
+      }
+    </div>
+    <!-- Second Page -->
+    <div
+      class="tab-pane fade"
+      id="lpage-tab-pane"
+      role="tabpanel"
+      aria-labelledby="lpage-tab"
+      tabindex="0"
+    >
+      @for (book of books | slice:12:20; track book.id) {
+      <!-- Book -->
+      <article class="border rounded-4 p-2 row mb-4">
+        <figure
+          class="col-12 col-md-4 col-lg-3 mx-auto mx-lg-0 rounded-4 mb-0 bg-body-secondary p-4"
+        >
+          <img
+            style="height: 200px"
+            [src]="book.volumeInfo.imageLinks.smallThumbnail"
+            [alt]="book.volumeInfo.title"
+          />
+        </figure>
+        <!-- Content -->
+        <div class="content col-12 col-md-9 text-center text-lg-start p-4">
+          <!-- Title -->
+          <h3
+            class="book-title fw-bold"
+            style="color: var(--blue)"
+            (click)="navigateToBook(book.id)"
+            title="Show Book"
+          >
+            {{ book.volumeInfo.title }}
+          </h3>
+          <!-- Price -->
+          <h5 class="fw-bold price mt-2">
+            {{
+              book.saleInfo.listPrice.amount
+                | currency : "EGP" : "symbol-narrow"
+            }}
+          </h5>
+          <!-- Stars -->
+          <div class="stars mb-3">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star mx-1"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star mx-1"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <!-- Description -->
+          <p>{{ book.volumeInfo.description | slice : 0 : 275 }}</p>
+          <!-- Icons And Add to Cart button -->
+          <div class="d-flex align-items-center">
+            <button
+              class="btn add-cart-btn mb-3 mx-auto mx-md-0 mb-md-0"
+              (click)="navigateToBook(book.id)"
+              title="Show Book"
+            >
+              <i class="fa-solid fa-basket-shopping"></i> Add To Cart
+            </button>
+            <!-- Icons -->
+            <span class="icons-shop w-fit mx-auto mx-md-0 ms-md-3">
+              <i class="fa-regular fa-heart" title="Add To Wishlist"></i>
+              <a href="cart" class="text-black text-decoration-none">
+                <i class="fa-solid fa-shuffle"></i>
+              </a>
+              <i
+                class="fa-regular fa-eye"
+                (click)="navigateToBook(book.id)"
+                title="Show Book"
+              ></i>
+            </span>
+          </div>
+        </div>
+      </article>
+      }
+    </div>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs w-fit mx-auto mt-5 mb-4" id="myTab" role="tablist">
+      <!-- Left arrow (first page) -->
+      <li
+        class="nav-item"
+        [class.opacity-0]="hideLeftButton"
+        role="presentation"
+      >
+        <button
+          [disabled]="hideLeftButton"
+          class="nav-link"
+          id="fpage-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#fpage-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="fpage-tab-pane"
+          aria-selected="false"
+          (click)="
+            hideRightButton = false; hideLeftButton = true; scrollToTop()
+          "
+        >
+          <i class="fa-solid fa-angles-left"></i>
+        </button>
+      </li>
+      <!-- First Page -->
+      <li class="nav-item mx-3" role="presentation">
+        <button
+          class="nav-link active"
+          [class.active]="hideLeftButton"
+          id="fpage-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#fpage-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="fpage-tab-pane"
+          aria-selected="true"
+          (click)="
+            hideRightButton = false; hideLeftButton = true; scrollToTop()
+          "
+        >
+          1
+        </button>
+      </li>
+      <!-- Last Page -->
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="lpage-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#lpage-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="lpage-tab-pane"
+          aria-selected="false"
+          [class.active]="hideRightButton"
+          (click)="
+            hideLeftButton = false; hideRightButton = true; scrollToTop()
+          "
+        >
+          2
+        </button>
+      </li>
+      <!-- Right arrow (last page) -->
+      <li
+        class="nav-item ms-3"
+        [class.opacity-0]="hideRightButton"
+        role="presentation"
+      >
+        <button
+          [disabled]="hideRightButton"
+          class="nav-link"
+          id="lpage-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#lpage-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="lpage-tab-pane"
+          aria-selected="false"
+          (click)="
+            hideLeftButton = false; hideRightButton = true; scrollToTop()
+          "
+        >
+          <i class="fa-solid fa-angles-right"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
+</section>

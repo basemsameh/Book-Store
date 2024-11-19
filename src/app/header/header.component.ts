@@ -16,4 +16,8 @@ export class HeaderComponent {
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
     this.isFixed = scrollPosition > 50; // Adjust threshold as needed
   }
+
+  scrollToTop(): void {
+    window.scrollTo(0, 0);
+  }
 }

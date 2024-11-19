@@ -1,0 +1,142 @@
+:root {
+  --value1: 5%; /* Default for the first range */
+  --value2: 0%; /* Default for the second range */
+}
+.book-title:hover {
+  color: var(--orange) !important;
+  cursor: pointer;
+}
+
+.book:hover figure img {
+  transform: scale(1.1);
+}
+
+.book:hover figure .icons-shop {
+  transform: rotateY(0deg);
+}
+
+figure .icons-shop {
+  top: 25px;
+  right: 15px;
+  transform: rotateY(90deg);
+}
+
+.icons-shop i {
+  border: 1px solid #999;
+  border-radius: 50%;
+  height: 33px;
+  width: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.icons-shop i:hover {
+  background-color: var(--orange);
+  color: var(--white);
+  border: 1px solid var(--orange);
+}
+
+section aside .categories .category.active,
+section aside .categories .category:hover {
+  cursor: pointer;
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+section aside .review label {
+  color: var(--star-color);
+}
+
+section aside #minMaxPrice {
+  background-color: var(--blue);
+}
+
+section aside #minMaxPrice input {
+  -webkit-appearance: none; /* Remove default styling in Chrome/Safari */
+  appearance: none; /* Standard appearance reset */
+  background-color: var(--blue);
+  height: 8px;
+  width: 50%;
+}
+
+section aside #minMaxPrice input:focus {
+  border: none;
+  outline: none;
+}
+
+.styled-range::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default thumb styling */
+  appearance: none;
+  height: 20px;
+  width: 10px;
+  background: var(--main-color);
+  cursor: pointer;
+  border-radius: 5px;
+  top: 50%;
+  transform: translateY(-30%);
+}
+
+section aside #minMaxPrice #rangeInpt1::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    to right,
+    var(--main-color) 0%,
+    var(--main-color) var(--value1),
+    var(--blue) var(--value1),
+    var(--blue) 100%
+  );
+  height: 8px;
+}
+
+/* For the second range, use value2 */
+section aside #minMaxPrice #rangeInpt2::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    to right,
+    var(--main-color) 0%,
+    var(--main-color) var(--value2),
+    var(--blue) var(--value2),
+    var(--blue) 100%
+  );
+  height: 8px;
+}
+
+section aside .filter-btn {
+  background-color: var(--light-main-color) !important;
+  color: var(--main-color) !important;
+}
+
+section aside .filter-btn:hover {
+  background-color: var(--orange) !important;
+  color: var(--white) !important;
+}
+
+.nav-tabs .nav-item .nav-link {
+  border: 1px solid var(--main-color);
+  color: var(--blue);
+  border-radius: 5px;
+  font-weight: 600;
+  background-color: var(--light-main-color);
+}
+
+.nav-tabs .nav-item .nav-link.active,
+.nav-tabs .nav-item .nav-link:hover {
+  color: var(--white);
+  background-color: var(--main-color);
+}
+
+@media (width >= 1200px) {
+  .booksAndAside .books {
+    width: 75% !important;
+  }
+
+  .booksAndAside aside {
+    width: 25% !important;
+  }
+
+  .divsCollection,
+  .categories {
+    width: 100%;
+  }
+}

@@ -1,0 +1,91 @@
+<aside>
+  <!-- Search -->
+  <div class="border rounded-3 p-3">
+    <div class="input-group">
+      <input
+        type="search"
+        name="search"
+        placeholder="Search.."
+        class="form-control rounded-end-0 shadow-none"
+      />
+      <button class="btn btn-main">Search</button>
+    </div>
+  </div>
+  <!-- Categories and Lates Posts -->
+  <div class="row justify-content-between px-3">
+    <!-- Categories -->
+    <div
+      class="categories border rounded-3 p-3 position-relative mt-5 col-12 col-md-5"
+    >
+      <h5
+        class="position-absolute shadow fw-bold btn-main text-center rounded-3 w-75 top-0 start-50 translate-middle"
+      >
+        Categories
+      </h5>
+      <ul class="pt-4 list-unstyled mb-0">
+        @for (category of categories; track $index) {
+        <li
+          class="category pb-3 d-flex align-items-center"
+          [class.activeLi]="currentCategory === categoryName.textContent"
+        >
+          <i class="fa-solid fa-circle me-3" style="font-size: 8px"></i>
+          <span #categoryName>{{ category.category }}</span>
+          <span class="ms-auto">({{ category.number }})</span>
+        </li>
+        }
+      </ul>
+    </div>
+    <!-- Lates Posts -->
+    <div
+      class="latest-posts border rounded-3 p-3 pb-0 position-relative mt-5 col-12 col-md-6"
+    >
+      <h5
+        class="position-absolute shadow fw-bold btn-main text-center rounded-3 w-75 top-0 start-50 translate-middle"
+      >
+        Latest Posts
+      </h5>
+      <div class="pt-4">
+        @for (blog of blogs; track blog.id) { @if
+        (latesPosts.includes(blog.publishedDate)) {
+        <div class="row align-items-center border-bottom mb-3 pb-3">
+          <figure class="col-12 col-md-5 mb-md-0 rounded-3">
+            <img
+              src="../../assets/images/blogs-page/{{
+                checkIdNumber(blog.id)
+              }}.jfif"
+              alt="Blog"
+              class="w-100 rounded-3"
+            />
+          </figure>
+          <div class="content col-12 col-md-7 p-3">
+            <h5 class="fw-bold blog-title" (click)="navigateToBlog(blog.id)">
+              {{ blog.title }}
+            </h5>
+            <p class="mb-0 text-black-50">
+              <i class="fa-regular fa-clock me-1"></i>
+              {{ blog.publishedDate | date }}
+            </p>
+          </div>
+        </div>
+        } }
+      </div>
+    </div>
+  </div>
+  <!-- Tags -->
+  <div
+    class="tags border rounded-3 p-3 pb-0 position-relative mt-5 col-12 col-md-6"
+  >
+    <h5
+      class="position-absolute shadow fw-bold btn-main text-center rounded-3 w-75 top-0 start-50 translate-middle"
+    >
+      Tags
+    </h5>
+    <div class="pt-4">
+      @for (tag of tags; track $index) {
+      <span class="w-fit bg-secondary-subtle p-2 d-inline-block mb-3 mx-2">{{
+        tag
+      }}</span>
+      }
+    </div>
+  </div>
+</aside>

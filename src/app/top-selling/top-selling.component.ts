@@ -1,18 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener } from '@angular/core';
 import { DataService } from '../data.service';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-top-selling',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './top-selling.component.html',
   styleUrl: './top-selling.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class TopSellingComponent {
   books: any[] = [];
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService, private router: Router) {
     this.books = dataService.books;
     this.books[5].volumeInfo.authors = ['Management Association'];
   }
@@ -38,5 +39,11 @@ export class TopSellingComponent {
 
   checkTextLength(text: string): string {
     return text.length > 10 ? text.slice(0, 10) : text;
+  }
+
+  // Navigate to shop details
+  navigateToBook(id: any): void {
+    window.scrollTo(0, 0);
+    this.router.navigate(['shop', id]);
   }
 }
