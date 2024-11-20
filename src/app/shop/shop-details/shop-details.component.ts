@@ -21,6 +21,7 @@ export class ShopDetailsComponent implements OnInit {
   books: any[] = [];
   bookId: any;
   currentBook: any;
+  cart: any[] = [];
   windowWidth: number = window.innerWidth;
   @HostListener('window:resize', ['$event'])
   onResize() {
@@ -42,6 +43,23 @@ export class ShopDetailsComponent implements OnInit {
       this.getCurrentBook();
       console.log(this.currentBook);
     });
+    // Get data of cart from localStorage
+    let storedData = localStorage.getItem('cart');
+    storedData ? (this.cart = JSON.parse(storedData)) : (this.cart = []);
+  }
+
+  // Add to cart
+  addToCart(quantity: any): void {
+    this.cart.push({
+      id: this.currentBook.id,
+      image: this.currentBook.volumeInfo.imageLinks.smallThumbnail,
+      title: this.currentBook.volumeInfo.title,
+      price: this.currentBook.saleInfo.listPrice.amount,
+      quantity: +quantity,
+    });
+    localStorage.setItem('cart', JSON.stringify(this.cart));
+    this.dataService.cart.next(this.cart);
+    console.log(this.cart);
   }
 
   getCurrentBook(): void {

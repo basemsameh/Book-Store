@@ -1,0 +1,60 @@
+.empty-cart figure svg {
+  max-width: 300px;
+}
+
+.fill-table table th {
+  font-size: 26px;
+}
+
+.fill-table table th,
+.fill-table table td {
+  border-bottom: 1px solid lightgrey;
+  padding: 10px;
+}
+
+.fill-table table td.remove-btn i:hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.fill-table table td {
+  vertical-align: middle;
+  padding: 15px 10px;
+}
+
+.fill-table table td.price {
+  color: var(--orange);
+  font-weight: 600;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.fill-table .cart-total table th,
+.fill-table .cart-total table td {
+  padding: 20px 15px;
+}
+
+.cont-shop-btn {
+  background-color: var(--white) !important;
+  color: var(--main-color) !important;
+  border: 1px solid var(--main-color) !important;
+}
+
+.cont-shop-btn:hover {
+  background-color: var(--orange) !important;
+  color: var(--white) !important;
+}
+
+@media (width <= 640px) {
+  .tableAndForm .table-container {
+    overflow-x: auto;
+  }
+
+  .tableAndForm .table-container table {
+    min-width: 630px;
+  }
+}

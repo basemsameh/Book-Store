@@ -140,21 +140,25 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 pe-0 pe-lg-3">
         <!-- Favourites -->
         <li class="nav-item d-none d-lg-block">
-          <a class="nav-link right-items border rounded-circle" href="#">
+          <a
+            href="#"
+            routerLink="/whishlist"
+            class="nav-link right-items border rounded-circle"
+          >
             <i class="fa-regular fa-heart"></i>
-            <span>0</span>
+            <span>{{ wishlist.length }}</span>
           </a>
         </li>
         <!-- Cart -->
         <li class="nav-item d-none d-lg-block">
           <a
-            routerLink="cart"
+            routerLink="/cart"
             class="nav-link right-items border rounded-circle mx-0 mx-lg-4"
             href="#"
             (click)="scrollToTop()"
           >
             <i class="fa-solid fa-cart-shopping"></i>
-            <span>0</span>
+            <span>{{ cart.length }}</span>
           </a>
         </li>
         <!-- List (Offcanvas Trigger) -->
@@ -194,6 +198,7 @@
       </button>
     </div>
 
+    <!-- offcanvas -->
     <div class="offcanvas-body">
       <!-- Navbar Items - Visible on small screens -->
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-lg-none">
@@ -202,9 +207,9 @@
           <a
             class="nav-link active"
             routerLinkActive="nav-orange"
-            routerLink="home"
+            routerLink="/home"
             aria-current="page"
-            href="home"
+            href="#"
             (click)="scrollToTop()"
             >Home</a
           >
@@ -273,7 +278,7 @@
           <a
             class="nav-link"
             routerLinkActive="nav-orange"
-            routerLink="blogs"
+            routerLink="/blogs"
             href="#"
             (click)="scrollToTop()"
             >Blogs</a
@@ -285,7 +290,7 @@
             class="nav-link"
             href="#"
             routerLinkActive="nav-orange"
-            routerLink="contact"
+            routerLink="/contact"
             (click)="scrollToTop()"
             >Contact</a
           >
@@ -330,7 +335,7 @@
         </ul>
         <a
           href="#"
-          routerLink="contact"
+          routerLink="/contact"
           class="btn-main rounded-5 mt-2 btn w-100"
           (click)="scrollToTop()"
         >

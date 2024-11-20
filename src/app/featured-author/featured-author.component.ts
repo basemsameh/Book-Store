@@ -4,11 +4,12 @@ import {
   HostListener,
   Input,
 } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-featured-author',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './featured-author.component.html',
   styleUrl: './featured-author.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

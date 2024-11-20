@@ -1,5 +1,6 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { RouterLinkActive, RouterModule } from '@angular/router';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,12 @@ import { RouterLinkActive, RouterModule } from '@angular/router';
 })
 export class HeaderComponent {
   isFixed: boolean = false;
-
+  cart!: any[];
+  wishlist!: any[];
+  constructor(private dataService: DataService) {
+    dataService.cart.subscribe((value) => (this.cart = value));
+    dataService.wishlist.subscribe((value) => (this.wishlist = value));
+  }
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;

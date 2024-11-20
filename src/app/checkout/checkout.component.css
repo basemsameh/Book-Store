@@ -1,0 +1,40 @@
+.empty-cart figure svg {
+  max-width: 300px;
+}
+
+section form label {
+  color: var(--blue);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.table-container table th {
+  font-size: 22px;
+}
+
+.table-container table th,
+.table-container table td {
+  border-bottom: 1px solid lightgrey;
+  padding: 15px 10px;
+}
+
+input[type="radio"]:focus {
+  border: 0 !important;
+  outline: 0;
+}
+
+input[type="radio"]:checked {
+  color: var(--orange);
+  background-color: var(--orange);
+}
+
+.cashOnDelivery span:hover {
+  cursor: pointer;
+  border: 1px solid var(--black) !important;
+}

@@ -1,7 +1,7 @@
 <!-- Head Section -->
 <div class="d-flex justify-content-between">
   <h2 class="fs-1 fw-bold">Top Selling Books</h2>
-  <a href="shop/defualt" class="explore-btn btn rounded-5 me-2"
+  <a href="#" routerLink="/shop" class="explore-btn btn rounded-5 me-2"
     >Explore More <i class="fa-solid fa-arrow-right-long ms-2"></i
   ></a>
 </div>
@@ -29,7 +29,7 @@
       <!-- Icons -->
       <div class="icons-shop position-absolute">
         <i class="fa-regular fa-heart" title="Add To Wishlist"></i>
-        <a href="cart" class="text-black text-decoration-none">
+        <a href="#" routerLink="/cart" class="text-black text-decoration-none">
           <i class="fa-solid fa-shuffle"></i>
         </a>
         <i class="fa-regular fa-eye" (click)="navigateToBook(book.id)"></i>
@@ -60,7 +60,7 @@
         <figure class="author w-fit">
           <img
             src="../../assets/images/publisher-placeholder.jpg"
-            alt=""
+            alt="Author"
             class="publisher-img rounded-circle me-2"
           />
           @if ( book.volumeInfo.authors) {

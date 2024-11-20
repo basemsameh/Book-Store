@@ -13,15 +13,14 @@ import { Router } from '@angular/router';
   providers: [DataService],
 })
 export class ShopDefaultComponent {
-  minPrice: number = 100; // Default value for the slider
-  maxPrice: number = 5000; // Default value for the slider
-  booksCategories: any[] = [];
   books: any[] = [];
+  minPrice: number = 100;
+  maxPrice: number = 5000;
+  booksCategories: any[] = [];
   currentCategory: string[] = [];
 
   constructor(private dataService: DataService, private router: Router) {
     this.books = dataService.books;
-    console.log(this.books);
     this.getCategories();
   }
 

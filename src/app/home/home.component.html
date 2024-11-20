@@ -7,7 +7,7 @@
       <h1>Get Your New Book <br />With The Best Price</h1>
       <a
         href="#"
-        routerLink="shop"
+        routerLink="/shop"
         class="btn btn-main rounded-5 px-5 py-3 mt-4"
         >Shop Now <i class="fa-solid fa-arrow-right-long ms-2"></i
       ></a>
@@ -64,7 +64,7 @@
     class="position-absolute z-1 start-50 translate-middle-x"
   />
 </section>
-<!-- Features Section -->
+<!-- Features Section  -->
 <section class="features p-3">
   <article class="p-3 row rounded-3">
     <!-- Feature -->
@@ -117,12 +117,12 @@
     </div>
   </article>
 </section>
-<!-- Shop Section -->
+<!-- Shop Section (Featured Books) -->
 <section class="shop-sec p-3">
   <!-- Head Section -->
   <div class="d-flex justify-content-between">
     <h2 class="fs-1 fw-bold">Featured Books</h2>
-    <a href="shop" class="explore-btn btn rounded-5 me-2"
+    <a href="#" routerLink="/shop" class="explore-btn btn rounded-5 me-2"
       >Explore More <i class="fa-solid fa-arrow-right-long ms-2"></i
     ></a>
   </div>
@@ -149,13 +149,20 @@
         />
         <!-- Icons -->
         <div class="icons-shop position-absolute">
-          <i class="fa-regular fa-heart" title="Add To Wishlist"></i>
-          <a href="cart" class="text-black text-decoration-none">
+          <i
+            class="fa-regular fa-heart"
+            title="Add To Wishlist"
+            [id]="book.id"
+            (click)="addOrRemoveToWishlist(book.id)"
+          ></i>
+          <a
+            href="#"
+            routerLink="/cart"
+            class="text-black text-decoration-none"
+          >
             <i class="fa-solid fa-shuffle"></i>
           </a>
-          <a href="shop/details" class="text-black text-decoration-none">
-            <i class="fa-regular fa-eye"></i>
-          </a>
+          <i class="fa-regular fa-eye" (click)="navigateToBook(book.id)"></i>
         </div>
       </figure>
       <!-- Content -->
@@ -192,6 +199,7 @@
             <span>Basem Sameh</span>
             }
           </figure>
+          <!-- Stars -->
           <div class="ms-auto w-fit" style="color: var(--orange)">
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
@@ -261,12 +269,12 @@
   <!-- Head Section -->
   <div class="d-flex justify-content-between">
     <h2 class="fs-1 fw-bold">Bookle Top Books</h2>
-    <a href="#" routerLink="shop" class="explore-btn btn rounded-5 me-2"
+    <a href="#" routerLink="/shop" class="explore-btn btn rounded-5 me-2"
       >Explore More <i class="fa-solid fa-arrow-right-long ms-2"></i
     ></a>
   </div>
   <div class="row mt-5">
-    @for (book of books| slice:0:4; track book.id) {
+    @for (book of books| slice:4:8; track book.id) {
     <!-- Book -->
     <div class="book col-12 col-md-6 col-lg-3 p-3 mb-3">
       <!-- Image -->
@@ -280,8 +288,17 @@
         />
         <!-- Icons -->
         <div class="icons-shop position-absolute">
-          <i class="fa-regular fa-heart" title="Add To Wishlist"></i>
-          <a href="cart" class="text-black text-decoration-none">
+          <i
+            class="fa-regular fa-heart"
+            title="Add To Wishlist"
+            [id]="book.id"
+            (click)="addOrRemoveToWishlist(book.id)"
+          ></i>
+          <a
+            href="#"
+            routerLink="/cart"
+            class="text-black text-decoration-none"
+          >
             <i class="fa-solid fa-shuffle"></i>
           </a>
           <i class="fa-regular fa-eye" (click)="navigateToBook(book.id)"></i>
@@ -343,7 +360,7 @@
         <p class="my-4 fw-medium">And get your 25% discount now!</p>
         <a
           href="#"
-          routerlink="shop"
+          routerlink="/shop"
           class="btn shopNow-btn rounded-5 fw-bold text-decoration-none bg-white"
           >Shop Now <i class="fa-solid fa-arrow-right-long ms-2"></i
         ></a>
@@ -362,7 +379,7 @@
     <!-- Title Section -->
     <div class="d-flex justify-content-between align-items-center">
       <h3 class="fw-bold">Top Rating Books</h3>
-      <a href="#" routerLink="shop" class="explore-btn btn rounded-5 me-2"
+      <a href="#" routerLink="/shop" class="explore-btn btn rounded-5 me-2"
         >View More <i class="fa-solid fa-arrow-right-long ms-2"></i
       ></a>
     </div>
@@ -400,8 +417,17 @@
               </div>
               <!-- Icons -->
               <div class="icons-shop col-12 col-md-4 mt-3 mt-md-0">
-                <i class="fa-regular fa-heart" title="Add To Wishlist"></i>
-                <a href="cart" class="text-black text-decoration-none">
+                <i
+                  class="fa-regular fa-heart"
+                  title="Add To Wishlist"
+                  [id]="book.id"
+                  (click)="addOrRemoveToWishlist(book.id)"
+                ></i>
+                <a
+                  href="#"
+                  routerLink="/cart"
+                  class="text-black text-decoration-none"
+                >
                   <i class="fa-solid fa-shuffle"></i>
                 </a>
                 <i

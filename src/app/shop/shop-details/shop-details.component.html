@@ -93,7 +93,12 @@
           class="add-btns col-12 mb-4 mb-md-0 d-flex align-items-center justify-content-between"
         >
           <!-- Add To Cart Button -->
-          <button class="btn btn-main rounded-5 w-75 py-3">
+          <button
+            class="btn btn-main rounded-5 w-75 py-3"
+            data-bs-toggle="modal"
+            data-bs-target="#addToCart"
+            (click)="addToCart(quantityInput.value)"
+          >
             <i class="fa-solid fa-basket-shopping me-1"></i> Add To Cart
           </button>
           <!-- Add to Whislist -->
@@ -104,8 +109,6 @@
             <i class="fa-regular fa-heart"></i>
           </button>
         </div>
-        <!-- <div class="btn-whish col-12 col-md-6 col-lg-2">
-        </div> -->
       </div>
       <hr />
       <!-- Book Category -->
@@ -200,8 +203,6 @@
     <div
       class="modal fade"
       id="readALittle"
-      data-bs-backdrop="static"
-      data-bs-keyboard="false"
       tabindex="-1"
       aria-labelledby="staticBackdropLabel"
       aria-hidden="true"
@@ -244,6 +245,36 @@
               events. This historical documentation is essential for
               understanding the evolution of political systems and ideologies.
             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add To Cart Modal -->
+    <div
+      class="modal fade"
+      id="addToCart"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-3">
+          <div class="modal-header border-0 p-4">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div
+            class="modal-body text-center px-5 py-3 border-0"
+            style="font-size: 80px"
+          >
+            <i class="fa-regular fa-circle-check text-success"></i>
+            <h3 class="text-black mt-3 mb-5">
+              Book added to cart successfully!
+            </h3>
           </div>
         </div>
       </div>
@@ -480,7 +511,7 @@
     <!-- Head Section -->
     <div class="head-sec">
       <h2 class="fs-1 fw-bold text-center">Related Products</h2>
-      <p class="text-center mx-auto" style="max-width: 500px;">
+      <p class="text-center mx-auto" style="max-width: 500px">
         Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec at
         nulla nulla. Duis posuere ex lacus
       </p>

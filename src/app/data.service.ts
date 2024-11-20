@@ -1,12 +1,14 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { afterNextRender, Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
   books: any[] = [];
+  cart: BehaviorSubject<any> = new BehaviorSubject([]);
+  wishlist: BehaviorSubject<any> = new BehaviorSubject([]);
 
   getFirstBooks(): Observable<any> {
     return this.httpClient.get(
@@ -28,27 +30,40 @@ export class DataService {
       this.books = [...this.books, ...x.items];
     });
     if (this.books.length > 0) {
-      this.books[0].volumeInfo.categories = ['Business & Economics'];
-      this.books[0].volumeInfo.authors = ['InfoWorld Media Group, Inc.'];
-      this.books[0].volumeInfo.publisher = 'InfoWorld Media Group, Inc.';
-      this.checkPriceAmount();
+      this.fillEmpty();
+    }
+    afterNextRender(() => {
+      // Get Cart
+      const storedData = localStorage.getItem('cart');
+      storedData ? this.cart.next(JSON.parse(storedData)) : this.cart.next([]);
+
+      // Get wishlist
+      const storedWishlist = localStorage.getItem('wishlist');
+      storedWishlist
+        ? this.wishlist.next(JSON.parse(storedWishlist))
+        : this.wishlist.next([]);
+    });
+  }
+
+  // Fill empty elements
+  fillEmpty(): void {
+    for (let i = 0; i < this.books.length; i++) {
+      if (!this.books[i].volumeInfo.categories) {
+        this.books[i].volumeInfo.categories = ['Business & Economics'];
+      }
+      if (!this.books[i].volumeInfo.publisher) {
+        this.books[i].volumeInfo.publisher = 'InfoWorld Media Group, Inc.';
+      }
+      if (!this.books[i].saleInfo.listPrice) {
+        this.books[i].saleInfo.listPrice = { amount: 0 };
+        this.books[i].saleInfo.listPrice.amount = 832.15;
+      }
     }
   }
 
-  prices: any = [
-    1760.29, 3092.04, 3700.91, 4411.32, 1270.64, 54624.09, 1079.44, 3684.78,
-    1788.51, 2996.49, 2499.38, 2190.5, 4626.41, 829.98, 1738.63, 4618.05,
-    2519.03, 3253.29, 4540.41, 559.35,
-  ];
-
-  // Give price to books that don't have price
-  checkPriceAmount() {
-    for (let i = 0; i < this.books.length; i++) {
-      if (!this.books[i].saleInfo.listPrice) {
-        this.books[i].saleInfo.listPrice = { amount: 0 };
-        this.books[i].saleInfo.listPrice.amount = this.prices[i];
-      }
-    }
+  hello(word: string): string {
+    console.log(word);
+    return word;
   }
 
   // Blogs
@@ -162,5 +177,4 @@ export class DataService {
       category: 'Books Store',
     },
   ];
-  
 }
