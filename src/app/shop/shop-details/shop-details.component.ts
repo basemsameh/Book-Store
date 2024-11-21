@@ -4,20 +4,21 @@ import {
   HostListener,
   OnInit,
   CUSTOM_ELEMENTS_SCHEMA,
+  AfterViewInit,
 } from '@angular/core';
 import { DataService } from '../../data.service';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ActivatedRoute, Params, Router, RouterModule } from '@angular/router';
 import { BreadcrumbWrapperComponent } from '../../breadcrumb-wrapper/breadcrumb-wrapper.component';
 
 @Component({
   selector: 'app-shop-details',
   standalone: true,
-  imports: [CommonModule, BreadcrumbWrapperComponent],
+  imports: [CommonModule, BreadcrumbWrapperComponent, RouterModule],
   templateUrl: './shop-details.component.html',
   styleUrl: './shop-details.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class ShopDetailsComponent implements OnInit {
+export class ShopDetailsComponent implements OnInit, AfterViewInit {
   books: any[] = [];
   bookId: any;
   currentBook: any;
@@ -34,7 +35,6 @@ export class ShopDetailsComponent implements OnInit {
     private router: Router
   ) {
     this.books = dataService.books;
-    this.books[5].volumeInfo.authors = ['Management Association'];
   }
 
   ngOnInit(): void {
@@ -46,6 +46,21 @@ export class ShopDetailsComponent implements OnInit {
     // Get data of cart from localStorage
     let storedData = localStorage.getItem('cart');
     storedData ? (this.cart = JSON.parse(storedData)) : (this.cart = []);
+  }
+
+  ngAfterViewInit(): void {
+    this.changeWishlistIcons();
+  }
+
+  // Change class name of wishlist icons
+  changeWishlistIcons(): void {
+    this.dataService.changeWishlistIcons();
+  }
+
+  // Add to or Remove from wishlist
+  addOrRemoveToWishlist(bookId: any): void {
+    this.dataService.addOrRemoveToWishlist(bookId);
+    this.changeWishlistIcons();
   }
 
   // Add to cart

@@ -1,0 +1,24 @@
+main .table-container table th {
+  font-size: 24px;
+}
+
+main .table-container table th,
+main .table-container table td {
+  border-bottom: 1px solid lightgrey;
+  padding: 10px;
+}
+
+main .table-container table td.remove-btn i:hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+main .table-container table td {
+  vertical-align: middle;
+  padding: 15px 10px;
+}
+
+main .table-container table td.price {
+  color: var(--orange);
+  font-weight: 600;
+}

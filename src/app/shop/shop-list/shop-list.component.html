@@ -3,7 +3,7 @@
     <!-- First Page -->
     <div
       class="tab-pane fade show active"
-      id="fpage-tab-pane"
+      id="first-page-tab"
       role="tabpanel"
       aria-labelledby="fpage-tab"
       tabindex="0"
@@ -59,8 +59,17 @@
             </button>
             <!-- Icons -->
             <span class="icons-shop w-fit mx-auto mx-md-0 ms-md-3">
-              <i class="fa-regular fa-heart" title="Add To Wishlist"></i>
-              <a href="cart" class="text-black text-decoration-none">
+              <i
+                class="fa-regular fa-heart"
+                title="Add To Wishlist"
+                [id]="book.id"
+                (click)="addOrRemoveToWishlist(book.id)"
+              ></i>
+              <a
+                href="#"
+                routerLink="/cart"
+                class="text-black text-decoration-none"
+              >
                 <i class="fa-solid fa-shuffle"></i>
               </a>
               <i
@@ -77,7 +86,7 @@
     <!-- Second Page -->
     <div
       class="tab-pane fade"
-      id="lpage-tab-pane"
+      id="last-page-tab"
       role="tabpanel"
       aria-labelledby="lpage-tab"
       tabindex="0"
@@ -133,8 +142,17 @@
             </button>
             <!-- Icons -->
             <span class="icons-shop w-fit mx-auto mx-md-0 ms-md-3">
-              <i class="fa-regular fa-heart" title="Add To Wishlist"></i>
-              <a href="cart" class="text-black text-decoration-none">
+              <i
+                class="fa-regular fa-heart"
+                title="Add To Wishlist"
+                [id]="book.id"
+                (click)="addOrRemoveToWishlist(book.id)"
+              ></i>
+              <a
+                href="#"
+                routerLink="/cart"
+                class="text-black text-decoration-none"
+              >
                 <i class="fa-solid fa-shuffle"></i>
               </a>
               <i
@@ -161,10 +179,10 @@
           class="nav-link"
           id="fpage-tab"
           data-bs-toggle="tab"
-          data-bs-target="#fpage-tab-pane"
+          data-bs-target="#first-page-tab"
           type="button"
           role="tab"
-          aria-controls="fpage-tab-pane"
+          aria-controls="first-page-tab"
           aria-selected="false"
           (click)="
             hideRightButton = false; hideLeftButton = true; scrollToTop()
@@ -180,10 +198,10 @@
           [class.active]="hideLeftButton"
           id="fpage-tab"
           data-bs-toggle="tab"
-          data-bs-target="#fpage-tab-pane"
+          data-bs-target="#first-page-tab"
           type="button"
           role="tab"
-          aria-controls="fpage-tab-pane"
+          aria-controls="first-page-tab"
           aria-selected="true"
           (click)="
             hideRightButton = false; hideLeftButton = true; scrollToTop()
@@ -198,10 +216,10 @@
           class="nav-link"
           id="lpage-tab"
           data-bs-toggle="tab"
-          data-bs-target="#lpage-tab-pane"
+          data-bs-target="#last-page-tab"
           type="button"
           role="tab"
-          aria-controls="lpage-tab-pane"
+          aria-controls="last-page-tab"
           aria-selected="false"
           [class.active]="hideRightButton"
           (click)="
@@ -222,10 +240,10 @@
           class="nav-link"
           id="lpage-tab"
           data-bs-toggle="tab"
-          data-bs-target="#lpage-tab-pane"
+          data-bs-target="#last-page-tab"
           type="button"
           role="tab"
-          aria-controls="lpage-tab-pane"
+          aria-controls="last-page-tab"
           aria-selected="false"
           (click)="
             hideLeftButton = false; hideRightButton = true; scrollToTop()

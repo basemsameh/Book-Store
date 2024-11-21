@@ -1,5 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  HostListener,
+} from '@angular/core';
 import { DataService } from '../data.service';
 import { Router, RouterModule } from '@angular/router';
 
@@ -11,11 +16,26 @@ import { Router, RouterModule } from '@angular/router';
   styleUrl: './top-selling.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class TopSellingComponent {
+export class TopSellingComponent implements AfterViewInit {
   books: any[] = [];
   constructor(private dataService: DataService, private router: Router) {
     this.books = dataService.books;
     this.books[5].volumeInfo.authors = ['Management Association'];
+  }
+
+  ngAfterViewInit(): void {
+    this.changeWishlistIcons();
+  }
+
+  // Change class name of wishlist icons
+  changeWishlistIcons(): void {
+    this.dataService.changeWishlistIcons();
+  }
+
+  // Add to or Remove from wishlist
+  addOrRemoveToWishlist(bookId: any): void {
+    this.dataService.addOrRemoveToWishlist(bookId);
+    this.changeWishlistIcons();
   }
 
   windowWidth: number = window.innerWidth;
@@ -45,5 +65,10 @@ export class TopSellingComponent {
   navigateToBook(id: any): void {
     window.scrollTo(0, 0);
     this.router.navigate(['shop', id]);
+  }
+
+  // Scroll to top
+  scrollToTop(): void {
+    window.scrollTo(0, 0);
   }
 }

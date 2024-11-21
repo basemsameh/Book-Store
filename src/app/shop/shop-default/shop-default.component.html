@@ -176,8 +176,17 @@
                 />
                 <!-- Icons -->
                 <div class="icons-shop position-absolute">
-                  <i class="fa-regular fa-heart" title="Add To Wishlist"></i>
-                  <a href="cart" class="text-black text-decoration-none">
+                  <i
+                    [id]="book.id"
+                    class="fa-regular fa-heart"
+                    title="Add To Wishlist"
+                    (click)="addOrRemoveToWishlist(book.id)"
+                  ></i>
+                  <a
+                    href="#"
+                    routerLink="/cart"
+                    class="text-black text-decoration-none"
+                  >
                     <i class="fa-solid fa-shuffle"></i>
                   </a>
                   <i
@@ -317,8 +326,17 @@
                 />
                 <!-- Icons -->
                 <div class="icons-shop position-absolute">
-                  <i class="fa-regular fa-heart" title="Add To Wishlist"></i>
-                  <a href="cart" class="text-black text-decoration-none">
+                  <i
+                    class="fa-regular fa-heart"
+                    title="Add To Wishlist"
+                    [id]="book.id"
+                    (click)="addOrRemoveToWishlist(book.id)"
+                  ></i>
+                  <a
+                    href="#"
+                    routerLink="/cart"
+                    class="text-black text-decoration-none"
+                  >
                     <i class="fa-solid fa-shuffle"></i>
                   </a>
                   <i

@@ -61,11 +61,6 @@ export class DataService {
     }
   }
 
-  hello(word: string): string {
-    console.log(word);
-    return word;
-  }
-
   // Blogs
   blogs = [
     {
@@ -177,4 +172,59 @@ export class DataService {
       category: 'Books Store',
     },
   ];
+
+  // This part related to wishlist and favourite icons
+  // Change class name of wishlist icons
+  changeWishlistIcons(): void {
+    let dataInWishlist: any;
+    this.wishlist.subscribe((value) => (dataInWishlist = value));
+    const wishlistIcons = document.querySelectorAll<HTMLElement>(
+      'i[title="Add To Wishlist"]'
+    );
+    console.log(wishlistIcons);
+    if (dataInWishlist.length !== 0) {
+      for (let i = 0; i < wishlistIcons.length; i++) {
+        // console.log(wishlistIcons[i].id);
+        for (let k = 0; k < dataInWishlist.length; k++) {
+          wishlistIcons[i].id === dataInWishlist[k].id
+            ? (wishlistIcons[i].className = 'fa-solid fa-heart')
+            : (wishlistIcons[i].className = 'fa-regular fa-heart');
+        }
+      }
+    } else {
+      wishlistIcons.forEach((icon) => (icon.className = 'fa-regular fa-heart'));
+    }
+  }
+
+  // Add to or Remove from wishlist
+  addOrRemoveToWishlist(bookId: any): void {
+    let dataInWishlist: any;
+    this.wishlist.subscribe((value) => (dataInWishlist = value));
+    const currentBook = this.books.find((book) => book.id === bookId);
+    let existCurrentBook = dataInWishlist?.find(
+      (ele: any) => ele.id === currentBook.idW
+    )
+      ? true
+      : false;
+    // Check if current book exist in the wishlist or not
+    if (!existCurrentBook) {
+      dataInWishlist.push({
+        id: currentBook.id,
+        image: currentBook.volumeInfo.imageLinks.smallThumbnail,
+        title: currentBook.volumeInfo.title,
+        price: currentBook.saleInfo.listPrice.amount,
+        category: currentBook.volumeInfo.categories,
+        date: new Date(),
+      });
+    } else {
+      dataInWishlist.find((book: any, bookIndex: any) => {
+        if (book.id === currentBook.id) {
+          dataInWishlist.splice(bookIndex, 1);
+        }
+      });
+    }
+    console.log(dataInWishlist);
+    this.wishlist.next(dataInWishlist);
+    localStorage.setItem('wishlist', JSON.stringify(dataInWishlist));
+  }
 }

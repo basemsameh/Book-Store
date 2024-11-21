@@ -1,18 +1,17 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { DataService } from '../../data.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-shop-default',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './shop-default.component.html',
   styleUrl: './shop-default.component.css',
-  providers: [DataService],
 })
-export class ShopDefaultComponent {
+export class ShopDefaultComponent implements AfterViewInit {
   books: any[] = [];
   minPrice: number = 100;
   maxPrice: number = 5000;
@@ -22,6 +21,21 @@ export class ShopDefaultComponent {
   constructor(private dataService: DataService, private router: Router) {
     this.books = dataService.books;
     this.getCategories();
+  }
+
+  ngAfterViewInit(): void {
+    this.changeWishlistIcons();
+  }
+
+  // Change class name of wishlist icons
+  changeWishlistIcons(): void {
+    this.dataService.changeWishlistIcons();
+  }
+
+  // Add to or Remove from wishlist
+  addOrRemoveToWishlist(bookId: any): void {
+    this.dataService.addOrRemoveToWishlist(bookId);
+    this.changeWishlistIcons();
   }
 
   // Get Categories

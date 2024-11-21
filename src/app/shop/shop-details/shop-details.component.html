@@ -102,11 +102,13 @@
             <i class="fa-solid fa-basket-shopping me-1"></i> Add To Cart
           </button>
           <!-- Add to Whislist -->
-          <button
-            class="btn btn-main rounded-circle mx-auto mx-md-0"
-            title="Add to Whislist"
-          >
-            <i class="fa-regular fa-heart"></i>
+          <button class="btn btn-main rounded-circle mx-auto mx-md-0">
+            <i
+              class="fa-regular fa-heart"
+              title="Add to Whislist"
+              [id]="currentBook.id"
+              (click)="addOrRemoveToWishlist(currentBook.id)"
+            ></i>
           </button>
         </div>
       </div>
@@ -539,8 +541,17 @@
           />
           <!-- Icons -->
           <div class="icons-shop position-absolute">
-            <i class="fa-regular fa-heart" title="Add To Wishlist"></i>
-            <a href="cart" class="text-black text-decoration-none">
+            <i
+              class="fa-regular fa-heart"
+              title="Add To Wishlist"
+              [id]="book.id"
+              (click)="addOrRemoveToWishlist(book.id)"
+            ></i>
+            <a
+              href="#"
+              routerLink="/cart"
+              class="text-black text-decoration-none"
+            >
               <i class="fa-solid fa-shuffle"></i>
             </a>
             <i class="fa-regular fa-eye" (click)="navigateToBook(book.id)"></i>

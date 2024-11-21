@@ -1,4 +1,76 @@
 <app-breadcrumb-wrapper [title]="'Wishlist'"></app-breadcrumb-wrapper>
-<main class="container-fluid">
-  
+<main class="container-fluid py-5">
+  @if (wishlist.length !== 0 && wishlist){
+  <!-- Table Container -->
+  <section class="table-container">
+    <table class="table mb-4">
+      <thead>
+        <tr>
+          <th colspan="3">Book</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Date Added</th>
+          <th>View</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (book of wishlist; track book.id) {
+        <tr>
+          <td class="remove-btn" title="Remove Book From Cart">
+            <i
+              class="fa-regular fa-circle-xmark fs-4"
+              (click)="removeBook($index)"
+            ></i>
+          </td>
+          <!-- Image -->
+          <td>
+            <img
+              [src]="book.image"
+              [alt]="book.title"
+              height="70px"
+              width="55px"
+            />
+          </td>
+          <td class="fw-bold fs-5">{{ book.title }}</td>
+          <td class="price">
+            {{ book.price | currency : "EGP" : "symbol-narrow" }}
+          </td>
+          <td>{{ book.category }}</td>
+          <td>{{ book.date | date }}</td>
+          <td>
+            <button
+              class="btn btn-main fs-6"
+              (click)="navigateToBookDetails(book.id)"
+            >
+              View
+            </button>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </section>
+  }@else {
+  <!-- Empty Cart -->
+  <section class="text-center py-5 empty-cart">
+    <figure class="m-0 col-11 col-md-6 col-lg-4 mx-auto">
+      <img
+        src="../../assets/images/wishlist-page/Empty Wishlist.png"
+        alt="Wishlist Empty"
+        class="w-100"
+      />
+    </figure>
+    <h1 class="fw-bold mt-4" style="color: var(--main-color); font-size: 50px">
+      Looks like your wishlist is empty!
+    </h1>
+    <p class="fs-3 opacity-75 my-4">Time to start your shopping</p>
+    <a
+      href="#"
+      routerLink="/shop"
+      (click)="scrollToTop()"
+      class="btn btn-main mx-auto rounded-5 px-5 py-3"
+      >Return to shop</a
+    >
+  </section>
+  }
 </main>
