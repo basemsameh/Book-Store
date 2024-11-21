@@ -1,5 +1,16 @@
+<!-- Loading Page -->
+<section class="loading-page" *ngIf="isLoading" [class.hidden]="isHiding">
+  <article class="text-center">
+    <div class="spinner-border mb-3" role="status"></div>
+    <h1 class="w-100 mt-0">Bookle</h1>
+    <h4 class="loading">Loading...</h4>
+  </article>
+</section>
+<!-- Header Content -->
 <app-header></app-header>
+<!-- Content -->
 <router-outlet></router-outlet>
+<!-- Scroll To Top Button -->
 <button
   class="btn btn-main position-fixed"
   *ngIf="isVisible"
@@ -7,4 +18,5 @@
 >
   <i class="fa-solid fa-chevron-up"></i>
 </button>
+<!-- Footer Conetnt -->
 <app-footer></app-footer>
