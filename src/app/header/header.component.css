@@ -8,7 +8,7 @@ nav {
   left: 0;
   width: 100%;
   height: auto;
-  z-index: 1000;
+  z-index: 500;
   background-color: var(--white);
 }
 
@@ -116,4 +116,14 @@ nav {
 .navbar-nav .dropdown-menu .dropdown-item:hover {
   background-color: var(--orange);
   color: var(--white);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.hoverLink:hover {
+  color: var(--main-color);
 }

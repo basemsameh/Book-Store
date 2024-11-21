@@ -8,4 +8,8 @@ import { RouterModule } from '@angular/router';
   templateUrl: './discount-section.component.html',
   styleUrl: './discount-section.component.css',
 })
-export class DiscountSectionComponent {}
+export class DiscountSectionComponent {
+  scrollToTop(): void {
+    window.scrollTo(0, 0);
+  }
+}

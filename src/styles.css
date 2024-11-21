@@ -97,3 +97,7 @@
   background-color: var(--orange) !important;
   color: var(--white) !important;
 }
+
+i[title="Add To Wishlist"].fa-solid {
+  color: red;
+}

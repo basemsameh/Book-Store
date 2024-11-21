@@ -23,6 +23,7 @@ export class ShopDetailsComponent implements OnInit, AfterViewInit {
   bookId: any;
   currentBook: any;
   cart: any[] = [];
+  isCurrentBookInCart = false; // This for add to cart modal
   windowWidth: number = window.innerWidth;
   @HostListener('window:resize', ['$event'])
   onResize() {
@@ -65,16 +66,22 @@ export class ShopDetailsComponent implements OnInit, AfterViewInit {
 
   // Add to cart
   addToCart(quantity: any): void {
-    this.cart.push({
-      id: this.currentBook.id,
-      image: this.currentBook.volumeInfo.imageLinks.smallThumbnail,
-      title: this.currentBook.volumeInfo.title,
-      price: this.currentBook.saleInfo.listPrice.amount,
-      quantity: +quantity,
-    });
-    localStorage.setItem('cart', JSON.stringify(this.cart));
-    this.dataService.cart.next(this.cart);
-    console.log(this.cart);
+    let existCurrentBook = this.cart.find((ele) =>
+      ele.id === this.currentBook.id ? true : false
+    );
+    this.isCurrentBookInCart = existCurrentBook;
+    if (!existCurrentBook) {
+      this.cart.push({
+        id: this.currentBook.id,
+        image: this.currentBook.volumeInfo.imageLinks.smallThumbnail,
+        title: this.currentBook.volumeInfo.title,
+        price: this.currentBook.saleInfo.listPrice.amount,
+        quantity: +quantity,
+      });
+      localStorage.setItem('cart', JSON.stringify(this.cart));
+      this.dataService.cart.next(this.cart);
+      console.log(this.cart);
+    }
   }
 
   getCurrentBook(): void {

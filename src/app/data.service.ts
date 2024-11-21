@@ -181,14 +181,15 @@ export class DataService {
     const wishlistIcons = document.querySelectorAll<HTMLElement>(
       'i[title="Add To Wishlist"]'
     );
-    console.log(wishlistIcons);
     if (dataInWishlist.length !== 0) {
       for (let i = 0; i < wishlistIcons.length; i++) {
-        // console.log(wishlistIcons[i].id);
         for (let k = 0; k < dataInWishlist.length; k++) {
-          wishlistIcons[i].id === dataInWishlist[k].id
-            ? (wishlistIcons[i].className = 'fa-solid fa-heart')
-            : (wishlistIcons[i].className = 'fa-regular fa-heart');
+          if (wishlistIcons[i].id === dataInWishlist[k].id) {
+            wishlistIcons[i].className = 'fa-solid fa-heart';
+            break;
+          } else {
+            wishlistIcons[i].className = 'fa-regular fa-heart';
+          }
         }
       }
     } else {
@@ -201,8 +202,8 @@ export class DataService {
     let dataInWishlist: any;
     this.wishlist.subscribe((value) => (dataInWishlist = value));
     const currentBook = this.books.find((book) => book.id === bookId);
-    let existCurrentBook = dataInWishlist?.find(
-      (ele: any) => ele.id === currentBook.idW
+    let existCurrentBook = dataInWishlist.find(
+      (ele: any) => ele.id === currentBook.id
     )
       ? true
       : false;
@@ -217,14 +218,13 @@ export class DataService {
         date: new Date(),
       });
     } else {
-      dataInWishlist.find((book: any, bookIndex: any) => {
+      dataInWishlist.forEach((book: any, bookIndex: any) => {
         if (book.id === currentBook.id) {
           dataInWishlist.splice(bookIndex, 1);
         }
       });
     }
-    console.log(dataInWishlist);
-    this.wishlist.next(dataInWishlist);
     localStorage.setItem('wishlist', JSON.stringify(dataInWishlist));
+    this.wishlist.next(dataInWishlist);
   }
 }

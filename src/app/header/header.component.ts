@@ -1,5 +1,5 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-import { RouterLinkActive, RouterModule } from '@angular/router';
+import { Component, HostListener } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { DataService } from '../data.service';
 
 @Component({
@@ -25,5 +25,10 @@ export class HeaderComponent {
 
   scrollToTop(): void {
     window.scrollTo(0, 0);
+  }
+
+  activeForm: 'login' | 'register' | 'recover' = 'login'; // Default form
+  setActiveForm(form: 'login' | 'register' | 'recover'): void {
+    this.activeForm = form;
   }
 }

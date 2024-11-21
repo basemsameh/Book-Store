@@ -176,3 +176,9 @@ figure .icons-shop {
     width: 45% !important;
   }
 }
+
+@media (min-width: 992px) and (max-width: 1280px) {
+  .other-books div {
+    width: calc(100% / 3);
+  }
+}

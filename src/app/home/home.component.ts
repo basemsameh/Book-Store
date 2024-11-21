@@ -108,7 +108,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   // Navigate to shop details
   navigateToBook(id: any): void {
-    window.scrollTo(0, 0);
+    this.scrollToTop();
     this.router.navigate(['shop', id]);
+  }
+
+  scrollToTop(): void {
+    window.scrollTo(0, 0);
   }
 }

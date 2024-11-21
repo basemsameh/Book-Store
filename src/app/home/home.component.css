@@ -145,6 +145,10 @@ swiper-slide:hover figure .icons-shop {
   transform: rotateY(0deg);
 }
 
+swiper-container swiper-slide:hover figure img {
+  transform: scale(1.1);
+}
+
 figure .icons-shop {
   top: 25px;
   right: 15px;

@@ -20,11 +20,11 @@ export class WhishlistComponent {
       : (this.wishlist = []);
   }
 
-  // Remove Book From Cart
+  // Remove Book From wishlist
   removeBook(index: number): void {
     this.wishlist.splice(index, 1);
     this.saveWishlistData();
-    this.dataService.cart.next(this.wishlist);
+    this.dataService.wishlist.next(this.wishlist);
   }
 
   // Save wishlist data

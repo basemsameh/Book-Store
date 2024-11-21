@@ -105,7 +105,7 @@
           <button class="btn btn-main rounded-circle mx-auto mx-md-0">
             <i
               class="fa-regular fa-heart"
-              title="Add to Whislist"
+              title="Add To Wishlist"
               [id]="currentBook.id"
               (click)="addOrRemoveToWishlist(currentBook.id)"
             ></i>
@@ -273,10 +273,17 @@
             class="modal-body text-center px-5 py-3 border-0"
             style="font-size: 80px"
           >
+            @if (!isCurrentBookInCart) {
             <i class="fa-regular fa-circle-check text-success"></i>
             <h3 class="text-black mt-3 mb-5">
               Book added to cart successfully!
             </h3>
+            }@else {
+            <i class="fa-regular fa-circle-xmark text-warning"></i>
+            <h3 class="text-black mt-3 mb-5">
+              The book was added to the cart before!
+            </h3>
+            }
           </div>
         </div>
       </div>
