@@ -19,14 +19,14 @@ This project is an Angular-based **Book Store** application that offers a sleek,
 
 ## Features
 
-- **Hero Section**: Showcases promotional offers and a call-to-action button.
+- **Fully responsive** design for all devices.
+- **Blogs**: Stay updated with the latest book releases and promotions.
+- **Wishlist**: Save your favorite books for future browsing.
+- **Loading Page** for a polished user experience.
+- **Shop Component** Views tailored for better exploration.
 - **Featured Books**: Highlights a collection of books with title, author, price, and user actions (wishlist, cart).
 - **Top Categories**: Displays popular categories with custom navigation.
-- **Discount Section**: Promotes ongoing discounts in a dedicated component.
-- **Top Rating Books**: Lists books with the highest ratings, including details like author, price, and ratings.
-- **Top Selling Books**: Displays best-selling books using a reusable component.
 - **Client Testimonials**: Features customer reviews to build trust.
-- **Featured Author**: Highlights a notable author.
 - **Latest News**: Shares the latest updates about books and promotions.
 
 ## Installation and Setup
