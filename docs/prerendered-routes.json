@@ -1,0 +1,14 @@
+{
+  "routes": [
+    "/blogs",
+    "/cart",
+    "/checkout",
+    "/contact",
+    "/home",
+    "/pages/about",
+    "/pages/author",
+    "/pages/faqs",
+    "/shop",
+    "/whishlist"
+  ]
+}
