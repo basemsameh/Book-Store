@@ -15,7 +15,8 @@ This project is an Angular-based **Book Store** application that offers a sleek,
    - [Add New Components](#add-new-components)
    - [Modify Styles](#modify-styles)
    - [Extend Features](#extend-features)
-7. [Contact](#contact)
+7. [Links](#links)
+8. [Contact](#contact)
 
 ## Features
 
@@ -89,6 +90,10 @@ export const environment = {
 3. **Extend Features**
    - Update services in src/app/services/ to handle new data.
    - Enhance UI by creating additional components in src/app/components.
+
+## Links
+
+- **Live URL**: [Demo](https://unique-yeot-2626e4.netlify.app/home)
 
 ## Contact
 
